@@ -1,0 +1,381 @@
+/* ============================================================
+   Ritvij Naram — Portfolio
+   Design tokens
+   ============================================================ */
+:root{
+  --bg:        #0D1117;
+  --panel:     #161B22;
+  --panel-2:   #1C2128;
+  --border:    #30363D;
+  --text:      #E6EDF3;
+  --muted:     #8B949E;
+  --green:     #3FB950;   /* additions / success / prompt */
+  --red:       #F85149;   /* deletions */
+  --purple:    #A371F7;   /* commit hash */
+  --blue:      #58A6FF;   /* links / active */
+  --amber:     #D29922;   /* warnings / highlight tag */
+
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --maxw: 920px;
+  --edge: clamp(20px, 5vw, 48px);
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color:var(--blue); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+a:focus-visible, button:focus-visible{
+  outline:2px solid var(--blue);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+.mono{ font-family:var(--mono); }
+
+/* ---------- layout shells ---------- */
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 var(--edge);
+}
+section{ padding:88px 0; border-bottom:1px solid var(--border); }
+section:last-of-type{ border-bottom:none; }
+
+.section-head{ margin-bottom:40px; }
+.section-tag{
+  font-family:var(--mono);
+  font-size:0.8rem;
+  color:var(--green);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+.section-tag::before{ content:"$"; color:var(--muted); }
+.section-title{
+  font-family:var(--mono);
+  font-size:clamp(1.4rem, 2.4vw, 1.9rem);
+  font-weight:600;
+  margin:0;
+  letter-spacing:-0.01em;
+}
+
+/* ---------- top nav ---------- */
+.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(13,17,23,0.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.nav .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:16px; padding-bottom:16px;
+}
+.nav-brand{ font-family:var(--mono); font-weight:600; color:var(--text); font-size:0.95rem; }
+.nav-brand .dot{ color:var(--green); }
+.nav-links{ display:flex; gap:24px; list-style:none; margin:0; padding:0; }
+.nav-links a{
+  font-family:var(--mono); font-size:0.82rem; color:var(--muted);
+}
+.nav-links a:hover{ color:var(--text); text-decoration:none; }
+.nav-links .n{ color:var(--purple); }
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding-top:72px;
+  padding-bottom:96px;
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+#hero-canvas{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  z-index:0;
+  opacity:0.55;
+  pointer-events:none;
+}
+.hero .wrap{ position:relative; z-index:1; }
+
+.prompt-line{
+  font-family:var(--mono);
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.prompt-line .sigil{ color:var(--green); }
+.prompt-line .cmd{ color:var(--text); }
+.caret{
+  display:inline-block; width:8px; height:1.1em;
+  background:var(--green);
+  margin-left:2px;
+  animation:blink 1s steps(1) infinite;
+  vertical-align:-2px;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+
+.hero h1{
+  font-family:var(--mono);
+  font-weight:700;
+  font-size:clamp(1.9rem, 5vw, 3.1rem);
+  line-height:1.15;
+  letter-spacing:-0.01em;
+  margin:0 0 22px;
+  max-width:720px;
+}
+.hero h1 .accent{ color:var(--green); }
+
+.hero p.lede{
+  font-size:1.05rem;
+  color:#C9D1D9;
+  max-width:600px;
+  margin:0 0 34px;
+}
+.hero p.lede strong{ color:var(--text); font-weight:600; }
+
+.hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:52px; }
+.btn{
+  font-family:var(--mono);
+  font-size:0.85rem;
+  padding:11px 20px;
+  border-radius:6px;
+  border:1px solid var(--border);
+  background:var(--panel);
+  color:var(--text);
+  cursor:pointer;
+  transition:border-color .15s ease, transform .15s ease, background .15s ease;
+}
+.btn:hover{ border-color:var(--green); text-decoration:none; transform:translateY(-1px); }
+.btn.primary{ background:var(--green); border-color:var(--green); color:#04140a; font-weight:600; }
+.btn.primary:hover{ background:#3ddc5c; }
+
+.stat-row{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+}
+.stat{
+  background:var(--panel);
+  padding:18px 16px;
+}
+.stat .diff{
+  font-family:var(--mono);
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--green);
+}
+.stat .diff.neutral{ color:var(--purple); }
+.stat .label{
+  font-size:0.72rem;
+  color:var(--muted);
+  margin-top:4px;
+  letter-spacing:0.02em;
+}
+
+@media (max-width:640px){
+  .stat-row{ grid-template-columns:repeat(2, 1fr); }
+}
+
+/* ---------- work / commits ---------- */
+.commit{
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:var(--panel);
+  margin-bottom:20px;
+  overflow:hidden;
+  transition:border-color .15s ease;
+}
+.commit:hover{ border-color:#484F58; }
+.commit-head{
+  display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+  padding:18px 22px 0;
+}
+.commit-hash{ font-family:var(--mono); color:var(--purple); font-size:0.85rem; }
+.commit-branch{ font-family:var(--mono); color:var(--muted); font-size:0.78rem; }
+.commit h3{
+  font-family:var(--sans);
+  font-size:1.15rem;
+  margin:10px 0 8px;
+  padding:0 22px;
+  font-weight:700;
+}
+.commit p{
+  margin:0 0 14px;
+  padding:0 22px;
+  color:#C9D1D9;
+  font-size:0.95rem;
+}
+.commit .diffstat{
+  font-family:var(--mono);
+  font-size:0.82rem;
+  padding:0 22px;
+  margin-bottom:14px;
+  color:var(--muted);
+}
+.commit .diffstat .add{ color:var(--green); }
+.commit .diffstat .del{ color:var(--red); }
+.tag-row{
+  display:flex; flex-wrap:wrap; gap:8px;
+  padding:0 22px 18px;
+}
+.tag{
+  font-family:var(--mono);
+  font-size:0.72rem;
+  padding:3px 9px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  color:var(--muted);
+}
+.commit-foot{
+  border-top:1px solid var(--border);
+  padding:12px 22px;
+  display:flex; justify-content:space-between; align-items:center;
+  background:var(--panel-2);
+}
+.commit-foot a{ font-family:var(--mono); font-size:0.82rem; }
+.commit-foot .files{ font-family:var(--mono); font-size:0.78rem; color:var(--muted); }
+
+.more-github{
+  font-family:var(--mono);
+  font-size:0.85rem;
+  color:var(--muted);
+  margin-top:8px;
+}
+.more-github a{ margin:0 4px; }
+
+/* ---------- journey / git log ---------- */
+.gitlog{ position:relative; padding-left:28px; }
+.gitlog::before{
+  content:"";
+  position:absolute; left:5px; top:6px; bottom:6px;
+  width:2px; background:var(--border);
+}
+.logrow{ position:relative; padding-bottom:34px; }
+.logrow:last-child{ padding-bottom:0; }
+.logrow::before{
+  content:"";
+  position:absolute; left:-28px; top:4px;
+  width:12px; height:12px; border-radius:50%;
+  background:var(--bg); border:2px solid var(--purple);
+}
+.logrow.current::before{ border-color:var(--green); box-shadow:0 0 0 4px rgba(63,185,80,0.15); }
+.logrow .lg-hash{ font-family:var(--mono); color:var(--purple); font-size:0.8rem; }
+.logrow.current .lg-hash{ color:var(--green); }
+.logrow .lg-when{ font-family:var(--mono); color:var(--muted); font-size:0.78rem; margin-left:10px; }
+.logrow h4{ margin:8px 0 4px; font-size:1.05rem; }
+.logrow .lg-org{ color:var(--muted); font-size:0.9rem; margin-bottom:8px; }
+.logrow ul{ margin:8px 0 0; padding-left:18px; color:#C9D1D9; font-size:0.92rem; }
+.logrow li{ margin-bottom:5px; }
+.badge-current{
+  font-family:var(--mono); font-size:0.68rem;
+  color:#04140a; background:var(--green);
+  padding:2px 8px; border-radius:999px;
+  margin-left:8px; font-weight:700;
+}
+
+/* ---------- skills ---------- */
+.pkg-block{
+  font-family:var(--mono);
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:22px 24px;
+  margin-bottom:16px;
+}
+.pkg-block .pkg-key{ color:var(--blue); font-size:0.82rem; margin-bottom:10px; }
+.chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+.chip{
+  font-family:var(--mono);
+  font-size:0.78rem;
+  padding:5px 11px;
+  border-radius:6px;
+  background:var(--panel-2);
+  border:1px solid var(--border);
+  color:#C9D1D9;
+}
+
+/* ---------- contact ---------- */
+.contact-term{
+  font-family:var(--mono);
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:28px 26px;
+}
+.contact-term .lg{ font-size:0.9rem; }
+.contact-term .lg .sigil{ color:var(--green); }
+.contact-term .out{ color:var(--text); margin:14px 0 22px; padding-left:18px; border-left:2px solid var(--border); }
+.contact-term .out a{ font-weight:600; }
+.contact-list{ list-style:none; margin:0; padding:0; }
+.contact-list li{ margin-bottom:8px; font-size:0.92rem; }
+.contact-list .k{ color:var(--muted); display:inline-block; width:96px; }
+
+footer{
+  padding:32px 0 60px;
+  text-align:center;
+  color:var(--muted);
+  font-family:var(--mono);
+  font-size:0.78rem;
+}
+footer a{ color:var(--muted); }
+
+/* ---------- case study pages ---------- */
+.case-hero{ padding:56px 0 40px; border-bottom:1px solid var(--border); }
+.case-back{ font-family:var(--mono); font-size:0.82rem; color:var(--muted); }
+.case-hero h1{
+  font-family:var(--sans);
+  font-size:clamp(1.7rem, 4vw, 2.5rem);
+  margin:18px 0 12px;
+}
+.case-meta{ font-family:var(--mono); font-size:0.82rem; color:var(--purple); }
+.case-body h2{
+  font-family:var(--mono);
+  font-size:1.15rem;
+  color:var(--green);
+  margin-top:44px;
+}
+.case-body h2::before{ content:"## "; color:var(--muted); }
+.case-body p, .case-body li{ color:#C9D1D9; font-size:0.98rem; }
+.case-body pre{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px 18px;
+  overflow-x:auto;
+  font-family:var(--mono);
+  font-size:0.82rem;
+  color:#C9D1D9;
+}
+.arch-grid{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr));
+  gap:10px; margin:18px 0;
+}
+.arch-box{
+  border:1px solid var(--border); border-radius:8px;
+  padding:14px; background:var(--panel);
+  font-family:var(--mono); font-size:0.8rem; text-align:center;
+  color:var(--text);
+}
+.arch-box .sub{ color:var(--muted); font-size:0.72rem; margin-top:4px; }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  .caret{ animation:none; opacity:1; }
+  #hero-canvas{ display:none; }
+}

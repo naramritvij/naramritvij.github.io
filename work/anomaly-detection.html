@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anomaly Detection for Video Surveillance — Case Study — Ritvij Naram</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
+    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / anomaly-detection.html</div>
+    <h1>Anomaly Detection for Video Surveillance</h1>
+    <div class="case-meta">commit 71dd3f0 · Keras CNN · OpenCV · Tkinter · SQLite</div>
+  </div>
+</header>
+
+<main class="wrap case-body" style="padding:44px 0 80px;">
+
+  <h2>The problem</h2>
+  <p>Reviewing surveillance footage for unusual events is almost entirely manual — someone either watches
+  it live or scrubs through hours of recording after the fact, and most of what they watch is nothing
+  happening.</p>
+
+  <h2>What I built</h2>
+  <p>A desktop anomaly-detection tool: a Keras CNN trained to distinguish normal from anomalous frames,
+  OpenCV handling the video capture and preprocessing pipeline, a Tkinter interface for loading a feed and
+  watching flags appear in real time, and a SQLite log recording every flagged event with a timestamp for
+  later review.</p>
+
+  <div class="arch-grid">
+    <div class="arch-box">Video feed<div class="sub">OpenCV capture</div></div>
+    <div class="arch-box">Keras CNN<div class="sub">frame classification</div></div>
+    <div class="arch-box">Tkinter UI<div class="sub">live view + flags</div></div>
+    <div class="arch-box">SQLite<div class="sub">event log</div></div>
+  </div>
+
+  <h2>Design decisions</h2>
+  <ul>
+    <li><strong>Frame-level CNN over full video models</strong> — kept the model simple and fast enough to
+    run near real time on ordinary hardware, trading some temporal context for responsiveness.</li>
+    <li><strong>Logged, not just alerted</strong> — every flag is written to SQLite with a timestamp, so a
+    reviewer can go back and audit what was flagged and why, rather than trusting a one-time alert.</li>
+    <li><strong>Desktop-first</strong> — Tkinter was the right fit for a self-contained tool that needs no
+    server and can run directly against a local or IP camera feed.</li>
+  </ul>
+
+  <h2>Stack</h2>
+  <div class="tag-row" style="padding:0 0 24px;">
+    <span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Tkinter</span><span class="tag">SQLite</span><span class="tag">Python</span>
+  </div>
+
+</main>
+
+<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+</body>
+</html>

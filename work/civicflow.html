@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicFlow AI — Case Study — Ritvij Naram</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
+    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / civicflow.html</div>
+    <h1>CivicFlow AI</h1>
+    <div class="case-meta">commit 4e91a2c · FastAPI · Oracle DB · Gemini · React</div>
+  </div>
+</header>
+
+<main class="wrap case-body" style="padding:44px 0 80px;">
+
+  <h2>The problem</h2>
+  <p>Civic and municipal incident reports — potholes, outages, service complaints — tend to land in
+  whatever channel is easiest for the reporter (a form, an email, a call log), which leaves staff manually
+  reading, categorizing, and routing each one before anything gets fixed. That manual triage step is where
+  response time gets lost.</p>
+
+  <h2>What I built</h2>
+  <p>CivicFlow AI is a full-stack incident intelligence system: a FastAPI backend persists reports to an
+  Oracle database, Google Gemini reads each incoming report and assigns a category, urgency level, and a
+  short summary, and a React front end gives staff a live queue to review, filter, and close cases from.</p>
+
+  <div class="arch-grid">
+    <div class="arch-box">React UI<div class="sub">case queue + filters</div></div>
+    <div class="arch-box">FastAPI<div class="sub">ingest + routing</div></div>
+    <div class="arch-box">Gemini API<div class="sub">categorize + summarize</div></div>
+    <div class="arch-box">Oracle DB<div class="sub">system of record</div></div>
+  </div>
+
+  <h2>Design decisions</h2>
+  <ul>
+    <li><strong>Oracle as the backbone</strong> — chosen over a lighter store because the course context and
+    downstream reporting needs called for relational integrity: foreign keys tying reports to categories,
+    staff, and status history.</li>
+    <li><strong>LLM in the loop, not the driver</strong> — Gemini classifies and summarizes, but every
+    categorization is editable by a human reviewer before it's final. The model speeds up triage; it doesn't
+    replace the judgment call.</li>
+    <li><strong>API-first backend</strong> — FastAPI exposes clean endpoints for ingest, review, and status
+    updates, so the React app is a thin client rather than where any business logic lives.</li>
+  </ul>
+
+  <h2>What it improved</h2>
+  <p>The categorize-and-summarize step that used to require a person reading the full report now happens the
+  moment it's submitted, so staff open a queue that's already sorted by urgency instead of a raw inbox.</p>
+
+  <h2>Stack</h2>
+  <div class="tag-row" style="padding:0 0 24px;">
+    <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Oracle SQL</span>
+    <span class="tag">Google Gemini API</span><span class="tag">React</span>
+  </div>
+
+</main>
+
+<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+</body>
+</html>

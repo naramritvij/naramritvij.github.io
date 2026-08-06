@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTC Service Disruption DB — Case Study — Ritvij Naram</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
+    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / ttc-disruption.html</div>
+    <h1>TTC Service Disruption &amp; Passenger Impact DB</h1>
+    <div class="case-meta">commit 9b0f6d1 · Oracle SQL · Data Modeling · ERD</div>
+  </div>
+</header>
+
+<main class="wrap case-body" style="padding:44px 0 80px;">
+
+  <h2>The problem</h2>
+  <p>Transit disruptions — delays, closures, diversions — and their impact on riders are usually tracked
+  in scattered, flat records that make it hard to answer relational questions: which routes get hit hardest,
+  how disruption type correlates with passenger complaints, how impact trends over time.</p>
+
+  <h2>What I built</h2>
+  <p>A normalized Oracle database purpose-built for TTC-style disruption data: entities for routes,
+  stations, disruption events, causes, and passenger impact reports, connected through a crow's-foot ERD and
+  enforced with real constraints rather than left to application code.</p>
+
+  <div class="arch-grid">
+    <div class="arch-box">Routes / Stations<div class="sub">reference data</div></div>
+    <div class="arch-box">Disruption Events<div class="sub">fact table</div></div>
+    <div class="arch-box">Passenger Impact<div class="sub">linked reports</div></div>
+    <div class="arch-box">Views + Triggers<div class="sub">derived + enforced</div></div>
+  </div>
+
+  <h2>What's in the build</h2>
+  <ul>
+    <li><strong>Full DDL/DML</strong> — schema creation scripts and seed data covering routes, events, and
+    impact records.</li>
+    <li><strong>Views</strong> for the recurring analytical questions — worst-affected routes, disruption
+    frequency by cause, month-over-month impact trends — so they're one query away instead of re-derived
+    each time.</li>
+    <li><strong>Triggers</strong> enforcing referential and status-consistency rules that would otherwise
+    depend on the application layer behaving correctly every time.</li>
+    <li><strong>Crow's-foot ERD</strong> documenting cardinality decisions before a line of DDL was written.</li>
+  </ul>
+
+  <h2>Why relational, not just a spreadsheet</h2>
+  <p>The value of this dataset is in the joins — a disruption is only useful once it's tied to the route,
+  the time window, and the passengers it affected. A relational schema with enforced keys makes those joins
+  reliable instead of hopeful.</p>
+
+  <h2>Stack</h2>
+  <div class="tag-row" style="padding:0 0 24px;">
+    <span class="tag">Oracle SQL</span><span class="tag">PL/SQL</span><span class="tag">Data Modeling</span>
+    <span class="tag">ERD (crow's-foot)</span>
+  </div>
+
+</main>
+
+<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+</body>
+</html>

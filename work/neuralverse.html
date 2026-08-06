@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralVerse — Case Study — Ritvij Naram</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
+    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
+  </div>
+</nav>
+
+<header class="case-hero">
+  <div class="wrap">
+    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / neuralverse.html</div>
+    <h1>NeuralVerse</h1>
+    <div class="case-meta">commit c27a48e · 20 chapters · interactive visualization</div>
+  </div>
+</header>
+
+<main class="wrap case-body" style="padding:44px 0 80px;">
+
+  <h2>The problem</h2>
+  <p>Deep learning concepts — gradients, backprop, attention — are usually taught through static slides
+  or dense math, which makes the intuition behind them harder to hold onto than the formulas themselves.</p>
+
+  <h2>What I built</h2>
+  <p>NeuralVerse is a 20-chapter interactive walkthrough of deep learning, from a single perceptron up
+  through transformer attention, where each chapter pairs a short explanation with something you can
+  manipulate directly — nudging a weight, watching a loss surface shift, stepping through a forward pass
+  node by node.</p>
+
+  <div class="arch-grid">
+    <div class="arch-box">Ch. 1–6<div class="sub">perceptrons → backprop</div></div>
+    <div class="arch-box">Ch. 7–13<div class="sub">CNNs → RNNs</div></div>
+    <div class="arch-box">Ch. 14–20<div class="sub">attention → transformers</div></div>
+  </div>
+
+  <h2>Design decisions</h2>
+  <ul>
+    <li><strong>Interaction before explanation</strong> — each chapter leads with something to manipulate,
+    then explains what just happened, rather than the reverse.</li>
+    <li><strong>Progressive structure</strong> — chapters build strictly on prior ones, so the visualizer for
+    attention assumes you've already built intuition for weighted sums and softmax a few chapters earlier.</li>
+    <li><strong>Client-side only</strong> — every visualization runs in the browser with no backend, so it
+    stays fast and free to host.</li>
+  </ul>
+
+  <h2>Why this mattered to me</h2>
+  <p>Building the visualizations forced a more precise understanding of each concept than reading about it
+  ever did — you can't animate backprop correctly without actually tracing the gradient flow yourself.</p>
+
+  <h2>Stack</h2>
+  <div class="tag-row" style="padding:0 0 24px;">
+    <span class="tag">JavaScript</span><span class="tag">Data Visualization</span><span class="tag">ML Education</span>
+  </div>
+
+</main>
+
+<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+</body>
+</html>
