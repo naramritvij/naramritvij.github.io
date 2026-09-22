@@ -86,7 +86,24 @@
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / retrieval view</p>
+        <h2>Only retrieved document context should reach the answer layer.</h2>
+        <p>The retrieval board below shows the intended RAG behavior: rank relevant university chunks first, then compose the answer from selected context.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>retrieval_context</strong><span>rank → select → answer</span></div>
+          <div class="retrieval-board">
+            <div class="chunk-stack">
+              <div class="chunk"><span>rank 01 · selected</span><p>Most relevant chunk from the indexed university corpus.</p></div>
+              <div class="chunk"><span>rank 02 · selected</span><p>Supporting context from another matching document section.</p></div>
+              <div class="chunk"><span>rank 03</span><p>Lower-ranked context remains available but need not be used.</p></div>
+            </div>
+            <div class="answer-box"><span>answer context</span><p>Selected chunks are passed to the extractive or optional FLAN-T5 answer layer, keeping the response bounded by the indexed documents.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul>
           <li><strong>Bounded document corpus</strong> — the application is aimed at university information rather than open-domain chat.</li>
@@ -97,7 +114,7 @@
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Python</span><span>FAISS</span><span>Streamlit</span><span>PDF ingestion</span><span>Vector retrieval</span><span>FLAN-T5-small</span><span>Hugging Face</span></div>
       </section>
