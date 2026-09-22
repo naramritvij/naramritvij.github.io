@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Flashcard Generator — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a Streamlit NLP application that generates study flashcards using spaCy and a fine-tuned T5 model.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / flashcard-generator</div>
+      <h1>AI Flashcard Generator</h1>
+      <p class="case-lede">A Streamlit NLP pipeline that accepts arbitrary study text, segments it with spaCy, uses a fine-tuned T5 model to generate questions from source sentences, and exports the resulting flashcards as CSV.</p>
+      <div class="case-meta"><span>Python</span><span>Streamlit</span><span>spaCy</span><span>T5</span><span>Hugging Face</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://github.com/naramritvij/flashcard-generator-llm" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
+
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Turn raw study material into structured question-answer pairs.</h2>
+        <p>The application combines deterministic NLP preprocessing with generative question creation. spaCy defines sentence boundaries, T5 generates a question from the selected source text, and the original sentence remains the answer so each card stays grounded in the input.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>Text-to-flashcards</strong><p>The pipeline starts from arbitrary study text rather than a fixed question bank.</p></div><div class="case-summary-card"><span>02</span><strong>Grounded answers</strong><p>The source sentence is retained as the answer instead of asking the model to invent both sides.</p></div><div class="case-summary-card"><span>03</span><strong>Portable output</strong><p>Generated flashcards can be downloaded as CSV for reuse.</p></div></div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>Deterministic preprocessing before generative question creation.</h2>
+        <p>The model is used for the task it is best at—question generation—while segmentation and answer grounding remain deterministic.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge" d="M 200 209 L 270 209"/>
+<text class="edge-label" x="235" y="201">parse</text>
+<path class="edge" d="M 440 209 L 505 209"/>
+<text class="edge-label" x="472.5" y="201">sentence</text>
+<path class="edge edge-ai" d="M 680 195 L 745 129"/>
+<text class="edge-label" x="712.5" y="154">question</text>
+<path class="edge edge-accent" d="M 845 168 L 845 260"/>
+<text class="edge-label" x="845" y="206">export</text>
+  <rect class="node node-user" x="35" y="170" width="165" height="78" rx="14"/>
+<text class="label" x="117.5" y="205">Study Text</text>
+<text class="sub" x="117.5" y="224">user input</text>
+<rect class="node node-data" x="270" y="170" width="170" height="78" rx="14"/>
+<text class="label" x="355" y="205">spaCy</text>
+<text class="sub" x="355" y="224">sentence segmentation</text>
+<rect class="node node-ai" x="505" y="170" width="175" height="78" rx="14"/>
+<text class="label" x="592.5" y="205">T5 Model</text>
+<text class="sub" x="592.5" y="224">question generation</text>
+<rect class="node node-data" x="745" y="90" width="200" height="78" rx="14"/>
+<text class="label" x="845" y="125">Flashcard Pair</text>
+<text class="sub" x="845" y="144">question + source answer</text>
+<rect class="node node-data" x="745" y="260" width="200" height="78" rx="14"/>
+<text class="label" x="845" y="295">CSV Export</text>
+<text class="sub" x="845" y="314">downloadable cards</text>
+</svg>
+<p class="diagram-caption">The answer stays tied to the original sentence, which makes the generated cards easier to trace back to the study material.</p>
+</div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>Generation pipeline</h2>
+        <p>Each stage has a narrow responsibility, which keeps the application easy to inspect and extend.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Paste text</strong><p>User provides notes, a paragraph, or study material.</p></div><div class="flow-step"><span>02</span><strong>Segment</strong><p>spaCy splits the text into candidate source sentences.</p></div><div class="flow-step"><span>03</span><strong>Generate</strong><p>Fine-tuned T5 produces a question for a source sentence.</p></div><div class="flow-step"><span>04</span><strong>Pair</strong><p>Generated question is matched with the original source sentence as answer.</p></div><div class="flow-step"><span>05</span><strong>Export</strong><p>Pandas assembles the flashcards for CSV download.</p></div></div>
+      </section>
+
+      
+
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key engineering decisions</h2>
+        <ul><li><strong>Ground answers in source text</strong> — the model generates only the question, reducing unsupported answer generation.</li><li><strong>Use spaCy for structure</strong> — sentence boundaries are handled by a dedicated NLP library instead of relying on generation.</li><li><strong>Streamlit for iteration</strong> — a lightweight interface makes the NLP pipeline directly usable without building a separate frontend.</li><li><strong>CSV as an interoperability layer</strong> — generated study material can move into other tools instead of being trapped in the app.</li></ul>
+        
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Python</span><span>Streamlit</span><span>spaCy</span><span>Hugging Face Transformers</span><span>T5</span><span>Pandas</span><span>CSV</span></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
+  </footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
