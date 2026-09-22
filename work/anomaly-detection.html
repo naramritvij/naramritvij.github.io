@@ -1,65 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anomaly Detection for Video Surveillance — Case Study — Ritvij Naram</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anomaly Detection for Video Surveillance — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a Python desktop video anomaly detection application using OpenCV, Keras, Tkinter, and SQLite authentication.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
-<nav class="nav">
-  <div class="wrap">
-    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
-    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
-  </div>
-</nav>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
 
-<header class="case-hero">
-  <div class="wrap">
-    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / anomaly-detection.html</div>
-    <h1>Anomaly Detection for Video Surveillance</h1>
-    <div class="case-meta">commit 71dd3f0 · Keras CNN · OpenCV · Tkinter · SQLite</div>
-  </div>
-</header>
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / anomaly-detection</div>
+      <h1>Anomaly Detection for Video Surveillance</h1>
+      <p class="case-lede">A Python desktop application that authenticates users, reads MP4 surveillance video frame by frame, preprocesses each frame for a Keras CNN, and displays normal/anomalous classifications through a Tkinter interface.</p>
+      <div class="case-meta"><span>Python</span><span>Keras CNN</span><span>OpenCV</span><span>Tkinter</span><span>SQLite authentication</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://github.com/naramritvij/Anomaly-Detection-for-Video-Surveillance" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
 
-<main class="wrap case-body" style="padding:44px 0 80px;">
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Reduce manual video review to a focused classification pipeline.</h2>
+        <p>The project demonstrates an end-to-end desktop inference workflow: authenticated access, video selection, frame extraction, deterministic preprocessing, CNN classification, and real-time visual annotation.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>Frame-by-frame inference</strong><p>MP4 video is processed sequentially rather than uploaded to an external service.</p></div><div class="case-summary-card"><span>02</span><strong>64 × 64 grayscale input</strong><p>Frames are resized, converted to grayscale, normalized, and reshaped for the trained model.</p></div><div class="case-summary-card"><span>03</span><strong>Controlled access</strong><p>Registration and login are persisted in SQLite before the detection dashboard is available.</p></div></div>
+      </section>
 
-  <h2>The problem</h2>
-  <p>Reviewing surveillance footage for unusual events is almost entirely manual — someone either watches
-  it live or scrubs through hours of recording after the fact, and most of what they watch is nothing
-  happening.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>Authentication and inference are separate application paths.</h2>
+        <p>SQLite is used for user access, while OpenCV and Keras form the video-analysis path inside the desktop application.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge edge-accent" d="M 205 101 L 280 101"/>
+<text class="edge-label" x="242.5" y="93">validate</text>
+<path class="edge" d="M 205 321 L 280 321"/>
+<text class="edge-label" x="242.5" y="313">frames</text>
+<path class="edge" d="M 455 321 L 525 321"/>
+<text class="edge-label" x="490" y="313">64×64 tensor</text>
+<path class="edge edge-ai" d="M 700 321 L 770 321"/>
+<text class="edge-label" x="735" y="313">class + label</text>
+  <rect class="node node-user" x="35" y="65" width="170" height="72" rx="14"/>
+<text class="label" x="120" y="97">Register / Login</text>
+<text class="sub" x="120" y="116">Tkinter forms</text>
+<rect class="node node-data" x="280" y="65" width="175" height="72" rx="14"/>
+<text class="label" x="367.5" y="97">SQLite</text>
+<text class="sub" x="367.5" y="116">user credentials</text>
+<rect class="node node-user" x="35" y="285" width="170" height="72" rx="14"/>
+<text class="label" x="120" y="317">MP4 Video</text>
+<text class="sub" x="120" y="336">local file</text>
+<rect class="node" x="280" y="285" width="175" height="72" rx="14"/>
+<text class="label" x="367.5" y="317">OpenCV</text>
+<text class="sub" x="367.5" y="336">capture + preprocess</text>
+<rect class="node node-ai" x="525" y="285" width="175" height="72" rx="14"/>
+<text class="label" x="612.5" y="317">Keras CNN</text>
+<text class="sub" x="612.5" y="336">normal vs anomaly</text>
+<rect class="node node-data" x="770" y="285" width="180" height="72" rx="14"/>
+<text class="label" x="860" y="317">Tkinter View</text>
+<text class="sub" x="860" y="336">annotated playback</text>
+</svg>
+<p class="diagram-caption">The database does not store detection events in the current implementation; its role is user authentication. The inference pipeline remains file-based and local.</p>
+</div>
+      </section>
 
-  <h2>What I built</h2>
-  <p>A desktop anomaly-detection tool: a Keras CNN trained to distinguish normal from anomalous frames,
-  OpenCV handling the video capture and preprocessing pipeline, a Tkinter interface for loading a feed and
-  watching flags appear in real time, and a SQLite log recording every flagged event with a timestamp for
-  later review.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>Frame-level inference pipeline</h2>
+        <p>Every frame is transformed into the input shape expected by the saved Keras model.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Authenticate</strong><p>User registers or logs in before opening the detection dashboard.</p></div><div class="flow-step"><span>02</span><strong>Read frame</strong><p>OpenCV reads the selected MP4 one frame at a time.</p></div><div class="flow-step"><span>03</span><strong>Preprocess</strong><p>Resize to 64×64, convert to grayscale, normalize, and reshape.</p></div><div class="flow-step"><span>04</span><strong>Predict</strong><p>The saved CNN classifies the frame as normal or anomalous.</p></div><div class="flow-step"><span>05</span><strong>Annotate</strong><p>Frame number and detection label are drawn on the displayed video.</p></div></div>
+      </section>
 
-  <div class="arch-grid">
-    <div class="arch-box">Video feed<div class="sub">OpenCV capture</div></div>
-    <div class="arch-box">Keras CNN<div class="sub">frame classification</div></div>
-    <div class="arch-box">Tkinter UI<div class="sub">live view + flags</div></div>
-    <div class="arch-box">SQLite<div class="sub">event log</div></div>
-  </div>
+      
 
-  <h2>Design decisions</h2>
-  <ul>
-    <li><strong>Frame-level CNN over full video models</strong> — kept the model simple and fast enough to
-    run near real time on ordinary hardware, trading some temporal context for responsiveness.</li>
-    <li><strong>Logged, not just alerted</strong> — every flag is written to SQLite with a timestamp, so a
-    reviewer can go back and audit what was flagged and why, rather than trusting a one-time alert.</li>
-    <li><strong>Desktop-first</strong> — Tkinter was the right fit for a self-contained tool that needs no
-    server and can run directly against a local or IP camera feed.</li>
-  </ul>
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key engineering decisions</h2>
+        <ul><li><strong>Frame-level model</strong> — keeps the inference pipeline straightforward and computationally lighter than a temporal video model.</li><li><strong>Local desktop workflow</strong> — Tkinter and OpenCV allow direct file analysis without deploying an application server.</li><li><strong>Explicit preprocessing</strong> — the exact resize, grayscale, normalization, and reshape sequence makes model expectations transparent.</li><li><strong>SQLite only for access control</strong> — authentication state is persisted without adding an external database dependency.</li></ul>
+        <div class="case-callout"><span>current limitations</span><p>The repository notes missing background-image assets and a hardcoded model path that should be converted to a portable relative path. The classifier is frame-based, so it does not model temporal context across frames.</p></div>
+      </section>
 
-  <h2>Stack</h2>
-  <div class="tag-row" style="padding:0 0 24px;">
-    <span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Tkinter</span><span class="tag">SQLite</span><span class="tag">Python</span>
-  </div>
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Python 3.8+</span><span>Keras / TensorFlow</span><span>OpenCV</span><span>Tkinter / ttk</span><span>SQLite3</span><span>NumPy</span><span>Pillow</span></div>
+      </section>
+    </div>
+  </main>
 
-</main>
-
-<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
+  </footer>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
