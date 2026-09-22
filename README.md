@@ -1,53 +1,67 @@
 # Ritvij Naram — Portfolio
 
-Personal portfolio site. Deploy at `https://<your-username>.github.io` via GitHub Pages.
+Personal engineering portfolio for **Ritvij Naram**, published through GitHub Pages.
 
-Full-stack + data engineer working across Oracle SQL pipelines, FastAPI/React apps, and AI-assisted
-analytics tooling. The site is framed as a terminal/git session: the hero is a `whoami` prompt, each
-project is a "commit," and the career path is a literal `git log --graph`.
+## Portfolio direction
 
-## Case studies
+The site uses a developer-systems visual language rather than a generic template: terminal cues, repository-style project metadata, an animated network background, filtered project discovery, and subtle scroll/pointer transitions.
 
-- **CivicFlow AI** — FastAPI + Oracle DB + Gemini + React incident intelligence system.
-- **TTC Service Disruption & Passenger Impact DB** — a normalized Oracle schema with views, triggers, and a crow's-foot ERD.
-- **NeuralVerse** — a 20-chapter interactive deep learning visualizer.
-- **Anomaly Detection for Video Surveillance** — Keras CNN + OpenCV + Tkinter + SQLite.
+The content is structured for recruiters first:
+- flagship projects appear at the top;
+- public repositories are grouped by engineering theme;
+- case studies remain available for deeper technical context;
+- coursework/lab repositories are discoverable without competing with production-style projects.
+
+## Featured public projects
+
+- **Local Eco-Scanner** — Kotlin, Jetpack Compose, CameraX, Gemini; municipality-aware recycling guidance from a photo.
+- **CivicFlow AI** — FastAPI, Oracle, React, Gemini; AI-assisted transit incident intelligence.
+- **RNA — Ritvij Naram Assistant** — Node.js, Express, Ollama; private local AI assistant with tools and persistent memory.
+- **NeuralVerse** — React, TypeScript, Framer Motion; 20 interactive deep-learning visualizations.
+- **TTC Service Disruption System** — React, Node.js, Oracle; role-based disruption management and passenger notifications.
+- **Image Whisperer** — React, TypeScript, TensorFlow.js, MobileNet; fully client-side image recognition.
+- **AI Flashcard Generator** — Python, Streamlit, spaCy, T5; automatic study flashcard generation.
+- **Anomaly Detection for Video Surveillance** — Python, Keras, OpenCV, SQLite; desktop video anomaly detection.
+- **NOra University Chatbot** — Python, FAISS, Streamlit; PDF retrieval and local-generation chatbot scaffold.
+
+`INFO5100_Lab` is represented as coursework rather than a flagship project. The `expired-product-alert` repository currently contains no implementation beyond its license and is not presented as completed work.
+
+Private projects can be added to the portfolio from user-approved README/project descriptions without exposing private source code.
 
 ## Tech
 
-- Plain HTML, CSS, and vanilla JavaScript. No build step.
-- [three.js](https://threejs.org/) (loaded from a CDN) for the hero particle-network animation.
+- Plain HTML, CSS and vanilla JavaScript.
+- three.js loaded progressively from a CDN for the hero network.
+- No build step.
+- Responsive, keyboard-friendly, and reduced-motion aware.
 - Hosted on GitHub Pages.
-
-Everything is progressive: content renders instantly as HTML, and the three.js layer loads lazily and
-degrades gracefully under reduced-motion, no-WebGL, or low-power mobile.
 
 ## Structure
 
 ```
-index.html      landing page
-assets/         style.css, script.js, resume PDF
-work/           case-study pages
+index.html                     main portfolio
+assets/style.css               visual system and responsive layout
+assets/script.js               filters, transitions, navigation and hero animation
+assets/RitvijNaram_Resume.pdf  résumé
+work/                          detailed case studies
 ```
 
 ## Run locally
 
-It's a static site, so any local server works:
-
-```
+```bash
 python -m http.server 8000
-# then open http://localhost:8000
 ```
 
-## Deploy to GitHub Pages
+Then open `http://localhost:8000`.
 
-1. Push this repo to GitHub (e.g. `naramritvij/naramritvij.github.io` for a root-level user site, or any
-   repo name + enable Pages from the `main` branch in Settings → Pages).
-2. Wait for the `github-pages` deployment to go green under the repo's Deployments tab.
-3. Visit the URL GitHub gives you.
+## Deployment
+
+This repository is the root user-site repository, so GitHub Pages publishes it at:
+
+`https://naramritvij.github.io`
 
 ## Contact
 
-- Email: naram.r@northeastern.edu
-- Phone: 437-604-7804
 - GitHub: https://github.com/naramritvij
+- LinkedIn: https://www.linkedin.com/in/ritvij-naram/
+- Email: ritvijcan@gmail.com
