@@ -8,12 +8,30 @@
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelectorAll(".nav-links a");
 
+  const progressBar = document.querySelector(".scroll-progress span");
+  let scrollFrame = 0;
+
   const updateNav = () => {
-    if (!nav) return;
-    nav.classList.toggle("scrolled", window.scrollY > 18);
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 18);
+
+    if (progressBar) {
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+      progressBar.style.setProperty("--scroll-progress", progress.toFixed(4));
+    }
   };
+
+  const requestScrollUpdate = () => {
+    if (scrollFrame) return;
+    scrollFrame = requestAnimationFrame(() => {
+      updateNav();
+      scrollFrame = 0;
+    });
+  };
+
   updateNav();
-  window.addEventListener("scroll", updateNav, { passive: true });
+  window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+  window.addEventListener("resize", requestScrollUpdate, { passive: true });
 
   if (navToggle) {
     navToggle.addEventListener("click", () => {
@@ -44,6 +62,19 @@
   }
 
   /* reveal on scroll */
+  document.querySelectorAll(".section").forEach((section) => {
+    const items = [...section.querySelectorAll(".reveal")];
+    items.forEach((item, index) => {
+      const delay = Math.min(index, 7) * 55;
+      item.style.setProperty("--reveal-delay", delay + "ms");
+    });
+  });
+
+  const heroReveals = [...document.querySelectorAll(".hero .reveal")];
+  heroReveals.forEach((item, index) => {
+    item.style.setProperty("--reveal-delay", index * 90 + "ms");
+  });
+
   const reveals = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     reveals.forEach((el) => el.classList.add("is-visible"));
@@ -67,14 +98,34 @@
   const visibleCount = document.getElementById("visible-count");
 
   const applyFilter = (value) => {
-    let count = 0;
+    const shown = [];
+
     projects.forEach((card) => {
       const categories = (card.dataset.category || "").split(/\s+/);
       const show = value === "all" || categories.includes(value);
       card.classList.toggle("filtered-out", !show);
-      if (show) count += 1;
+      if (show) shown.push(card);
     });
-    if (visibleCount) visibleCount.textContent = String(count);
+
+    if (!reduceMotion) {
+      shown.forEach((card, index) => {
+        const animation = card.animate(
+          [
+            { opacity: 0, transform: "translateY(12px) scale(.988)" },
+            { opacity: 1, transform: "translateY(0) scale(1)" }
+          ],
+          {
+            duration: 380,
+            delay: Math.min(index, 8) * 38,
+            easing: "cubic-bezier(.16,1,.3,1)",
+            fill: "both"
+          }
+        );
+        animation.addEventListener("finish", () => animation.cancel(), { once: true });
+      });
+    }
+
+    if (visibleCount) visibleCount.textContent = String(shown.length);
   };
 
   filters.forEach((button) => {
@@ -85,15 +136,29 @@
     });
   });
 
-  /* subtle card perspective on pointer devices */
+  /* pointer depth + spotlight */
   if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    const spotlightSurfaces = [
+      ...document.querySelectorAll(".project-card, .stack-card, .proof-card, .about-shell")
+    ];
+
+    spotlightSurfaces.forEach((surface) => {
+      surface.addEventListener("pointermove", (event) => {
+        const rect = surface.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 100;
+        const y = ((event.clientY - rect.top) / rect.height) * 100;
+        surface.style.setProperty("--spot-x", x.toFixed(1) + "%");
+        surface.style.setProperty("--spot-y", y.toFixed(1) + "%");
+      });
+    });
+
     projects.forEach((card) => {
       card.addEventListener("pointermove", (event) => {
         const rect = card.getBoundingClientRect();
         const px = (event.clientX - rect.left) / rect.width - 0.5;
         const py = (event.clientY - rect.top) / rect.height - 0.5;
         card.style.transform =
-          "perspective(900px) rotateX(" + (-py * 2.2).toFixed(2) + "deg) rotateY(" + (px * 2.2).toFixed(2) + "deg) translateY(-6px)";
+          "perspective(1000px) rotateX(" + (-py * 1.8).toFixed(2) + "deg) rotateY(" + (px * 1.8).toFixed(2) + "deg) translateY(-6px)";
       });
       card.addEventListener("pointerleave", () => {
         card.style.transform = "";
@@ -102,7 +167,7 @@
   }
 
   /* active nav section */
-  const sectionIds = ["projects", "journey", "stack", "contact"];
+  const sectionIds = ["about", "projects", "journey", "stack", "contact"];
   const sectionLinks = new Map(
     [...navLinks]
       .map((link) => [link.getAttribute("href")?.replace("#", ""), link])
@@ -115,11 +180,11 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           sectionLinks.forEach((link, id) => {
-            link.style.color = id === entry.target.id ? "var(--text)" : "";
+            link.classList.toggle("active", id === entry.target.id);
           });
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.28, rootMargin: "-18% 0px -52% 0px" }
     );
     sectionIds.forEach((id) => {
       const section = document.getElementById(id);
