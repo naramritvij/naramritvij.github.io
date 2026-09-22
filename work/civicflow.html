@@ -95,14 +95,31 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / AI output</p>
+        <h2>The model returns structured operational fields, not a generic chat response.</h2>
+        <p>This makes the AI output easier to cache, review, display, and reuse inside an incident workflow.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>analysis_payload</strong><span>structured output schema</span></div>
+          <div class="schema-grid">
+            <div class="schema-field"><span>severity</span><strong>Operational priority classification</strong></div>
+            <div class="schema-field"><span>root_cause</span><strong>Likely contributing cause</strong></div>
+            <div class="schema-field"><span>recommended_actions</span><strong>Suggested response steps</strong></div>
+            <div class="schema-field"><span>passenger_message</span><strong>Public-facing communication</strong></div>
+            <div class="schema-field"><span>executive_summary</span><strong>Concise management view</strong></div>
+            <div class="schema-field"><span>confidence</span><strong>Model confidence indicator</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>API-owned orchestration</strong> — FastAPI keeps database access, model calls, caching, and usage rules out of the browser.</li><li><strong>Structured AI output</strong> — the model produces defined operational fields rather than unbounded prose.</li><li><strong>Caching and usage limits</strong> — repeated analysis can reuse prior results while limiting unnecessary external API calls.</li><li><strong>Relational system of record</strong> — AI enriches the workflow, but Oracle remains authoritative for incident data.</li></ul>
         
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Python</span><span>FastAPI</span><span>Oracle Database</span><span>React 19</span><span>TanStack</span><span>Tailwind</span><span>Google Gemini 2.5 Flash</span><span>REST APIs</span></div>
       </section>
