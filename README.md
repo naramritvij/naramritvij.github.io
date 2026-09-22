@@ -12,9 +12,9 @@ The content is structured for recruiters first:
 - case studies remain available for deeper technical context;
 - coursework/lab repositories are discoverable without competing with production-style projects.
 
-## Featured public projects
+## Featured projects
 
-- **Local Eco-Scanner** — Kotlin, Jetpack Compose, CameraX, Gemini; municipality-aware recycling guidance from a photo.
+- **Local Eco-Scanner** — Kotlin, Jetpack Compose, CameraX, Gemini; municipality-aware recycling guidance from a photo.\n- **Pitch Predictor — FIFA World Cup 2026** *(private source, public live deployment)* — JavaScript, Firebase Firestore, GitHub Actions, Netlify and API-Football; realtime campus prediction game with automated result ingestion and leaderboard updates.
 - **CivicFlow AI** — FastAPI, Oracle, React, Gemini; AI-assisted transit incident intelligence.
 - **RNA — Ritvij Naram Assistant** — Node.js, Express, Ollama; private local AI assistant with tools and persistent memory.
 - **NeuralVerse** — React, TypeScript, Framer Motion; 20 interactive deep-learning visualizations.

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitch Predictor — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Case study for Pitch Predictor, Ritvij Naram's realtime FIFA World Cup 2026 campus prediction game.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top" aria-label="Ritvij Naram home">
+        <span class="brand-mark">&gt;_</span>
+        <span>ritvij<span class="brand-dot">.</span>naram</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">← Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / pitch-predictor</div>
+      <h1>Pitch Predictor — FIFA World Cup 2026</h1>
+      <div class="case-meta">Private source · Live deployment · JavaScript · Firestore · GitHub Actions · Netlify</div>
+      <div class="hero-actions" style="margin-top:24px;">
+        <a class="btn btn-primary" href="https://pitch-predictor-neu.netlify.app" target="_blank" rel="noopener">Open live experience ↗</a>
+        <span class="btn" style="cursor:default;">Source repository private</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap case-body">
+    <h2>The idea</h2>
+    <p>
+      Pitch Predictor turns the FIFA World Cup 2026 into a campus-wide participation game. Students scan a QR
+      code from university screens, enter the experience without installing an app, predict Home / Draw / Away
+      results before kickoff, and compete on a leaderboard that updates after matches finish.
+    </p>
+    <p>
+      The engineering goal was not just to build a prediction form. The system needed to stay online continuously,
+      synchronize phones and public displays in realtime, close predictions exactly at kickoff, ingest final results
+      automatically, and operate without a traditional application server that needed monitoring.
+    </p>
+
+    <h2>System architecture</h2>
+    <div class="arch-grid">
+      <div class="arch-box">Student phones<div class="sub">QR onboarding + predictions</div></div>
+      <div class="arch-box">Campus display<div class="sub">kiosk QR + live leaders</div></div>
+      <div class="arch-box">Static web app<div class="sub">HTML / CSS / JavaScript on Netlify</div></div>
+      <div class="arch-box">Firestore<div class="sub">realtime players, picks and results</div></div>
+      <div class="arch-box">GitHub Actions<div class="sub">scheduled every 15 minutes</div></div>
+      <div class="arch-box">API-Football<div class="sub">finished match results</div></div>
+    </div>
+
+    <h2>How the automation works</h2>
+    <p>
+      Predictions are editable only before kickoff. Once a match starts, the UI locks that fixture. A scheduled
+      GitHub Actions workflow runs a Node.js results bot every 15 minutes. The bot checks matches that are awaiting
+      a result, requests final scores from API-Football, and writes the winner to Firestore. Realtime listeners then
+      propagate the update to connected phones and campus displays, where points, streaks and leaderboard ordering
+      recalculate automatically.
+    </p>
+
+    <pre>student pick
+    ↓
+kickoff → prediction locks
+    ↓
+full time
+    ↓
+GitHub Actions → fetch-results.mjs → API-Football
+    ↓
+winner written to Firestore
+    ↓
+realtime listeners update every client
+    ↓
+points + streak + leaderboard + celebration</pre>
+
+    <h2>Product features</h2>
+    <ul>
+      <li><strong>QR-first onboarding</strong> — a student can move from a campus screen to the prediction experience without an app install.</li>
+      <li><strong>Kickoff-aware locking</strong> — predictions automatically close to the second when the match begins.</li>
+      <li><strong>Realtime leaderboard</strong> — total correct picks, current streak, best streak and accuracy drive the ranking.</li>
+      <li><strong>Automatic results</strong> — no administrator needs to manually enter every finished match.</li>
+      <li><strong>Track record</strong> — each participant can see which matches they predicted correctly.</li>
+      <li><strong>Display mode</strong> — a projector-friendly interface keeps the QR code and top predictors visible on campus screens.</li>
+      <li><strong>Staff controls</strong> — passcode-gated controls manage fixtures, people, results and settings.</li>
+    </ul>
+
+    <h2>Engineering decisions</h2>
+    <ul>
+      <li>
+        <strong>Static frontend instead of a permanent web server.</strong> The core experience is a single browser application,
+        which keeps deployment simple and removes server maintenance from the operational model.
+      </li>
+      <li>
+        <strong>Firestore for synchronization.</strong> Realtime listeners let student phones and public displays react to the same
+        state changes without building custom websocket infrastructure.
+      </li>
+      <li>
+        <strong>GitHub Actions as scheduled backend automation.</strong> A cron-triggered Node.js job handles result ingestion while
+        keeping the main application serverless from an operations perspective.
+      </li>
+      <li>
+        <strong>Quota-aware external API usage.</strong> The bot only requests football data when a match is actually waiting for a
+        result, minimizing unnecessary calls and keeping the design suitable for free-tier infrastructure.
+      </li>
+      <li>
+        <strong>Game mechanics separated from participation.</strong> Skipping a match does not break a streak; only an incorrect
+        prediction does, making the scoring model less punitive for occasional participants.
+      </li>
+    </ul>
+
+    <h2>Scoring model</h2>
+    <p>
+      A correct Home / Draw / Away prediction earns one point after full time. Ranking prioritizes total correct picks,
+      then best streak, then accuracy. Current and best streaks are tracked independently so the leaderboard captures
+      both consistent participation and standout prediction runs.
+    </p>
+
+    <h2>Deployment model</h2>
+    <p>
+      The project combines Netlify hosting, Firebase Firestore, GitHub Actions and API-Football. The application is
+      designed to remain available even when the development machine is offline, which was important for an always-on
+      campus-screen experience.
+    </p>
+
+    <h2>Stack</h2>
+    <div class="tags" style="padding-top:0;margin-top:0;">
+      <span>Vanilla JavaScript</span>
+      <span>HTML / CSS</span>
+      <span>Firebase Firestore</span>
+      <span>Node.js</span>
+      <span>firebase-admin</span>
+      <span>GitHub Actions</span>
+      <span>Netlify</span>
+      <span>API-Football</span>
+      <span>QRCode</span>
+    </div>
+
+    <h2>Project status</h2>
+    <p>
+      The group-stage experience includes the full 72-match fixture set, automated result retrieval, streaks,
+      celebrations and participant history. The roadmap includes dynamically adding knockout rounds as the tournament
+      bracket is decided, plus optional audience-specific leaderboard views and push notifications.
+    </p>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Ritvij Naram</span>
+      <span>Pitch Predictor case study</span>
+      <a href="../index.html#projects">Back to projects ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
