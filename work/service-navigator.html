@@ -4,164 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Navigator — Case Study — Ritvij Naram</title>
-  <meta name="description" content="UX research and product design case study for Service Navigator, a guided settlement experience for newcomers to Canada.">
+  <meta name="description" content="UX research and product design case study for a newcomer settlement guide in Canada.">
+  <meta name="theme-color" content="#080c14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body class="case-page">
   <div class="page-noise" aria-hidden="true"></div>
-
   <nav class="nav scrolled" aria-label="Primary navigation">
     <div class="wrap nav-inner">
-      <a class="brand" href="../index.html#top" aria-label="Ritvij Naram home">
-        <span class="brand-mark">&gt;_</span>
-        <span>ritvij<span class="brand-dot">.</span>naram</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="../index.html#projects">← Projects</a></li>
-      </ul>
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
   </nav>
 
   <header class="case-hero">
     <div class="wrap">
       <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / service-navigator</div>
       <h1>Service Navigator</h1>
-      <div class="case-meta">UX Research · Product Design · Figma · Moderated Usability Testing · Spring 2026</div>
-      <div class="hero-actions" style="margin-top:24px;">
-        <a class="btn btn-primary" href="https://ritvij-service-nav-portfolio.lovable.app" target="_blank" rel="noopener">View live case study ↗</a>
-        <span class="btn" style="cursor:default;">Solo UX Designer &amp; Researcher</span>
-      </div>
+      <p class="case-lede">A research-led newcomer settlement experience that turns fragmented SIN, OHIP, banking, housing, and tax tasks into guided workflows with preparation, warnings, progress cues, and clear next steps.</p>
+      <div class="case-meta"><span>UX Research</span><span>Product Design</span><span>Figma</span><span>5 participants</span><span>25 task attempts</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://ritvij-service-nav-portfolio.lovable.app" target="_blank" rel="noopener">Live case study ↗</a></div>
     </div>
   </header>
 
   <main class="wrap case-body">
-    <h2>The problem</h2>
-    <p>
-      Newcomers to Canada often have to complete essential settlement tasks across separate government,
-      financial and housing systems while learning unfamiliar terminology at the same time. For someone
-      completing these processes for the first time, fragmentation and fear of making a mistake can make
-      straightforward administrative tasks feel much harder than they need to be.
-    </p>
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Design trust into high-stakes first-time tasks.</h2>
+        <p>Newcomers often navigate unfamiliar terminology and disconnected services while worrying that a mistake may have legal or financial consequences. Service Navigator was designed to reduce that uncertainty by making each task sequential, explicit, and predictable.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>96% task completion</strong><p>24 of 25 observed task attempts were completed in the moderated study.</p></div><div class="case-summary-card"><span>02</span><strong>9.6 / 10 usability</strong><p>Reported usability score across the five study participants.</p></div><div class="case-summary-card"><span>03</span><strong>4% observed error rate</strong><p>One task failure surfaced a step-tracker perception problem that informed redesign priorities.</p></div></div>
+      </section>
 
-    <h2>The product</h2>
-    <p>
-      Service Navigator is a guided web experience designed around five high-priority newcomer tasks:
-      obtaining a Social Insurance Number, registering for OHIP, opening a bank account, searching for housing,
-      and understanding first-time tax filing. Instead of sending users into a collection of disconnected resources,
-      the experience turns each task into a structured workflow with preparation guidance, warnings, progress cues,
-      and a clear explanation of what happens next.
-    </p>
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>Information architecture organized around the newcomer journey.</h2>
+        <p>Rather than mirroring the structure of government websites, the experience starts from the newcomer’s goals and routes each goal through the same preparation → guided action → confirmation pattern.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge" d="M 205 209 L 275 209"/>
+<text class="edge-label" x="240" y="201">choose goal</text>
+<path class="edge" d="M 445 209 L 515 69"/>
+<path class="edge" d="M 445 209 L 515 149"/>
+<path class="edge" d="M 445 209 L 515 229"/>
+<path class="edge" d="M 445 209 L 515 309"/>
+<path class="edge" d="M 445 209 L 515 382"/>
+<path class="edge" d="M 680 229 L 755 209"/>
+<text class="edge-label" x="717.5" y="211">consistent UX</text>
+  <rect class="node node-user" x="40" y="170" width="165" height="78" rx="14"/>
+<text class="label" x="122.5" y="205">Newcomer</text>
+<text class="sub" x="122.5" y="224">first-time user</text>
+<rect class="node" x="275" y="170" width="170" height="78" rx="14"/>
+<text class="label" x="360" y="205">Navigator Home</text>
+<text class="sub" x="360" y="224">5 priority tasks</text>
+<rect class="node node-data" x="515" y="35" width="165" height="68" rx="14"/>
+<text class="label" x="597.5" y="65">SIN</text>
+<text class="sub" x="597.5" y="84">work eligibility</text>
+<rect class="node node-data" x="515" y="115" width="165" height="68" rx="14"/>
+<text class="label" x="597.5" y="145">OHIP</text>
+<text class="sub" x="597.5" y="164">health coverage</text>
+<rect class="node node-data" x="515" y="195" width="165" height="68" rx="14"/>
+<text class="label" x="597.5" y="225">Banking</text>
+<text class="sub" x="597.5" y="244">newcomer account</text>
+<rect class="node node-data" x="515" y="275" width="165" height="68" rx="14"/>
+<text class="label" x="597.5" y="305">Housing</text>
+<text class="sub" x="597.5" y="324">search + scam safety</text>
+<rect class="node node-data" x="515" y="355" width="165" height="55" rx="14"/>
+<text class="label" x="597.5" y="378.5">Taxes</text>
+<text class="sub" x="597.5" y="397.5">first-time filing</text>
+<rect class="node node-ai" x="755" y="170" width="200" height="78" rx="14"/>
+<text class="label" x="855" y="205">Guided Pattern</text>
+<text class="sub" x="855" y="224">prepare → act → confirm</text>
+</svg>
+<p class="diagram-caption">The system is consistent by design: each task can differ in content while preserving the same mental model for documents, warnings, progress, and completion.</p>
+</div>
+      </section>
 
-    <div class="arch-grid">
-      <div class="arch-box">SIN<div class="sub">documents + guided application steps</div></div>
-      <div class="arch-box">OHIP<div class="sub">eligibility + registration guidance</div></div>
-      <div class="arch-box">Banking<div class="sub">comparison + newcomer account flow</div></div>
-      <div class="arch-box">Housing<div class="sub">search guidance + scam awareness</div></div>
-      <div class="arch-box">Taxes<div class="sub">first-time filing orientation</div></div>
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>Research-to-redesign process</h2>
+        <p>The project moved from requirements and early evaluation into moderated observation, then used the findings to prioritize changes.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Research</strong><p>Background interviews, persona, journey, PRD, and success metrics.</p></div><div class="flow-step"><span>02</span><strong>Walkthrough</strong><p>Low-fidelity flows evaluated before high-fidelity design.</p></div><div class="flow-step"><span>03</span><strong>Prototype</strong><p>Step trackers, checklists, warnings, eligibility, filters, and comparisons.</p></div><div class="flow-step"><span>04</span><strong>Moderated test</strong><p>5 participants × 5 tasks = 25 observed task attempts.</p></div><div class="flow-step"><span>05</span><strong>Refine</strong><p>Translate observed confusion into specific redesign priorities.</p></div></div>
+      </section>
+
+      <section class="case-section reveal">
+<p class="case-kicker">04 / validation</p>
+<h2>Usability results, shown in context.</h2>
+<p>The metrics below describe the five-participant moderated study, not production-scale usage.</p>
+<div class="metric-visual">
+  <div class="metric-panel">
+    <h3>Observed study metrics</h3>
+    <div class="bar-row"><span class="bar-label">Task completion</span><div class="bar-track"><div class="bar-fill" style="--value:96%"></div></div><span class="bar-value">96%</span></div>
+    <div class="bar-row"><span class="bar-label">Satisfaction</span><div class="bar-track"><div class="bar-fill" style="--value:99.2%"></div></div><span class="bar-value">99.2%</span></div>
+    <div class="bar-row"><span class="bar-label">Repeat-use intent</span><div class="bar-track"><div class="bar-fill" style="--value:100%"></div></div><span class="bar-value">100%</span></div>
+    <div class="bar-row"><span class="bar-label">Observed error rate</span><div class="bar-track"><div class="bar-fill" style="--value:4%"></div></div><span class="bar-value">4%</span></div>
+    <p class="metric-note">25 total task attempts · 24 completed · 5 participants.</p>
+  </div>
+  <div class="metric-panel">
+    <h3>What observation revealed</h3>
+    <div class="insight-list">
+      <div class="insight"><span>HIGH</span><strong>Housing progress cues</strong><p>Checkmarks implied that steps were already complete and caused the only task failure.</p></div>
+      <div class="insight"><span>MEDIUM</span><strong>Tax hierarchy</strong><p>Required items visually resembled optional content.</p></div>
+      <div class="insight"><span>MEDIUM</span><strong>Bank filters</strong><p>Multi-select behavior was not communicated clearly enough.</p></div>
     </div>
+  </div>
+</div>
+</section>
 
-    <h2>My role</h2>
-    <p>
-      I worked as the solo UX designer and researcher, taking the project from problem framing through
-      evaluation and refinement. My work included the product requirements document, user research,
-      persona and journey development, low-fidelity flows, cognitive walkthroughs, high-fidelity prototyping,
-      moderated usability testing, findings synthesis, prioritization, and final documentation.
-    </p>
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
+        <h2>Product decisions supported by research</h2>
+        <ul><li><strong>Tunnel, don’t sprawl</strong> — one clear next action per screen reduces decision load for first-time, anxious users.</li><li><strong>Prepare before proceeding</strong> — documents and prerequisites appear before the user begins an application flow.</li><li><strong>Warn early and consistently</strong> — risk and scam guidance uses a repeatable visual language rather than appearing as one-off notices.</li><li><strong>Confirm and close</strong> — every task ends with a clear explanation of what happens next.</li></ul>
+        <div class="case-callout"><span>research lesson</span><p>AI-assisted evaluation helped structure data and find logical gaps, but moderated observation exposed the housing step-tracker failure immediately. The project reinforced that human perception cannot be inferred reliably from a logically correct flow.</p></div>
+      </section>
 
-    <h2>Research and design process</h2>
-    <div class="arch-grid">
-      <div class="arch-box">01 · Research<div class="sub">interviews · PRD · success metrics</div></div>
-      <div class="arch-box">02 · Structure<div class="sub">wireframes · cognitive walkthrough</div></div>
-      <div class="arch-box">03 · Prototype<div class="sub">guided flows · checklists · warnings</div></div>
-      <div class="arch-box">04 · Test<div class="sub">5 participants · 25 task attempts</div></div>
-      <div class="arch-box">05 · Refine<div class="sub">findings · fixes · documentation</div></div>
+      <section class="case-section reveal">
+        <p class="case-kicker">06 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Figma</span><span>Moderated Think-Aloud</span><span>Cognitive Walkthrough</span><span>UX Research</span><span>Claude</span><span>Otter.ai</span><span>Fireflies AI</span><span>React / Tailwind prototype</span></div>
+      </section>
     </div>
-
-    <h2>Core design principles</h2>
-    <ul>
-      <li><strong>Tunnel, don’t sprawl.</strong> Each screen should make the next action obvious and introduce choices only when a real decision is required.</li>
-      <li><strong>Prepare before you proceed.</strong> Required documents and prerequisites appear before an application flow begins rather than halfway through it.</li>
-      <li><strong>Warn early and consistently.</strong> Risk, scam and safety guidance uses a consistent visual language so users learn what to pay attention to.</li>
-      <li><strong>Confirm and close.</strong> Every workflow ends by explaining what happens next, reducing uncertainty after task completion.</li>
-    </ul>
-
-    <h2>Usability validation</h2>
-    <p>
-      The high-fidelity prototype was evaluated through five moderated think-aloud sessions. Each participant
-      attempted five settlement tasks, producing 25 observed task attempts in total. These metrics describe that
-      study sample rather than large-scale production usage.
-    </p>
-
-    <div class="arch-grid">
-      <div class="arch-box">96%<div class="sub">task completion · 24/25 attempts</div></div>
-      <div class="arch-box">9.6 / 10<div class="sub">reported usability</div></div>
-      <div class="arch-box">99.2%<div class="sub">user satisfaction · 4.96/5</div></div>
-      <div class="arch-box">4%<div class="sub">observed task error rate</div></div>
-      <div class="arch-box">100%<div class="sub">repeat-usage intent · 5/5</div></div>
-      <div class="arch-box">0%<div class="sub">observed drop-off</div></div>
-    </div>
-
-    <h2>What the testing uncovered</h2>
-    <p>
-      The most important result was not the aggregate score; it was identifying where the interface could still
-      mislead someone. A housing step tracker used checkmarks in a way that one participant interpreted as
-      “already completed,” producing the only failed task in the test. Other sessions surfaced subtler issues:
-      required tax items visually resembling optional content, unclear bank-filter multi-select behavior, an OHIP
-      guidance note that looked optional, and inconsistent visual treatment across some flows.
-    </p>
-    <p>
-      Those findings became redesign priorities rather than being hidden behind the strong overall metrics.
-      The exercise reinforced that a logically correct interface can still fail when the user interprets a visual
-      cue differently from what the designer intended.
-    </p>
-
-    <h2>AI-assisted research workflow</h2>
-    <p>
-      AI tools supported parts of the research workflow rather than replacing user testing. Otter.ai and Fireflies
-      were used for transcription, while Claude helped structure testing data, generate draft debrief questions,
-      calculate aggregate metrics, and synthesize project documents. Domain-specific terms still required manual
-      transcript correction, and human review was necessary to distinguish literal task completion from confident,
-      low-friction completion.
-    </p>
-
-    <h2>What I learned</h2>
-    <ul>
-      <li><strong>Reducing choice can be a service.</strong> For anxious first-time users, unnecessary optionality creates extra failure points.</li>
-      <li><strong>Task completion is not the end of the experience.</strong> “What happens next?” guidance can determine whether a user leaves confident or uncertain.</li>
-      <li><strong>Human testing reveals perceptual failures that automated review misses.</strong> The housing step-tracker issue appeared immediately in observation even though the flow was logically sound.</li>
-      <li><strong>Design should assume the user has no informal support network.</strong> The strongest guidance works without requiring a friend, forum, or tutorial to fill in missing context.</li>
-    </ul>
-
-    <h2>Tools</h2>
-    <div class="tags" style="padding-top:0;margin-top:0;">
-      <span>Figma</span>
-      <span>UX Research</span>
-      <span>Cognitive Walkthrough</span>
-      <span>Moderated Think-Aloud</span>
-      <span>Claude</span>
-      <span>Otter.ai</span>
-      <span>Fireflies AI</span>
-      <span>React / Tailwind prototype</span>
-    </div>
-
-    <h2>Context</h2>
-    <p>
-      Service Navigator was completed at Northeastern University Toronto during Spring 2026 for
-      INFO 7375 — User Experience Design in the Era of Generative AI. The project is presented here as a
-      product and research case study; personal student identifiers and participant names are intentionally
-      excluded from the public portfolio.
-    </p>
   </main>
 
   <footer>
-    <div class="wrap footer-inner">
-      <span>© 2026 Ritvij Naram</span>
-      <span>Service Navigator case study</span>
-      <a href="../index.html#projects">Back to projects ↑</a>
-    </div>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
   </footer>
+  <script src="../assets/script.js"></script>
 </body>
 </html>

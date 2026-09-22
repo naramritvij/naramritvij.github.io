@@ -9,7 +9,7 @@ The site uses a developer-systems visual language rather than a generic template
 The content is structured for recruiters first:
 - flagship projects appear at the top;
 - public repositories are grouped by engineering theme;
-- case studies remain available for deeper technical context;
+- every selected project includes a visual case study with architecture/data-flow diagrams;
 - coursework/lab repositories are discoverable without competing with production-style projects.
 
 ## Featured projects
@@ -24,8 +24,6 @@ The content is structured for recruiters first:
 - **AI Flashcard Generator** — Python, Streamlit, spaCy, T5; automatic study flashcard generation.
 - **Anomaly Detection for Video Surveillance** — Python, Keras, OpenCV, SQLite; desktop video anomaly detection.
 - **NOra University Chatbot** — Python, FAISS, Streamlit; PDF retrieval and local-generation chatbot scaffold.
-
-`INFO5100_Lab` is represented as coursework rather than a flagship project. The `expired-product-alert` repository currently contains no implementation beyond its license and is not presented as completed work.
 
 Private projects can be added to the portfolio from user-approved README/project descriptions without exposing private source code.
 
@@ -44,7 +42,7 @@ index.html                     main portfolio
 assets/style.css               visual system and responsive layout
 assets/script.js               filters, transitions, navigation and hero animation
 assets/RitvijNaram_Resume.pdf  résumé
-work/                          detailed case studies
+work/                          visual architecture + project case studies
 ```
 
 ## Run locally
