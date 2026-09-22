@@ -96,14 +96,30 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / model input</p>
+        <h2>The model sees a normalized grayscale tensor, not the raw video frame.</h2>
+        <p>This simplified visual represents the preprocessing contract before each frame reaches the CNN.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>frame_tensor</strong><span>64 × 64 × 1 input</span></div>
+          <div class="tensor-visual">
+            <div class="pixel-grid">
+              <i style="--shade:0.08"></i><i style="--shade:0.25"></i><i style="--shade:0.42"></i><i style="--shade:0.59"></i><i style="--shade:0.76"></i><i style="--shade:0.23"></i><i style="--shade:0.40"></i><i style="--shade:0.57"></i><i style="--shade:0.74"></i><i style="--shade:0.21"></i><i style="--shade:0.38"></i><i style="--shade:0.55"></i><i style="--shade:0.72"></i><i style="--shade:0.19"></i><i style="--shade:0.36"></i><i style="--shade:0.53"></i><i style="--shade:0.70"></i><i style="--shade:0.17"></i><i style="--shade:0.34"></i><i style="--shade:0.51"></i><i style="--shade:0.68"></i><i style="--shade:0.15"></i><i style="--shade:0.32"></i><i style="--shade:0.49"></i><i style="--shade:0.66"></i><i style="--shade:0.13"></i><i style="--shade:0.30"></i><i style="--shade:0.47"></i><i style="--shade:0.64"></i><i style="--shade:0.11"></i><i style="--shade:0.28"></i><i style="--shade:0.45"></i><i style="--shade:0.62"></i><i style="--shade:0.09"></i><i style="--shade:0.26"></i><i style="--shade:0.43"></i><i style="--shade:0.60"></i><i style="--shade:0.77"></i><i style="--shade:0.24"></i><i style="--shade:0.41"></i><i style="--shade:0.58"></i><i style="--shade:0.75"></i><i style="--shade:0.22"></i><i style="--shade:0.39"></i><i style="--shade:0.56"></i><i style="--shade:0.73"></i><i style="--shade:0.20"></i><i style="--shade:0.37"></i><i style="--shade:0.54"></i><i style="--shade:0.71"></i><i style="--shade:0.18"></i><i style="--shade:0.35"></i><i style="--shade:0.52"></i><i style="--shade:0.69"></i><i style="--shade:0.16"></i><i style="--shade:0.33"></i><i style="--shade:0.50"></i><i style="--shade:0.67"></i><i style="--shade:0.14"></i><i style="--shade:0.31"></i><i style="--shade:0.48"></i><i style="--shade:0.65"></i><i style="--shade:0.12"></i><i style="--shade:0.29"></i>
+            </div>
+            <div class="transform-arrow">→</div>
+            <div class="decision-panel"><span>CNN decision</span><strong>Binary frame classification</strong><p>prediction &lt; 0.5 → anomaly<br>prediction ≥ 0.5 → normal</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>Frame-level model</strong> — keeps the inference pipeline straightforward and computationally lighter than a temporal video model.</li><li><strong>Local desktop workflow</strong> — Tkinter and OpenCV allow direct file analysis without deploying an application server.</li><li><strong>Explicit preprocessing</strong> — the exact resize, grayscale, normalization, and reshape sequence makes model expectations transparent.</li><li><strong>SQLite only for access control</strong> — authentication state is persisted without adding an external database dependency.</li></ul>
         <div class="case-callout"><span>current limitations</span><p>The repository notes missing background-image assets and a hardcoded model path that should be converted to a portable relative path. The classifier is frame-based, so it does not model temporal context across frames.</p></div>
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Python 3.8+</span><span>Keras / TensorFlow</span><span>OpenCV</span><span>Tkinter / ttk</span><span>SQLite3</span><span>NumPy</span><span>Pillow</span></div>
       </section>
