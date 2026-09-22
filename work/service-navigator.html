@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Navigator — Case Study — Ritvij Naram</title>
+  <meta name="description" content="UX research and product design case study for Service Navigator, a guided settlement experience for newcomers to Canada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top" aria-label="Ritvij Naram home">
+        <span class="brand-mark">&gt;_</span>
+        <span>ritvij<span class="brand-dot">.</span>naram</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#projects">← Projects</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / service-navigator</div>
+      <h1>Service Navigator</h1>
+      <div class="case-meta">UX Research · Product Design · Figma · Moderated Usability Testing · Spring 2026</div>
+      <div class="hero-actions" style="margin-top:24px;">
+        <a class="btn btn-primary" href="https://ritvij-service-nav-portfolio.lovable.app" target="_blank" rel="noopener">View live case study ↗</a>
+        <span class="btn" style="cursor:default;">Solo UX Designer &amp; Researcher</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap case-body">
+    <h2>The problem</h2>
+    <p>
+      Newcomers to Canada often have to complete essential settlement tasks across separate government,
+      financial and housing systems while learning unfamiliar terminology at the same time. For someone
+      completing these processes for the first time, fragmentation and fear of making a mistake can make
+      straightforward administrative tasks feel much harder than they need to be.
+    </p>
+
+    <h2>The product</h2>
+    <p>
+      Service Navigator is a guided web experience designed around five high-priority newcomer tasks:
+      obtaining a Social Insurance Number, registering for OHIP, opening a bank account, searching for housing,
+      and understanding first-time tax filing. Instead of sending users into a collection of disconnected resources,
+      the experience turns each task into a structured workflow with preparation guidance, warnings, progress cues,
+      and a clear explanation of what happens next.
+    </p>
+
+    <div class="arch-grid">
+      <div class="arch-box">SIN<div class="sub">documents + guided application steps</div></div>
+      <div class="arch-box">OHIP<div class="sub">eligibility + registration guidance</div></div>
+      <div class="arch-box">Banking<div class="sub">comparison + newcomer account flow</div></div>
+      <div class="arch-box">Housing<div class="sub">search guidance + scam awareness</div></div>
+      <div class="arch-box">Taxes<div class="sub">first-time filing orientation</div></div>
+    </div>
+
+    <h2>My role</h2>
+    <p>
+      I worked as the solo UX designer and researcher, taking the project from problem framing through
+      evaluation and refinement. My work included the product requirements document, user research,
+      persona and journey development, low-fidelity flows, cognitive walkthroughs, high-fidelity prototyping,
+      moderated usability testing, findings synthesis, prioritization, and final documentation.
+    </p>
+
+    <h2>Research and design process</h2>
+    <div class="arch-grid">
+      <div class="arch-box">01 · Research<div class="sub">interviews · PRD · success metrics</div></div>
+      <div class="arch-box">02 · Structure<div class="sub">wireframes · cognitive walkthrough</div></div>
+      <div class="arch-box">03 · Prototype<div class="sub">guided flows · checklists · warnings</div></div>
+      <div class="arch-box">04 · Test<div class="sub">5 participants · 25 task attempts</div></div>
+      <div class="arch-box">05 · Refine<div class="sub">findings · fixes · documentation</div></div>
+    </div>
+
+    <h2>Core design principles</h2>
+    <ul>
+      <li><strong>Tunnel, don’t sprawl.</strong> Each screen should make the next action obvious and introduce choices only when a real decision is required.</li>
+      <li><strong>Prepare before you proceed.</strong> Required documents and prerequisites appear before an application flow begins rather than halfway through it.</li>
+      <li><strong>Warn early and consistently.</strong> Risk, scam and safety guidance uses a consistent visual language so users learn what to pay attention to.</li>
+      <li><strong>Confirm and close.</strong> Every workflow ends by explaining what happens next, reducing uncertainty after task completion.</li>
+    </ul>
+
+    <h2>Usability validation</h2>
+    <p>
+      The high-fidelity prototype was evaluated through five moderated think-aloud sessions. Each participant
+      attempted five settlement tasks, producing 25 observed task attempts in total. These metrics describe that
+      study sample rather than large-scale production usage.
+    </p>
+
+    <div class="arch-grid">
+      <div class="arch-box">96%<div class="sub">task completion · 24/25 attempts</div></div>
+      <div class="arch-box">9.6 / 10<div class="sub">reported usability</div></div>
+      <div class="arch-box">99.2%<div class="sub">user satisfaction · 4.96/5</div></div>
+      <div class="arch-box">4%<div class="sub">observed task error rate</div></div>
+      <div class="arch-box">100%<div class="sub">repeat-usage intent · 5/5</div></div>
+      <div class="arch-box">0%<div class="sub">observed drop-off</div></div>
+    </div>
+
+    <h2>What the testing uncovered</h2>
+    <p>
+      The most important result was not the aggregate score; it was identifying where the interface could still
+      mislead someone. A housing step tracker used checkmarks in a way that one participant interpreted as
+      “already completed,” producing the only failed task in the test. Other sessions surfaced subtler issues:
+      required tax items visually resembling optional content, unclear bank-filter multi-select behavior, an OHIP
+      guidance note that looked optional, and inconsistent visual treatment across some flows.
+    </p>
+    <p>
+      Those findings became redesign priorities rather than being hidden behind the strong overall metrics.
+      The exercise reinforced that a logically correct interface can still fail when the user interprets a visual
+      cue differently from what the designer intended.
+    </p>
+
+    <h2>AI-assisted research workflow</h2>
+    <p>
+      AI tools supported parts of the research workflow rather than replacing user testing. Otter.ai and Fireflies
+      were used for transcription, while Claude helped structure testing data, generate draft debrief questions,
+      calculate aggregate metrics, and synthesize project documents. Domain-specific terms still required manual
+      transcript correction, and human review was necessary to distinguish literal task completion from confident,
+      low-friction completion.
+    </p>
+
+    <h2>What I learned</h2>
+    <ul>
+      <li><strong>Reducing choice can be a service.</strong> For anxious first-time users, unnecessary optionality creates extra failure points.</li>
+      <li><strong>Task completion is not the end of the experience.</strong> “What happens next?” guidance can determine whether a user leaves confident or uncertain.</li>
+      <li><strong>Human testing reveals perceptual failures that automated review misses.</strong> The housing step-tracker issue appeared immediately in observation even though the flow was logically sound.</li>
+      <li><strong>Design should assume the user has no informal support network.</strong> The strongest guidance works without requiring a friend, forum, or tutorial to fill in missing context.</li>
+    </ul>
+
+    <h2>Tools</h2>
+    <div class="tags" style="padding-top:0;margin-top:0;">
+      <span>Figma</span>
+      <span>UX Research</span>
+      <span>Cognitive Walkthrough</span>
+      <span>Moderated Think-Aloud</span>
+      <span>Claude</span>
+      <span>Otter.ai</span>
+      <span>Fireflies AI</span>
+      <span>React / Tailwind prototype</span>
+    </div>
+
+    <h2>Context</h2>
+    <p>
+      Service Navigator was completed at Northeastern University Toronto during Spring 2026 for
+      INFO 7375 — User Experience Design in the Era of Generative AI. The project is presented here as a
+      product and research case study; personal student identifiers and participant names are intentionally
+      excluded from the public portfolio.
+    </p>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Ritvij Naram</span>
+      <span>Service Navigator case study</span>
+      <a href="../index.html#projects">Back to projects ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
