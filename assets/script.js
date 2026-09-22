@@ -3,6 +3,20 @@
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* first-load welcome */
+  const intro = document.getElementById("portfolio-intro");
+  if (intro && document.documentElement.classList.contains("intro-pending") && !reduceMotion) {
+    document.body.classList.add("intro-active");
+    window.setTimeout(() => document.documentElement.classList.add("intro-leaving"), 1350);
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("intro-pending", "intro-leaving");
+      document.body.classList.remove("intro-active");
+      try { sessionStorage.setItem("ritvij-portfolio-intro-seen", "1"); } catch (e) {}
+    }, 1820);
+  } else {
+    document.documentElement.classList.remove("intro-pending");
+  }
+
   /* nav */
   const nav = document.querySelector(".nav");
   const navToggle = document.querySelector(".nav-toggle");
@@ -133,6 +147,32 @@
       filters.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
       applyFilter(button.dataset.filter || "all");
+    });
+  });
+
+  /* project cards: whole-card navigation, links remain independent */
+  projects.forEach((card) => {
+    const caseLink = card.querySelector('.card-links a[href^="work/"]');
+    const destination = card.dataset.caseStudy || caseLink?.getAttribute("href");
+    if (!destination) return;
+
+    card.dataset.caseStudy = destination;
+    card.setAttribute("role", "link");
+    if (!card.hasAttribute("tabindex")) card.tabIndex = 0;
+
+    const openCaseStudy = () => { window.location.href = destination; };
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a, button, input, select, textarea")) return;
+      openCaseStudy();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.target !== card) return;
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openCaseStudy();
+      }
     });
   });
 
