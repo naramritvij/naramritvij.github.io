@@ -98,7 +98,75 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / game logic</p>
+        <p class="case-kicker">04 / real product</p>
+        <h2>Actual screens from the working Pitch Predictor experience.</h2>
+        <p>
+          Pitch Predictor has two complementary surfaces: a shared display for campus screens and a personal
+          player view for predictions, results, streaks, and leaderboard progress.
+        </p>
+        <div class="visual-showcase product-evidence">
+          <div class="visual-showcase-title"><strong>live_product_screens</strong><span>Pitch Predictor · actual project screens</span></div>
+          <div class="phone-evidence-grid">
+            <figure class="evidence-card evidence-phone">
+              <div class="evidence-frame phone-evidence-frame">
+                <img src="../assets/projects/pitch-predictor/display-mode.webp" alt="Pitch Predictor display mode with a QR code and top predictors leaderboard" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>01 / display mode</span>
+                <strong>QR onboarding plus live leaderboard</strong>
+                <p>Designed for shared campus screens so students can scan to join and see current standings at a glance.</p>
+              </figcaption>
+            </figure>
+            <figure class="evidence-card evidence-phone">
+              <div class="evidence-frame phone-evidence-frame">
+                <img src="../assets/projects/pitch-predictor/player-dashboard.webp" alt="Pitch Predictor player dashboard with player stats, leaderboard access, and completed match results" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>02 / player view</span>
+                <strong>Personal stats and match history</strong>
+                <p>The signed-in experience brings correct picks, streaks, accuracy, results, and navigation into one surface.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / project documentation</p>
+        <h2>System logic documented in the original project README.</h2>
+        <p>
+          These diagrams are supporting artifacts from the project repository. They document both the deployed
+          system architecture and the prediction-to-points lifecycle used by the application.
+        </p>
+        <div class="visual-showcase documentation-evidence">
+          <div class="visual-showcase-title"><strong>repository_documentation</strong><span>README · original project diagrams</span></div>
+          <div class="doc-evidence-grid">
+            <figure class="evidence-card">
+              <div class="evidence-frame doc-evidence-frame">
+                <img src="../assets/projects/pitch-predictor/readme-architecture.webp" alt="Pitch Predictor README architecture diagram linking student phones, campus screens, Netlify, Firestore, GitHub Actions, the results bot, and API-Football" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>architecture / deployment</span>
+                <strong>Always-on serverless operating model</strong>
+                <p>The README maps the client, realtime database, scheduled automation, and football-results API.</p>
+              </figcaption>
+            </figure>
+            <figure class="evidence-card">
+              <div class="evidence-frame doc-evidence-frame doc-evidence-tall">
+                <img src="../assets/projects/pitch-predictor/readme-prediction-flow.webp" alt="Pitch Predictor README flow diagram showing prediction validation, kickoff locking, automated result retrieval, Firestore update, leaderboard recalculation, points, streaks, and celebration" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>logic / prediction lifecycle</span>
+                <strong>From prediction to points</strong>
+                <p>The second README diagram documents the complete path from a player's pick to leaderboard recalculation.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">06 / game logic</p>
         <h2>Scoring is intentionally simple and transparent.</h2>
         <p>The game rewards correct predictions while keeping occasional participation from feeling punitive.</p>
         <div class="visual-showcase">
@@ -113,14 +181,14 @@
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / decisions</p>
+        <p class="case-kicker">07 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>Static app instead of a permanent server</strong> - the interaction layer stays simple to deploy and avoids maintaining an always-on application backend.</li><li><strong>Firestore for synchronization</strong> - realtime listeners keep phones and public screens aligned without custom websocket infrastructure.</li><li><strong>GitHub Actions as scheduled backend work</strong> - a cron-triggered Node.js job handles result ingestion while preserving the lightweight hosting model.</li><li><strong>Quota-aware API calls</strong> - the bot requests football data only when a match is actually waiting for a result.</li></ul>
         <div class="case-callout"><span>scoring model</span><p>Ranking prioritizes total correct picks, then best streak, then accuracy. A skipped match does not break the current streak; an incorrect prediction does.</p></div>
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">06 / stack</p>
+        <p class="case-kicker">08 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Vanilla JavaScript</span><span>HTML / CSS</span><span>Firebase Firestore</span><span>Node.js</span><span>firebase-admin</span><span>GitHub Actions</span><span>Netlify</span><span>API-Football</span></div>
       </section>
