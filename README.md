@@ -65,4 +65,4 @@ This repository is the root user-site repository, so GitHub Pages publishes it a
 
 - GitHub: https://github.com/naramritvij
 - LinkedIn: https://www.linkedin.com/in/ritvij-naram/
-- Email: ritvijcan@gmail.com
+- Email: naram.r@northeastern.edu
