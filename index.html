@@ -1,302 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ritvij Naram — Data & Full-Stack Engineer</title>
-<meta name="description" content="Ritvij Naram — Information Systems grad student and data engineer. Oracle SQL pipelines, FastAPI + React apps, and AI-assisted analytics tooling.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritvij Naram — Software, Data & AI Engineer</title>
+  <meta name="description" content="Portfolio of Ritvij Naram — software, data and AI engineer building full-stack applications, data systems, and practical machine-learning products.">
+  <meta name="theme-color" content="#0a0f1c">
+  <meta property="og:title" content="Ritvij Naram — Software, Data & AI Engineer">
+  <meta property="og:description" content="Full-stack applications, data systems, AI products, and engineering case studies.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-<nav class="nav">
-  <div class="wrap">
-    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
-    <ul class="nav-links">
-      <li><a href="#work"><span class="n">01</span> work</a></li>
-      <li><a href="#journey"><span class="n">02</span> journey</a></li>
-      <li><a href="#skills"><span class="n">03</span> skills</a></li>
-      <li><a href="#contact"><span class="n">04</span> contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Ritvij Naram home">
+        <span class="brand-mark">&gt;_</span>
+        <span>ritvij<span class="brand-dot">.</span>naram</span>
+      </a>
 
-<header class="hero">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div class="prompt-line">
-      <span class="sigil">ritvij@systems</span>:~$ <span class="cmd">whoami</span><span class="caret"></span>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
 
-    <h1>Full-stack &amp; data engineer.<br>I build the pipeline, <span class="accent">then the app that trusts it.</span></h1>
-
-    <p class="lede">
-      MSIS candidate at Northeastern University, Toronto — graduating <strong>December 2026</strong>.
-      3+ years shipping SQL-based data pipelines, dashboards, and full-stack apps across data engineering,
-      analytics, and AI-driven automation. Based in the GTA, open to full-time and co-op roles across Canada.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn primary" href="#work">See my work</a>
-      <a class="btn" href="assets/RitvijNaram_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
-      <a class="btn" href="#contact">Contact</a>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="diff">+97%</div>
-        <div class="label">reporting efficiency</div>
-      </div>
-      <div class="stat">
-        <div class="diff">+50%</div>
-        <div class="label">data reliability improved</div>
-      </div>
-      <div class="stat">
-        <div class="diff neutral">300+</div>
-        <div class="label">student/alumni records managed</div>
-      </div>
-      <div class="stat">
-        <div class="diff neutral">15+</div>
-        <div class="label">KPIs tracked in live dashboards</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-
-  <section id="work">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-tag">git log --oneline --stat -4</div>
-        <h2 class="section-title">Selected work</h2>
-      </div>
-
-      <!-- CASE 1 -->
-      <article class="commit">
-        <div class="commit-head">
-          <span class="commit-hash">commit 4e91a2c</span>
-          <span class="commit-branch">(HEAD → main, origin/civicflow-ai)</span>
-        </div>
-        <h3>CivicFlow AI — incident intelligence, full stack</h3>
-        <p>A full-stack platform for triaging and tracking civic incident reports: FastAPI backend over an
-        Oracle database, Google Gemini for automated categorization and summarization, and a React front end
-        for case management and reporting.</p>
-        <div class="diffstat"><span class="add">+ FastAPI · Oracle DB · Gemini · React</span> <span class="del">− manual triage</span></div>
-        <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Oracle SQL</span><span class="tag">Gemini API</span><span class="tag">React</span>
-        </div>
-        <div class="commit-foot">
-          <a href="work/civicflow.html">Read case study →</a>
-          <span class="files">4 files changed</span>
-        </div>
-      </article>
-
-      <!-- CASE 2 -->
-      <article class="commit">
-        <div class="commit-head">
-          <span class="commit-hash">commit 9b0f6d1</span>
-          <span class="commit-branch">(origin/ttc-disruption-db)</span>
-        </div>
-        <h3>TTC Service Disruption &amp; Passenger Impact DB</h3>
-        <p>A relational Oracle database modelling transit disruptions and their downstream passenger impact —
-        full DDL/DML, views, triggers, and a crow's-foot ERD, built end to end for a graduate database course
-        and written up as a formal system report.</p>
-        <div class="diffstat"><span class="add">+ Oracle SQL · triggers · views</span> <span class="del">− flat spreadsheets</span></div>
-        <div class="tag-row">
-          <span class="tag">Oracle SQL</span><span class="tag">Data Modeling</span><span class="tag">ERD</span><span class="tag">PL/SQL</span>
-        </div>
-        <div class="commit-foot">
-          <a href="work/ttc-disruption.html">Read case study →</a>
-          <span class="files">6 files changed</span>
-        </div>
-      </article>
-
-      <!-- CASE 3 -->
-      <article class="commit">
-        <div class="commit-head">
-          <span class="commit-hash">commit c27a48e</span>
-          <span class="commit-branch">(origin/neuralverse)</span>
-        </div>
-        <h3>NeuralVerse — interactive deep learning visualizer</h3>
-        <p>A 20-chapter interactive walkthrough of deep learning concepts, from perceptrons to transformers,
-        built to make the math and intuition behind modern ML visible and explorable rather than just read.</p>
-        <div class="diffstat"><span class="add">+ 20 chapters · interactive viz</span> <span class="del">− static slide decks</span></div>
-        <div class="tag-row">
-          <span class="tag">JavaScript</span><span class="tag">Data Viz</span><span class="tag">ML Education</span>
-        </div>
-        <div class="commit-foot">
-          <a href="work/neuralverse.html">Read case study →</a>
-          <span class="files">20 modules</span>
-        </div>
-      </article>
-
-      <!-- CASE 4 -->
-      <article class="commit">
-        <div class="commit-head">
-          <span class="commit-hash">commit 71dd3f0</span>
-          <span class="commit-branch">(origin/anomaly-detection)</span>
-        </div>
-        <h3>Anomaly Detection for Video Surveillance</h3>
-        <p>A CNN-based anomaly detector (Keras) over live and recorded video via OpenCV, with a Tkinter desktop
-        interface and a SQLite log of flagged events for review.</p>
-        <div class="diffstat"><span class="add">+ Keras CNN · OpenCV · SQLite</span> <span class="del">− manual footage review</span></div>
-        <div class="tag-row">
-          <span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Tkinter</span><span class="tag">SQLite</span>
-        </div>
-        <div class="commit-foot">
-          <a href="work/anomaly-detection.html">Read case study →</a>
-          <span class="files">5 files changed</span>
-        </div>
-      </article>
-
-      <p class="more-github">
-        more on GitHub —
-        <a href="https://github.com/naramritvij" target="_blank" rel="noopener">full portfolio site</a> ·
-        <a href="https://github.com/naramritvij" target="_blank" rel="noopener">@naramritvij</a>
-      </p>
-    </div>
-  </section>
-
-  <section id="journey">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-tag">git log --graph --all</div>
-        <h2 class="section-title">Journey</h2>
-      </div>
-
-      <div class="gitlog">
-
-        <div class="logrow">
-          <span class="lg-hash">a3f9c11</span><span class="lg-when">May 2021</span>
-          <h4>BE, Computer Science</h4>
-          <div class="lg-org">University of Pune · India</div>
-        </div>
-
-        <div class="logrow">
-          <span class="lg-hash">7c04e58</span><span class="lg-when">Aug 2021 – Aug 2022</span>
-          <h4>Software Developer</h4>
-          <div class="lg-org">Raja Industries · Pune, India</div>
-          <ul>
-            <li>Designed integrated analytics systems layered onto legacy operational platforms for real-time reporting.</li>
-            <li>Wrote and optimized complex SQL for internal reporting and audit-related data requests.</li>
-          </ul>
-        </div>
-
-        <div class="logrow">
-          <span class="lg-hash">d81b2f4</span><span class="lg-when">Sep 2022 – May 2024</span>
-          <h4>Software Developer</h4>
-          <div class="lg-org">Mechanize Industries · Pune, India</div>
-          <ul>
-            <li>Built automated SQL pipelines for weekly/monthly operational reporting.</li>
-            <li>Designed Power BI dashboards tracking 15+ KPIs for 20+ stakeholders.</li>
-            <li>Automated legacy Excel workflows, cutting manual reporting load by ~30%.</li>
-          </ul>
-        </div>
-
-        <div class="logrow">
-          <span class="lg-hash">f4e12a9</span><span class="lg-when">2024 – Dec 2026</span>
-          <h4>MS, Information Systems</h4>
-          <div class="lg-org">Northeastern University · Toronto</div>
-        </div>
-
-        <div class="logrow current">
-          <span class="lg-hash">2a7d90c</span><span class="lg-when">Jul 2025 – Dec 2025</span>
-          <h4>Business Analytics &amp; Systems Associate, Co-op <span class="badge-current">merged</span></h4>
-          <div class="lg-org">Northeastern University · Toronto</div>
-          <ul>
-            <li>Built pipelines and dashboards for the Scorecard Data Project — improved data reliability by 50%.</li>
-            <li>Managed backend systems for the Huskies for Life Mentorship Program across 300+ records.</li>
-            <li>Shipped Python (Flask) + Azure + Snowflake integrations for scalable internal reporting.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-tag">pip list --format=columns</div>
-        <h2 class="section-title">Skills</h2>
-      </div>
-
-      <div class="pkg-block">
-        <div class="pkg-key">data &amp; engineering</div>
-        <div class="chip-row">
-          <span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">Python</span>
-          <span class="chip">ETL / ELT</span><span class="chip">Data Modeling</span><span class="chip">Data Warehousing</span>
-          <span class="chip">REST APIs</span>
-        </div>
-      </div>
-
-      <div class="pkg-block">
-        <div class="pkg-key">cloud &amp; platforms</div>
-        <div class="chip-row">
-          <span class="chip">Azure</span><span class="chip">Azure Functions</span><span class="chip">Snowflake</span>
-          <span class="chip">Serverless</span>
-        </div>
-      </div>
-
-      <div class="pkg-block">
-        <div class="pkg-key">BI &amp; visualization</div>
-        <div class="chip-row">
-          <span class="chip">Tableau</span><span class="chip">Power BI</span><span class="chip">Dashboarding</span>
-          <span class="chip">KPI Reporting</span>
-        </div>
-      </div>
-
-      <div class="pkg-block">
-        <div class="pkg-key">AI &amp; automation</div>
-        <div class="chip-row">
-          <span class="chip">LangChain</span><span class="chip">LLM Integration</span><span class="chip">RAG</span>
-          <span class="chip">NLP</span><span class="chip">Workflow Automation</span>
-        </div>
-      </div>
-
-      <div class="pkg-block">
-        <div class="pkg-key">app &amp; tooling</div>
-        <div class="chip-row">
-          <span class="chip">FastAPI</span><span class="chip">React</span><span class="chip">Git</span>
-          <span class="chip">Java</span><span class="chip">C++</span><span class="chip">Excel Automation</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-tag">./contact.sh --run</div>
-        <h2 class="section-title">Let's build something that ships</h2>
-      </div>
-
-      <div class="contact-term">
-        <div class="lg"><span class="sigil">ritvij@systems</span>:~$ ./contact.sh --run</div>
-        <div class="out">
-          Open to full-time and co-op roles in data engineering, analytics, and full-stack development —
-          across the GTA and remote in Canada. Fastest way to reach me is email.
-        </div>
-        <ul class="contact-list">
-          <li><span class="k">email</span> <a href="mailto:ritvijcan@gmail.com">ritvijcan@gmail.com</a></li>
-          <li><span class="k">phone</span> <a href="tel:+14376047804">437-604-7804</a></li>
-          <li><span class="k">linkedin</span> <a href="https://linkedin.com/in/ritvij-naram" target="_blank" rel="noopener">linkedin.com/in/ritvij-naram</a></li>
-          <li><span class="k">github</span> <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></li>
+      <div class="nav-right">
+        <div class="availability"><span class="availability-dot"></span> Open to 2027 roles</div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
-</main>
+  <header class="hero" id="top">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-layout">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="terminal-prompt">ritvij@portfolio:~$</span>
+          <span class="typing-target">build --useful-systems</span>
+          <span class="caret"></span>
+        </div>
 
-<footer>
-  © Ritvij Naram · Built &amp; hosted on GitHub Pages ·
-  <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a>
-</footer>
+        <h1>
+          I build software that turns
+          <span class="gradient-text">data into decisions.</span>
+        </h1>
 
-<script src="assets/script.js"></script>
+        <p class="hero-lede">
+          Software, data and AI engineer focused on practical products: full-stack systems,
+          database-backed applications, intelligent automation, and machine-learning experiences
+          that are designed to be used — not just demoed.
+        </p>
+
+        <div class="hero-role-line">
+          <span>Currently:</span>
+          <strong>MS in Information Systems · Northeastern University Toronto · Dec 2026</strong>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore projects <span>↘</span></a>
+          <a class="btn" href="assets/RitvijNaram_Resume.pdf" target="_blank" rel="noopener">View résumé</a>
+          <a class="btn btn-ghost" href="https://github.com/naramritvij" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+
+        <div class="hero-metrics" aria-label="Highlights">
+          <div class="metric">
+            <strong>11</strong>
+            <span>public repositories reviewed</span>
+          </div>
+          <div class="metric">
+            <strong>AI + Data</strong>
+            <span>from models to production interfaces</span>
+          </div>
+          <div class="metric">
+            <strong>Full Stack</strong>
+            <span>frontend, APIs, databases, automation</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="identity-card reveal" aria-label="Profile">
+        <div class="identity-glow"></div>
+        <div class="identity-top">
+          <img src="https://avatars.githubusercontent.com/u/181509223?v=4" alt="Ritvij Naram" class="avatar">
+          <div>
+            <span class="identity-kicker">github.com/naramritvij</span>
+            <h2>Ritvij Naram</h2>
+            <p>Software · Data · AI</p>
+          </div>
+        </div>
+
+        <div class="system-panel">
+          <div class="panel-title"><span></span> system.profile</div>
+          <div class="system-row"><span>location</span><strong>Greater Toronto Area</strong></div>
+          <div class="system-row"><span>focus</span><strong>Engineering + Analytics + AI</strong></div>
+          <div class="system-row"><span>graduation</span><strong>December 2026</strong></div>
+          <div class="system-row"><span>status</span><strong class="status-live">building</strong></div>
+        </div>
+
+        <div class="identity-code" aria-hidden="true">
+          <span class="code-muted">const</span> ritvij = {<br>
+          &nbsp;&nbsp;build: <span>"end-to-end"</span>,<br>
+          &nbsp;&nbsp;learn: <span>"continuously"</span>,<br>
+          &nbsp;&nbsp;ship: <span>true</span><br>
+          };
+        </div>
+      </aside>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll to inspect</span><i></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">01 / selected_repository_graph</p>
+            <h2>Projects with real engineering depth.</h2>
+          </div>
+          <p class="section-intro">
+            The strongest work is featured first. Filters let you move quickly between AI/ML,
+            full-stack, data, and mobile projects.
+          </p>
+        </div>
+
+        <div class="project-toolbar reveal">
+          <div class="filter-group" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="ai" type="button">AI / ML</button>
+            <button class="filter" data-filter="fullstack" type="button">Full Stack</button>
+            <button class="filter" data-filter="data" type="button">Data</button>
+            <button class="filter" data-filter="mobile" type="button">Mobile</button>
+          </div>
+          <span class="repo-count"><strong id="visible-count">9</strong> projects visible</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal" data-category="mobile ai">
+            <div class="card-topline">
+              <span class="project-index">01</span>
+              <span class="project-state">Functional MVP</span>
+            </div>
+            <div class="project-icon">♻</div>
+            <h3>Local Eco-Scanner</h3>
+            <p>
+              Native Android app that uses CameraX and Gemini to identify household items and return
+              recycling, disposal and upcycling guidance tailored to a Canadian municipality and residence type.
+            </p>
+            <div class="project-impact">Multimodal AI · location-aware prompting · on-device profile persistence</div>
+            <div class="tags">
+              <span>Kotlin</span><span>Jetpack Compose</span><span>CameraX</span><span>Gemini</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/naramritvij/LocalEcoScanner" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card featured reveal" data-category="fullstack data ai">
+            <div class="card-topline">
+              <span class="project-index">02</span>
+              <span class="project-state">Case study</span>
+            </div>
+            <div class="project-icon">◎</div>
+            <h3>CivicFlow AI</h3>
+            <p>
+              Transit incident intelligence platform combining a FastAPI backend, Oracle database,
+              React interface, Gemini analysis, caching, and API-usage controls.
+            </p>
+            <div class="project-impact">AI-assisted severity, root-cause analysis, recommendations and executive summaries</div>
+            <div class="tags">
+              <span>FastAPI</span><span>Oracle</span><span>React</span><span>Gemini</span>
+            </div>
+            <div class="card-links">
+              <a href="work/civicflow.html">Case study →</a>
+              <a href="https://github.com/naramritvij/civicflow-ai" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card featured reveal" data-category="ai fullstack">
+            <div class="card-topline">
+              <span class="project-index">03</span>
+              <span class="project-state">Local-first AI</span>
+            </div>
+            <div class="project-icon">R</div>
+            <h3>RNA — Ritvij Naram Assistant</h3>
+            <p>
+              Local personal AI assistant powered by Ollama and phi3:mini with persistent memory,
+              web search, file reading, and PDF, Word and Excel generation.
+            </p>
+            <div class="project-impact">Private local inference with a full browser interface and agent-style tools</div>
+            <div class="tags">
+              <span>Node.js</span><span>Express</span><span>Ollama</span><span>Local AI</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/naramritvij/RNA-assistant" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai fullstack">
+            <div class="card-topline">
+              <span class="project-index">04</span>
+              <span class="project-state">Live demo</span>
+            </div>
+            <div class="project-icon">N</div>
+            <h3>NeuralVerse</h3>
+            <p>
+              Twenty interactive deep-learning chapters that turn neurons, backpropagation, CNNs,
+              RNNs, attention, transformers, GANs and more into hands-on visual simulations.
+            </p>
+            <div class="project-impact">Interactive learning paths · browser simulations · cinematic chapter transitions</div>
+            <div class="tags">
+              <span>React</span><span>TypeScript</span><span>Framer Motion</span><span>ML</span>
+            </div>
+            <div class="card-links">
+              <a href="work/neuralverse.html">Case study →</a>
+              <a href="https://neural-verse-spark.lovable.app" target="_blank" rel="noopener">Live demo ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack data">
+            <div class="card-topline">
+              <span class="project-index">05</span>
+              <span class="project-state">Database system</span>
+            </div>
+            <div class="project-icon">T</div>
+            <h3>TTC Service Disruption System</h3>
+            <p>
+              Role-based transit disruption platform with React dashboards, custom Node.js REST routing,
+              Oracle-backed operational data, audit logging, restore flows, and passenger notifications.
+            </p>
+            <div class="project-impact">Operational CRUD + response coordination + auditability + passenger-facing views</div>
+            <div class="tags">
+              <span>React</span><span>Node.js</span><span>Oracle</span><span>REST</span>
+            </div>
+            <div class="card-links">
+              <a href="work/ttc-disruption.html">Case study →</a>
+              <a href="https://github.com/naramritvij/ttc-project" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai fullstack">
+            <div class="card-topline">
+              <span class="project-index">06</span>
+              <span class="project-state">Live demo</span>
+            </div>
+            <div class="project-icon">◫</div>
+            <h3>Image Whisperer</h3>
+            <p>
+              Browser-native image recognition using TensorFlow.js and MobileNetV2. Images stay on-device
+              while the app returns ranked predictions and confidence scores in real time.
+            </p>
+            <div class="project-impact">No backend · no API key · client-side inference</div>
+            <div class="tags">
+              <span>React</span><span>TypeScript</span><span>TensorFlow.js</span><span>MobileNet</span>
+            </div>
+            <div class="card-links">
+              <a href="https://image-whisperer-64.lovable.app" target="_blank" rel="noopener">Live demo ↗</a>
+              <a href="https://github.com/naramritvij/image-whisperer-64" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai">
+            <div class="card-topline">
+              <span class="project-index">07</span>
+              <span class="project-state">NLP</span>
+            </div>
+            <div class="project-icon">Q</div>
+            <h3>AI Flashcard Generator</h3>
+            <p>
+              Streamlit application that segments arbitrary study text with spaCy and uses a fine-tuned T5 model
+              to generate question-answer flashcards with CSV export.
+            </p>
+            <div class="project-impact">NLP pipeline from raw text to downloadable study material</div>
+            <div class="tags">
+              <span>Python</span><span>Streamlit</span><span>spaCy</span><span>T5</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/naramritvij/flashcard-generator-llm" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai data">
+            <div class="card-topline">
+              <span class="project-index">08</span>
+              <span class="project-state">Computer vision</span>
+            </div>
+            <div class="project-icon">A</div>
+            <h3>Anomaly Detection for Video Surveillance</h3>
+            <p>
+              Desktop computer-vision system that processes surveillance video frame by frame with a Keras CNN,
+              OpenCV and a Tkinter interface, backed by SQLite authentication.
+            </p>
+            <div class="project-impact">Video inference · event classification · desktop GUI · persistent access control</div>
+            <div class="tags">
+              <span>Python</span><span>Keras</span><span>OpenCV</span><span>SQLite</span>
+            </div>
+            <div class="card-links">
+              <a href="work/anomaly-detection.html">Case study →</a>
+              <a href="https://github.com/naramritvij/Anomaly-Detection-for-Video-Surveillance" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="ai data">
+            <div class="card-topline">
+              <span class="project-index">09</span>
+              <span class="project-state">RAG prototype</span>
+            </div>
+            <div class="project-icon">N</div>
+            <h3>NOra University Chatbot</h3>
+            <p>
+              University question-answering scaffold that indexes academic PDFs into FAISS and serves answers
+              through Streamlit, with optional local FLAN-T5 generation.
+            </p>
+            <div class="project-impact">Document ingestion · vector retrieval · local fallback generation</div>
+            <div class="tags">
+              <span>Python</span><span>FAISS</span><span>Streamlit</span><span>RAG</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/naramritvij/openai" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="repository-note reveal">
+          <div class="repo-note-icon">git</div>
+          <div>
+            <strong>Also on GitHub</strong>
+            <p>
+              <a href="https://github.com/naramritvij/INFO5100_Lab" target="_blank" rel="noopener">INFO5100_Lab</a>
+              contains course lab work. The <code>expired-product-alert</code> repository currently has no implementation
+              beyond its license, so it is intentionally not presented as a completed project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="journey">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">02 / git_log --career</p>
+            <h2>Engineering journey.</h2>
+          </div>
+          <p class="section-intro">
+            Software development experience, graduate studies, and applied analytics work converge around one theme:
+            building systems that make information more usable.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">2024 — Dec 2026</div>
+            <h3>MS in Information Systems</h3>
+            <p class="timeline-org">Northeastern University · Toronto</p>
+            <p>Graduate work spanning database design, software engineering, AI/ML applications, and information systems.</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-meta">Jul 2025 — Dec 2025</div>
+            <h3>Business Analytics & Systems Associate · Co-op</h3>
+            <p class="timeline-org">Northeastern University · Toronto</p>
+            <p>Built data workflows, dashboards, backend integrations, and operational systems supporting reporting and program delivery.</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Sep 2022 — May 2024</div>
+            <h3>Software Developer</h3>
+            <p class="timeline-org">Mechanize Industries · Pune</p>
+            <p>Developed SQL-driven reporting workflows, KPI dashboards, and process automation for operational teams.</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">Aug 2021 — Aug 2022</div>
+            <h3>Software Developer</h3>
+            <p class="timeline-org">Raja Industries · Pune</p>
+            <p>Worked on internal software and analytics systems, including complex SQL reporting and integrations with legacy operations.</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-meta">2021</div>
+            <h3>Bachelor of Engineering · Computer Science</h3>
+            <p class="timeline-org">University of Pune · India</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">03 / stack_manifest.json</p>
+            <h2>Tools I reach for.</h2>
+          </div>
+          <p class="section-intro">
+            I am strongest where application engineering, data systems and AI overlap.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <article class="stack-card reveal">
+            <span class="stack-number">01</span>
+            <h3>Languages</h3>
+            <p>Python · Java · JavaScript · TypeScript · SQL · Kotlin · C++</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">02</span>
+            <h3>Backend & APIs</h3>
+            <p>FastAPI · Flask · Node.js · Express · REST APIs · serverless workflows</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">03</span>
+            <h3>Data</h3>
+            <p>Oracle · Snowflake · relational modeling · ETL/ELT · SQL pipelines · SQLite</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">04</span>
+            <h3>AI / ML</h3>
+            <p>Gemini · Ollama · TensorFlow · Keras · TensorFlow.js · FAISS · RAG · NLP</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">05</span>
+            <h3>Frontend</h3>
+            <p>React · Jetpack Compose · Tailwind CSS · Radix UI · responsive UI systems</p>
+          </article>
+          <article class="stack-card reveal">
+            <span class="stack-number">06</span>
+            <h3>Analytics & Cloud</h3>
+            <p>Azure · Power BI · Tableau · Airtable · Git · GitHub · automation</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="wrap">
+        <div class="contact-shell reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">04 / connect</p>
+            <h2>Have a problem worth building for?</h2>
+            <p>
+              I’m preparing for full-time software, data, analytics and AI opportunities starting in 2027.
+              The fastest way to reach me is by email or LinkedIn.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:ritvijcan@gmail.com">ritvijcan@gmail.com ↗</a>
+            <a class="btn" href="https://www.linkedin.com/in/ritvij-naram/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/naramritvij" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <div class="contact-terminal" aria-hidden="true">
+            <span>portfolio.deploy()</span>
+            <strong>status: ready_for_next_challenge</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Ritvij Naram</span>
+      <span>Built in HTML/CSS/JS · Hosted on GitHub Pages</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
