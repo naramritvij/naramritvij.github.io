@@ -93,14 +93,28 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / output model</p>
+        <h2>The generated question stays anchored to its source sentence.</h2>
+        <p>The app separates generation from grounding: T5 creates the question, while the original sentence remains the answer.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>flashcard_transformation</strong><span>input → generated study object</span></div>
+          <div class="flashcard-transform">
+            <div class="source-card"><span>source sentence</span><p>One sentence selected from the learner’s study material.</p></div>
+            <div class="transform-arrow">→</div>
+            <div class="flash-card"><span>generated flashcard</span><p><strong>Question:</strong> T5-generated prompt<br><br><strong>Answer:</strong> original source sentence</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>Ground answers in source text</strong> — the model generates only the question, reducing unsupported answer generation.</li><li><strong>Use spaCy for structure</strong> — sentence boundaries are handled by a dedicated NLP library instead of relying on generation.</li><li><strong>Streamlit for iteration</strong> — a lightweight interface makes the NLP pipeline directly usable without building a separate frontend.</li><li><strong>CSV as an interoperability layer</strong> — generated study material can move into other tools instead of being trapped in the app.</li></ul>
         
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Python</span><span>Streamlit</span><span>spaCy</span><span>Hugging Face Transformers</span><span>T5</span><span>Pandas</span><span>CSV</span></div>
       </section>
