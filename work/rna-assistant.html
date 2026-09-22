@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RNA — Ritvij Naram Assistant — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a local-first personal AI assistant built with Node.js, Express, Ollama, and tool integrations.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / rna-assistant</div>
+      <h1>RNA — Ritvij Naram Assistant</h1>
+      <p class="case-lede">A local-first personal AI assistant that combines Ollama inference, persistent JSON memory, web search, file reading, and document generation behind a browser and terminal interface.</p>
+      <div class="case-meta"><span>Node.js</span><span>Express</span><span>Ollama</span><span>phi3:mini</span><span>Local-first AI</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://github.com/naramritvij/RNA-assistant" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
+
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Build an assistant where the model is only one component.</h2>
+        <p>RNA explores a tool-using assistant architecture in which chat, memory, search, file understanding, and document generation are separate capabilities coordinated by a local Node.js application. The core premise is privacy: inference and conversation state stay on the user’s machine.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>100% local inference</strong><p>Ollama runs phi3:mini locally, avoiding a cloud model dependency for chat.</p></div><div class="case-summary-card"><span>02</span><strong>Persistent memory</strong><p>JSON persistence tracks user/session information and recent conversation context.</p></div><div class="case-summary-card"><span>03</span><strong>Tool layer</strong><p>Web search, file reading, and PDF/Word/Excel generation extend the assistant beyond chat.</p></div></div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>A local orchestrator around the language model.</h2>
+        <p>The Express application exposes a browser interface while RNA’s orchestration layer decides when to use local inference, memory, or a specialized tool.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge" d="M 195 111 L 260 190"/>
+<path class="edge" d="M 195 311 L 260 228"/>
+<path class="edge" d="M 435 209 L 500 209"/>
+<text class="edge-label" x="467.5" y="201">request</text>
+<path class="edge edge-ai" d="M 680 190 L 755 76"/>
+<text class="edge-label" x="717.5" y="125">generate</text>
+<path class="edge edge-accent" d="M 680 200 L 755 181"/>
+<text class="edge-label" x="717.5" y="182.5">context</text>
+<path class="edge" d="M 680 218 L 755 286"/>
+<text class="edge-label" x="717.5" y="244">tools</text>
+<path class="edge" d="M 680 230 L 755 375"/>
+<text class="edge-label" x="717.5" y="294.5">create</text>
+  <rect class="node node-user" x="35" y="75" width="160" height="72" rx="14"/>
+<text class="label" x="115" y="107">Web UI</text>
+<text class="sub" x="115" y="126">browser chat</text>
+<rect class="node node-user" x="35" y="275" width="160" height="72" rx="14"/>
+<text class="label" x="115" y="307">CLI</text>
+<text class="sub" x="115" y="326">terminal mode</text>
+<rect class="node" x="260" y="170" width="175" height="78" rx="14"/>
+<text class="label" x="347.5" y="205">Express Server</text>
+<text class="sub" x="347.5" y="224">local API</text>
+<rect class="node" x="500" y="170" width="180" height="78" rx="14"/>
+<text class="label" x="590" y="205">RNA Orchestrator</text>
+<text class="sub" x="590" y="224">context + tool routing</text>
+<rect class="node node-ai" x="755" y="40" width="190" height="72" rx="14"/>
+<text class="label" x="850" y="72">Ollama / phi3</text>
+<text class="sub" x="850" y="91">local generation</text>
+<rect class="node node-data" x="755" y="145" width="190" height="72" rx="14"/>
+<text class="label" x="850" y="177">Memory JSON</text>
+<text class="sub" x="850" y="196">sessions + context</text>
+<rect class="node" x="755" y="250" width="190" height="72" rx="14"/>
+<text class="label" x="850" y="282">Search / File Tools</text>
+<text class="sub" x="850" y="301">read + retrieve</text>
+<rect class="node" x="755" y="345" width="190" height="60" rx="14"/>
+<text class="label" x="850" y="371">Document Tools</text>
+<text class="sub" x="850" y="390">PDF / Word / Excel</text>
+</svg>
+<p class="diagram-caption">The model does not directly own every capability. A local orchestration layer keeps memory and tools modular, making the assistant easier to extend and reason about.</p>
+</div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>How a request moves through RNA</h2>
+        <p>A user request can stay as a simple local chat or invoke additional capabilities when needed.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Receive request</strong><p>Browser or CLI sends the user message to the local server.</p></div><div class="flow-step"><span>02</span><strong>Load context</strong><p>RNA loads relevant recent messages and persisted session memory.</p></div><div class="flow-step"><span>03</span><strong>Route capability</strong><p>Choose local model response, web search, file reading, or document generation.</p></div><div class="flow-step"><span>04</span><strong>Execute locally</strong><p>Ollama and Node.js tools perform the requested work.</p></div><div class="flow-step"><span>05</span><strong>Return + persist</strong><p>Response is shown and conversation state is saved for the next session.</p></div></div>
+      </section>
+
+      
+
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key engineering decisions</h2>
+        <ul><li><strong>Local-first inference</strong> — Ollama keeps the core conversation private and removes per-request API cost.</li><li><strong>Modular tools</strong> — search, file reading, document creation, and memory live in separate modules rather than one large assistant file.</li><li><strong>Dual interface</strong> — the same assistant can be used through the browser UI or terminal mode.</li><li><strong>Simple persistence for a personal tool</strong> — JSON is sufficient for the current single-user scope while keeping the project easy to inspect.</li></ul>
+        
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Node.js</span><span>Express</span><span>Ollama</span><span>phi3:mini</span><span>Vanilla JS</span><span>pdfkit</span><span>docx</span><span>exceljs</span><span>pdf2json</span><span>mammoth</span><span>axios</span><span>cheerio</span></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
+  </footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
