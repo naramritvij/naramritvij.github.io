@@ -299,6 +299,11 @@ img{max-width:100%;display:block}
 .pitch-mark{
   font-family:'Anton',Impact,sans-serif;font-size:28px;line-height:1;letter-spacing:-.02em
 }
+.logo-service-nav{
+  color:#7af0d2;
+  border-color:rgba(122,240,210,.28);
+  background:radial-gradient(circle at 28% 18%,rgba(122,240,210,.18),transparent 48%),linear-gradient(145deg,#0f2022,#111722)
+}
 .logo-civicflow{
   color:#72b6ff;
   background:radial-gradient(circle at 50% 45%,rgba(105,168,255,.2),transparent 55%),linear-gradient(145deg,#111d32,#0d1420)
