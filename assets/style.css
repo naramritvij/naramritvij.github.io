@@ -274,10 +274,69 @@ img{max-width:100%;display:block}
   border-radius:999px;padding:5px 8px
 }
 .project-icon{
-  width:44px;height:44px;display:grid;place-items:center;margin:31px 0 18px;
-  border:1px solid rgba(105,168,255,.2);border-radius:12px;
+  width:54px;height:54px;display:grid;place-items:center;margin:29px 0 18px;
+  border:1px solid rgba(105,168,255,.2);border-radius:15px;
   background:linear-gradient(145deg,rgba(105,168,255,.12),rgba(169,139,255,.07));
-  font-family:var(--mono);font-weight:700;color:var(--cyan)
+  color:var(--cyan);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 10px 28px rgba(0,0,0,.18);
+  overflow:hidden
+}
+.project-icon svg{
+  width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round
+}
+.logo-localeco{
+  color:#73f5a2;
+  border-color:rgba(89,242,141,.28);
+  background:radial-gradient(circle at 32% 22%,rgba(89,242,141,.22),transparent 42%),linear-gradient(145deg,#12261d,#0d1714)
+}
+.logo-pitch{
+  color:#0b0e07;
+  border-color:rgba(204,255,26,.52);
+  background:#ccff1a;
+  box-shadow:0 10px 30px rgba(204,255,26,.12),inset 0 1px 0 rgba(255,255,255,.35)
+}
+.pitch-mark{
+  font-family:'Anton',Impact,sans-serif;font-size:28px;line-height:1;letter-spacing:-.02em
+}
+.logo-civicflow{
+  color:#72b6ff;
+  background:radial-gradient(circle at 50% 45%,rgba(105,168,255,.2),transparent 55%),linear-gradient(145deg,#111d32,#0d1420)
+}
+.logo-rna{
+  color:#b79cff;
+  border-color:rgba(169,139,255,.3);
+  background:radial-gradient(circle at 35% 25%,rgba(169,139,255,.2),transparent 50%),linear-gradient(145deg,#19152d,#0e1020)
+}
+.logo-neural{
+  color:#79e9ff;
+  border-color:rgba(98,231,255,.3);
+  background:radial-gradient(circle at 50% 38%,rgba(98,231,255,.18),transparent 48%),linear-gradient(145deg,#101d2c,#111226)
+}
+.logo-ttc{
+  color:#ff727d;
+  border-color:rgba(255,114,125,.26);
+  background:radial-gradient(circle at 50% 20%,rgba(255,114,125,.16),transparent 48%),linear-gradient(145deg,#25151b,#12131d)
+}
+.logo-whisperer{
+  color:#a9c6ff;
+  border-color:rgba(105,168,255,.3);
+  background:radial-gradient(circle at 75% 18%,rgba(169,139,255,.2),transparent 43%),linear-gradient(145deg,#111a2e,#131126)
+}
+.logo-flashcards{
+  color:#ffd875;
+  border-color:rgba(255,216,117,.26);
+  background:radial-gradient(circle at 35% 20%,rgba(255,216,117,.17),transparent 45%),linear-gradient(145deg,#251e12,#12151d)
+}
+.logo-anomaly{
+  color:#ff8a9b;
+  border-color:rgba(255,138,155,.26);
+  background:radial-gradient(circle at 50% 45%,rgba(255,90,120,.16),transparent 50%),linear-gradient(145deg,#26131b,#11141d)
+}
+.logo-nora{
+  color:#7fdcff;
+  border-color:rgba(98,231,255,.27);
+  background:radial-gradient(circle at 30% 20%,rgba(98,231,255,.16),transparent 48%),linear-gradient(145deg,#0f1d28,#12151f)
 }
 .project-card h3{font-size:1.34rem;letter-spacing:-.025em;margin:0 0 10px}
 .project-card>p{margin:0;color:#aebbd0;font-size:.9rem}
