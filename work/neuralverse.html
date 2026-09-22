@@ -1,67 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeuralVerse — Case Study — Ritvij Naram</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuralVerse — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a 20-chapter interactive deep-learning visualizer.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
-<nav class="nav">
-  <div class="wrap">
-    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
-    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
-  </div>
-</nav>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
 
-<header class="case-hero">
-  <div class="wrap">
-    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / neuralverse.html</div>
-    <h1>NeuralVerse</h1>
-    <div class="case-meta">commit c27a48e · 20 chapters · interactive visualization</div>
-  </div>
-</header>
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / neuralverse</div>
+      <h1>NeuralVerse</h1>
+      <p class="case-lede">A browser-native 20-chapter deep-learning curriculum that turns concepts from neurons and gradient descent through attention, transformers, GANs, and autoencoders into interactive simulations.</p>
+      <div class="case-meta"><span>20 chapters</span><span>React 19</span><span>TypeScript</span><span>Framer Motion</span><span>Recharts</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://neural-verse-spark.lovable.app" target="_blank" rel="noopener">Live demo ↗</a><a class="btn" href="https://github.com/naramritvij/neural-verse-spark" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
 
-<main class="wrap case-body" style="padding:44px 0 80px;">
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Teach intuition through interaction, not another wall of theory.</h2>
+        <p>Each chapter is a self-contained interactive visualization. The application uses a shared shell and chapter registry so the learning experience feels continuous even though every concept has its own simulation and controls.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>20 interactive chapters</strong><p>Covers foundational neural-network concepts through modern deep-learning architecture.</p></div><div class="case-summary-card"><span>02</span><strong>3 learning paths</strong><p>Vision, NLP, and Core Theory provide guided routes through the material.</p></div><div class="case-summary-card"><span>03</span><strong>Browser-native</strong><p>All math and visualization logic runs client-side with progress saved locally.</p></div></div>
+      </section>
 
-  <h2>The problem</h2>
-  <p>Deep learning concepts — gradients, backprop, attention — are usually taught through static slides
-  or dense math, which makes the intuition behind them harder to hold onto than the formulas themselves.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>A reusable shell around independent learning simulations.</h2>
+        <p>Routing and chapter metadata are centralized, while each concept remains an isolated visualization component that can own its own controls, animation, and math.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge" d="M 200 209 L 270 209"/>
+<text class="edge-label" x="235" y="201">interact</text>
+<path class="edge edge-accent" d="M 445 195 L 515 92"/>
+<text class="edge-label" x="480" y="135.5">select chapter</text>
+<path class="edge" d="M 445 225 L 515 322"/>
+<text class="edge-label" x="480" y="265.5">save progress</text>
+<path class="edge" d="M 690 92 L 760 159"/>
+<text class="edge-label" x="725" y="117.5">render</text>
+<path class="edge" d="M 858 198 L 858 255"/>
+<text class="edge-label" x="858" y="218.5">animate</text>
+  <rect class="node node-user" x="35" y="170" width="165" height="78" rx="14"/>
+<text class="label" x="117.5" y="205">Learner</text>
+<text class="sub" x="117.5" y="224">click / drag / explore</text>
+<rect class="node" x="270" y="170" width="175" height="78" rx="14"/>
+<text class="label" x="357.5" y="205">App Shell</text>
+<text class="sub" x="357.5" y="224">navigation + progress</text>
+<rect class="node node-data" x="515" y="55" width="175" height="74" rx="14"/>
+<text class="label" x="602.5" y="88">Chapter Registry</text>
+<text class="sub" x="602.5" y="107">20 concepts</text>
+<rect class="node node-data" x="515" y="285" width="175" height="74" rx="14"/>
+<text class="label" x="602.5" y="318">LocalStorage</text>
+<text class="sub" x="602.5" y="337">progress state</text>
+<rect class="node node-ai" x="760" y="120" width="195" height="78" rx="14"/>
+<text class="label" x="857.5" y="155">Visualization</text>
+<text class="sub" x="857.5" y="174">chapter component</text>
+<rect class="node" x="760" y="255" width="195" height="78" rx="14"/>
+<text class="label" x="857.5" y="290">UI + Motion</text>
+<text class="sub" x="857.5" y="309">Recharts / Framer</text>
+</svg>
+<p class="diagram-caption">The registry keeps navigation and curriculum structure consistent while the chapter components remain specialized enough to represent very different concepts.</p>
+</div>
+      </section>
 
-  <h2>What I built</h2>
-  <p>NeuralVerse is a 20-chapter interactive walkthrough of deep learning, from a single perceptron up
-  through transformer attention, where each chapter pairs a short explanation with something you can
-  manipulate directly — nudging a weight, watching a loss surface shift, stepping through a forward pass
-  node by node.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>Learning interaction loop</h2>
+        <p>The interface is designed around manipulation first, then interpretation.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Choose chapter</strong><p>Navigate directly or follow a Vision, NLP, or Core Theory learning path.</p></div><div class="flow-step"><span>02</span><strong>Manipulate</strong><p>Drag weights, change parameters, toggle modes, or trigger an animation.</p></div><div class="flow-step"><span>03</span><strong>Observe</strong><p>Graphs, nodes, losses, gradients, or activations update immediately.</p></div><div class="flow-step"><span>04</span><strong>Explain</strong><p>The chapter connects the visible behavior back to the underlying concept.</p></div><div class="flow-step"><span>05</span><strong>Persist progress</strong><p>Completion state is saved locally for the next session.</p></div></div>
+      </section>
 
-  <div class="arch-grid">
-    <div class="arch-box">Ch. 1–6<div class="sub">perceptrons → backprop</div></div>
-    <div class="arch-box">Ch. 7–13<div class="sub">CNNs → RNNs</div></div>
-    <div class="arch-box">Ch. 14–20<div class="sub">attention → transformers</div></div>
-  </div>
+      
 
-  <h2>Design decisions</h2>
-  <ul>
-    <li><strong>Interaction before explanation</strong> — each chapter leads with something to manipulate,
-    then explains what just happened, rather than the reverse.</li>
-    <li><strong>Progressive structure</strong> — chapters build strictly on prior ones, so the visualizer for
-    attention assumes you've already built intuition for weighted sums and softmax a few chapters earlier.</li>
-    <li><strong>Client-side only</strong> — every visualization runs in the browser with no backend, so it
-    stays fast and free to host.</li>
-  </ul>
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key product and engineering decisions</h2>
+        <ul><li><strong>One component per concept</strong> — each visualization can use the interaction model that best fits the idea being taught.</li><li><strong>Shared shell and registry</strong> — navigation, completion state, and curriculum metadata stay consistent across all 20 chapters.</li><li><strong>Client-side computation</strong> — the educational experience stays fast, free to host, and independent of a backend.</li><li><strong>Motion as explanation</strong> — Framer Motion and chart transitions are used to reveal state changes, not only for decoration.</li></ul>
+        
+      </section>
 
-  <h2>Why this mattered to me</h2>
-  <p>Building the visualizations forced a more precise understanding of each concept than reading about it
-  ever did — you can't animate backprop correctly without actually tracing the gradient flow yourself.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>React 19</span><span>TypeScript 5.8</span><span>TanStack Router</span><span>Framer Motion</span><span>Recharts</span><span>Tailwind CSS 4</span><span>shadcn / Radix</span><span>Vite 7</span><span>localStorage</span></div>
+      </section>
+    </div>
+  </main>
 
-  <h2>Stack</h2>
-  <div class="tag-row" style="padding:0 0 24px;">
-    <span class="tag">JavaScript</span><span class="tag">Data Visualization</span><span class="tag">ML Education</span>
-  </div>
-
-</main>
-
-<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
+  </footer>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
