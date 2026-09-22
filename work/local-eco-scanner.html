@@ -100,24 +100,66 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / product view</p>
-        <h2>What the scan experience looks like.</h2>
-        <p>The interface keeps the result structured around the decisions a user actually needs to make after photographing an item.</p>
-        <div class="visual-showcase">
-          <div class="visual-showcase-title"><strong>mobile_result_preview</strong><span>illustrative UI structure</span></div>
-          <div class="phone-shell">
-            <div class="phone-screen">
-              <div class="phone-top">Local Eco-Scanner · scan result</div>
-              <div class="scan-preview">
-                <svg viewBox="0 0 80 80"><rect x="18" y="20" width="44" height="34" rx="8"/><circle cx="40" cy="37" r="10"/><path d="M28 20l4-7h16l4 7M27 63c8 5 18 5 26 0"/></svg>
-              </div>
-              <div class="result-stack">
-                <div class="result-block"><span>01 / recyclability</span><strong>Clear decision with municipal-context caveat</strong></div>
-                <div class="result-block"><span>02 / disposal</span><strong>Preparation and disposal steps</strong></div>
-                <div class="result-block"><span>03 / upcycling</span><strong>Optional reuse ideas</strong></div>
-              </div>
-            </div>
+        <p class="case-kicker">04 / real product</p>
+        <h2>Actual app screens from the installed Android APK.</h2>
+        <p>
+          These are real on-device screenshots from a working scan of headphones — not mockups.
+          They show the complete product interaction from framing the object, through Gemini analysis,
+          to the final recycling, disposal, and upcycling guidance.
+        </p>
+
+        <div class="visual-showcase real-product-showcase">
+          <div class="visual-showcase-title">
+            <strong>real_app_evidence</strong>
+            <span>Android APK · captured on-device</span>
           </div>
+
+          <div class="real-app-gallery">
+            <figure class="app-shot">
+              <a href="../assets/projects/local-eco-scanner/capture.webp" target="_blank" rel="noopener" aria-label="Open Local Eco-Scanner capture screen">
+                <div class="app-shot-frame">
+                  <img src="../assets/projects/local-eco-scanner/capture.webp" alt="Local Eco-Scanner camera screen with headphones centered in the scan frame and a Tap to scan button" loading="lazy" decoding="async">
+                </div>
+              </a>
+              <figcaption>
+                <span>01 / capture</span>
+                <strong>Frame the item</strong>
+                <p>CameraX presents a focused capture area and a single scan action.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="app-shot">
+              <a href="../assets/projects/local-eco-scanner/analyzing.webp" target="_blank" rel="noopener" aria-label="Open Local Eco-Scanner analyzing screen">
+                <div class="app-shot-frame">
+                  <img src="../assets/projects/local-eco-scanner/analyzing.webp" alt="Local Eco-Scanner analyzing screen showing headphones and an Analyzing your item progress overlay" loading="lazy" decoding="async">
+                </div>
+              </a>
+              <figcaption>
+                <span>02 / analyze</span>
+                <strong>Process the scan</strong>
+                <p>The UI communicates that recycling and upcycling guidance is being generated.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="app-shot app-shot-results">
+              <div class="app-shot-frame result-crop-stack" aria-label="Local Eco-Scanner Eco Analysis result screen shown in three continuous crops">
+                <img src="../assets/projects/local-eco-scanner/result-top.webp" alt="Top of Local Eco-Scanner Eco Analysis result showing the scanned headphones and recyclability guidance" loading="lazy" decoding="async">
+                <img src="../assets/projects/local-eco-scanner/result-mid.webp" alt="Middle of Local Eco-Scanner Eco Analysis result showing proper e-waste disposal guidance" loading="lazy" decoding="async">
+                <img src="../assets/projects/local-eco-scanner/result-bottom.webp" alt="Bottom of Local Eco-Scanner Eco Analysis result showing upcycling ideas, municipal reminder, and Scan Another Item button" loading="lazy" decoding="async">
+              </div>
+              <figcaption>
+                <span>03 / result</span>
+                <strong>Return actionable guidance</strong>
+                <p>The real result screen separates recyclability, disposal steps, creative reuse ideas, and a municipal-rules reminder.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <p class="product-proof-note">
+            <span>proof_of_build()</span>
+            These screenshots demonstrate the working Android experience running on a physical device.
+            The portfolio uses web-optimized copies of the original on-device captures.
+          </p>
         </div>
       </section>
 
