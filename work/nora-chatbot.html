@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOra University Chatbot — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a university document retrieval chatbot using FAISS, Streamlit, and optional local FLAN-T5 generation.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right"><ul class="nav-links"><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#journey">Journey</a></li><li><a href="../index.html#contact">Contact</a></li></ul></div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / nora-chatbot</div>
+      <h1>NOra University Chatbot</h1>
+      <p class="case-lede">A university question-answering prototype that ingests academic PDFs, builds a FAISS retrieval index, retrieves relevant course context, and serves answers through Streamlit with optional local FLAN-T5 generation.</p>
+      <div class="case-meta"><span>Python</span><span>FAISS</span><span>Streamlit</span><span>PDF retrieval</span><span>Optional FLAN-T5</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://github.com/naramritvij/openai" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
+
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Answer university questions from a bounded document collection.</h2>
+        <p>Rather than treating a language model as a source of truth, NOra starts with university documents. The retrieval layer finds relevant PDF content first, then the application can either summarize retrieved material directly or pass it through a small local generation model.</p>
+        <div class="case-summary-grid">
+          <div class="case-summary-card"><span>01</span><strong>Document-grounded</strong><p>Academic PDFs are the retrieval source for university questions.</p></div>
+          <div class="case-summary-card"><span>02</span><strong>Vector retrieval</strong><p>FAISS provides fast similarity search over indexed document content.</p></div>
+          <div class="case-summary-card"><span>03</span><strong>Local generation option</strong><p>FLAN-T5-small can be used for generation, with extractive behavior available as a simpler fallback.</p></div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>Retrieval first, generation second.</h2>
+        <p>The architecture separates document ingestion and indexing from the runtime question-answer path.</p>
+        <div class="architecture-card">
+          <div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+          <svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="NOra architecture diagram">
+            <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+            <path class="edge" d="M 205 91 L 275 91"/><text class="edge-label" x="240" y="83">ingest</text>
+            <path class="edge edge-accent" d="M 450 91 L 525 91"/><text class="edge-label" x="487" y="83">store</text>
+            <path class="edge" d="M 205 321 L 275 321"/><text class="edge-label" x="240" y="313">query</text>
+            <path class="edge" d="M 362 285 L 612 127"/><text class="edge-label" x="487" y="198">search</text>
+            <path class="edge" d="M 450 321 L 525 321"/><text class="edge-label" x="487" y="313">context</text>
+            <path class="edge edge-ai" d="M 700 321 L 770 321"/><text class="edge-label" x="735" y="313">answer</text>
+
+            <rect class="node node-user" x="35" y="55" width="170" height="72" rx="14"/><text class="label" x="120" y="87">Course PDFs</text><text class="sub" x="120" y="106">COE / COS / CPS</text>
+            <rect class="node" x="275" y="55" width="175" height="72" rx="14"/><text class="label" x="362.5" y="87">Index Pipeline</text><text class="sub" x="362.5" y="106">chunk + encode</text>
+            <rect class="node node-data" x="525" y="55" width="175" height="72" rx="14"/><text class="label" x="612.5" y="87">FAISS Index</text><text class="sub" x="612.5" y="106">vector retrieval</text>
+            <rect class="node node-user" x="35" y="285" width="170" height="72" rx="14"/><text class="label" x="120" y="317">User Question</text><text class="sub" x="120" y="336">Streamlit</text>
+            <rect class="node" x="275" y="285" width="175" height="72" rx="14"/><text class="label" x="362.5" y="317">Retriever</text><text class="sub" x="362.5" y="336">similar context</text>
+            <rect class="node node-ai" x="525" y="285" width="175" height="72" rx="14"/><text class="label" x="612.5" y="317">Answer Layer</text><text class="sub" x="612.5" y="336">extractive / FLAN-T5</text>
+            <rect class="node node-data" x="770" y="285" width="180" height="72" rx="14"/><text class="label" x="860" y="317">Streamlit UI</text><text class="sub" x="860" y="336">grounded response</text>
+          </svg>
+          <p class="diagram-caption">The vector index is prepared from a bounded university corpus. At runtime, the model sees retrieved context instead of answering an unconstrained question from general memory.</p>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>Question-answering path</h2>
+        <p>The user-facing path is short because document preparation happens ahead of time.</p>
+        <div class="flow-track">
+          <div class="flow-step"><span>01</span><strong>Prepare corpus</strong><p>Academic PDFs are parsed and indexed into the FAISS retrieval store.</p></div>
+          <div class="flow-step"><span>02</span><strong>Ask question</strong><p>The user enters a university-related question in Streamlit.</p></div>
+          <div class="flow-step"><span>03</span><strong>Retrieve context</strong><p>Similarity search selects relevant document content.</p></div>
+          <div class="flow-step"><span>04</span><strong>Compose answer</strong><p>Use extractive summary or optional local FLAN-T5 generation.</p></div>
+          <div class="flow-step"><span>05</span><strong>Present</strong><p>Streamlit returns an answer grounded in the indexed documents.</p></div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key engineering decisions</h2>
+        <ul>
+          <li><strong>Bounded document corpus</strong> — the application is aimed at university information rather than open-domain chat.</li>
+          <li><strong>Retrieval before generation</strong> — FAISS narrows the context before any optional local language-model step.</li>
+          <li><strong>Local model option</strong> — FLAN-T5-small allows experimentation without depending on a hosted generation API.</li>
+          <li><strong>Streamlit interface</strong> — keeps the prototype focused on retrieval quality and question-answer flow.</li>
+        </ul>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Python</span><span>FAISS</span><span>Streamlit</span><span>PDF ingestion</span><span>Vector retrieval</span><span>FLAN-T5-small</span><span>Hugging Face</span></div>
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div></footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
