@@ -109,7 +109,7 @@
 
     if (!reduceMotion) {
       shown.forEach((card, index) => {
-        card.animate(
+        const animation = card.animate(
           [
             { opacity: 0, transform: "translateY(12px) scale(.988)" },
             { opacity: 1, transform: "translateY(0) scale(1)" }
@@ -121,6 +121,7 @@
             fill: "both"
           }
         );
+        animation.addEventListener("finish", () => animation.cancel(), { once: true });
       });
     }
 
