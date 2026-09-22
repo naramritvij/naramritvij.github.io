@@ -1,72 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CivicFlow AI — Case Study — Ritvij Naram</title>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicFlow AI — Case Study — Ritvij Naram</title>
+  <meta name="description" content="Architecture case study for a full-stack transit incident intelligence platform.">
+  <meta name="theme-color" content="#080c14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
-<nav class="nav">
-  <div class="wrap">
-    <div class="nav-brand">ritvij<span class="dot">.</span>naram</div>
-    <ul class="nav-links"><li><a href="../index.html#work">back to work</a></li></ul>
-  </div>
-</nav>
+<body class="case-page">
+  <div class="page-noise" aria-hidden="true"></div>
+  <nav class="nav scrolled" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../index.html#top"><span class="brand-mark">&gt;_</span><span>ritvij<span class="brand-dot">.</span>naram</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#journey">Journey</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  </nav>
 
-<header class="case-hero">
-  <div class="wrap">
-    <div class="case-back mono"><a href="../index.html#work">← index</a> / work / civicflow.html</div>
-    <h1>CivicFlow AI</h1>
-    <div class="case-meta">commit 4e91a2c · FastAPI · Oracle DB · Gemini · React</div>
-  </div>
-</header>
+  <header class="case-hero">
+    <div class="wrap">
+      <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / civicflow</div>
+      <h1>CivicFlow AI</h1>
+      <p class="case-lede">A full-stack incident intelligence platform that combines React, FastAPI, Oracle, and Gemini to turn operational transit incidents into structured AI analysis, recommendations, passenger messaging, and executive summaries.</p>
+      <div class="case-meta"><span>React 19</span><span>FastAPI</span><span>Oracle</span><span>Gemini 2.5 Flash</span><span>AI caching</span></div>
+      <div class="case-actions"><a class="btn btn-primary" href="https://github.com/naramritvij/civicflow-ai" target="_blank" rel="noopener">Repository ↗</a></div>
+    </div>
+  </header>
 
-<main class="wrap case-body" style="padding:44px 0 80px;">
+  <main class="wrap case-body">
+    <div class="case-layout">
+      <section class="case-section reveal">
+        <p class="case-kicker">01 / overview</p>
+        <h2>Put AI around operational data without making AI the system of record.</h2>
+        <p>CivicFlow AI separates persistent incident data from generated analysis. Oracle stores incident state, FastAPI controls application logic and AI usage, Gemini creates structured intelligence, and the frontend presents both operational records and generated insight.</p>
+        <div class="case-summary-grid"><div class="case-summary-card"><span>01</span><strong>Structured incident intelligence</strong><p>Severity, root cause, recommended actions, passenger messaging, executive summary, and confidence.</p></div><div class="case-summary-card"><span>02</span><strong>Controlled AI usage</strong><p>Cached responses and daily API usage limits reduce unnecessary model calls.</p></div><div class="case-summary-card"><span>03</span><strong>Relational backbone</strong><p>Oracle remains the authoritative data layer for incidents and application state.</p></div></div>
+      </section>
 
-  <h2>The problem</h2>
-  <p>Civic and municipal incident reports — potholes, outages, service complaints — tend to land in
-  whatever channel is easiest for the reporter (a form, an email, a call log), which leaves staff manually
-  reading, categorizing, and routing each one before anything gets fixed. That manual triage step is where
-  response time gets lost.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">02 / architecture</p>
+        <h2>Operational data and AI analysis stay separated.</h2>
+        <p>The API layer mediates both the relational database and Gemini so the browser does not directly own business logic or AI credentials.</p>
+        <div class="architecture-card">
+<div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
+<svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+  <path class="edge" d="M 210 209 L 285 209"/>
+<text class="edge-label" x="247.5" y="201">REST</text>
+<path class="edge edge-accent" d="M 460 195 L 545 94"/>
+<text class="edge-label" x="502.5" y="136.5">read / write</text>
+<path class="edge" d="M 460 223 L 545 324"/>
+<text class="edge-label" x="502.5" y="265.5">check cache</text>
+<path class="edge" d="M 720 324 L 800 223"/>
+<text class="edge-label" x="760" y="265.5">uncached</text>
+<path class="edge edge-ai" d="M 800 195 L 720 94"/>
+<text class="edge-label" x="760" y="136.5">analysis</text>
+  <rect class="node node-user" x="40" y="170" width="170" height="78" rx="14"/>
+<text class="label" x="125" y="205">React Dashboard</text>
+<text class="sub" x="125" y="224">incident operations</text>
+<rect class="node" x="285" y="170" width="175" height="78" rx="14"/>
+<text class="label" x="372.5" y="205">FastAPI</text>
+<text class="sub" x="372.5" y="224">API + orchestration</text>
+<rect class="node node-data" x="545" y="55" width="175" height="78" rx="14"/>
+<text class="label" x="632.5" y="90">Oracle DB</text>
+<text class="sub" x="632.5" y="109">incident system of record</text>
+<rect class="node node-data" x="545" y="285" width="175" height="78" rx="14"/>
+<text class="label" x="632.5" y="320">AI Cache / Limits</text>
+<text class="sub" x="632.5" y="339">reuse + quota control</text>
+<rect class="node node-ai" x="800" y="170" width="165" height="78" rx="14"/>
+<text class="label" x="882.5" y="205">Gemini 2.5</text>
+<text class="sub" x="882.5" y="224">structured analysis</text>
+</svg>
+<p class="diagram-caption">FastAPI is the control plane: it retrieves incidents, checks cached AI state and usage limits, invokes Gemini only when needed, and persists the resulting structured analysis.</p>
+</div>
+      </section>
 
-  <h2>What I built</h2>
-  <p>CivicFlow AI is a full-stack incident intelligence system: a FastAPI backend persists reports to an
-  Oracle database, Google Gemini reads each incoming report and assigns a category, urgency level, and a
-  short summary, and a React front end gives staff a live queue to review, filter, and close cases from.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">03 / flow</p>
+        <h2>From incident record to decision support</h2>
+        <p>Generated intelligence is tied back to an existing operational record rather than living as an isolated chatbot response.</p>
+        <div class="flow-track"><div class="flow-step"><span>01</span><strong>Retrieve incident</strong><p>The dashboard requests an operational incident through FastAPI.</p></div><div class="flow-step"><span>02</span><strong>Check AI state</strong><p>Backend checks cache and daily model-usage constraints.</p></div><div class="flow-step"><span>03</span><strong>Analyze</strong><p>Gemini returns structured severity, cause, actions, messaging, and confidence.</p></div><div class="flow-step"><span>04</span><strong>Persist</strong><p>Analysis is cached alongside the incident workflow.</p></div><div class="flow-step"><span>05</span><strong>Present</strong><p>React renders actionable operational and executive views.</p></div></div>
+      </section>
 
-  <div class="arch-grid">
-    <div class="arch-box">React UI<div class="sub">case queue + filters</div></div>
-    <div class="arch-box">FastAPI<div class="sub">ingest + routing</div></div>
-    <div class="arch-box">Gemini API<div class="sub">categorize + summarize</div></div>
-    <div class="arch-box">Oracle DB<div class="sub">system of record</div></div>
-  </div>
+      
 
-  <h2>Design decisions</h2>
-  <ul>
-    <li><strong>Oracle as the backbone</strong> — chosen over a lighter store because the course context and
-    downstream reporting needs called for relational integrity: foreign keys tying reports to categories,
-    staff, and status history.</li>
-    <li><strong>LLM in the loop, not the driver</strong> — Gemini classifies and summarizes, but every
-    categorization is editable by a human reviewer before it's final. The model speeds up triage; it doesn't
-    replace the judgment call.</li>
-    <li><strong>API-first backend</strong> — FastAPI exposes clean endpoints for ingest, review, and status
-    updates, so the React app is a thin client rather than where any business logic lives.</li>
-  </ul>
+      <section class="case-section reveal">
+        <p class="case-kicker">04 / decisions</p>
+        <h2>Key engineering decisions</h2>
+        <ul><li><strong>API-owned orchestration</strong> — FastAPI keeps database access, model calls, caching, and usage rules out of the browser.</li><li><strong>Structured AI output</strong> — the model produces defined operational fields rather than unbounded prose.</li><li><strong>Caching and usage limits</strong> — repeated analysis can reuse prior results while limiting unnecessary external API calls.</li><li><strong>Relational system of record</strong> — AI enriches the workflow, but Oracle remains authoritative for incident data.</li></ul>
+        
+      </section>
 
-  <h2>What it improved</h2>
-  <p>The categorize-and-summarize step that used to require a person reading the full report now happens the
-  moment it's submitted, so staff open a queue that's already sorted by urgency instead of a raw inbox.</p>
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / stack</p>
+        <h2>Technology stack</h2>
+        <div class="case-tech"><span>Python</span><span>FastAPI</span><span>Oracle Database</span><span>React 19</span><span>TanStack</span><span>Tailwind</span><span>Google Gemini 2.5 Flash</span><span>REST APIs</span></div>
+      </section>
+    </div>
+  </main>
 
-  <h2>Stack</h2>
-  <div class="tag-row" style="padding:0 0 24px;">
-    <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Oracle SQL</span>
-    <span class="tag">Google Gemini API</span><span class="tag">React</span>
-  </div>
-
-</main>
-
-<footer>© Ritvij Naram · <a href="https://github.com/naramritvij" target="_blank" rel="noopener">github.com/naramritvij</a></footer>
+  <footer>
+    <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
+  </footer>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
