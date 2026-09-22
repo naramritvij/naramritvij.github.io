@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pitch Predictor — FIFA World Cup 2026 — Case Study — Ritvij Naram</title>
+  <title>Pitch Predictor - FIFA World Cup 2026 - Case Study - Ritvij Naram</title>
   <meta name="description" content="Architecture case study for a realtime campus FIFA World Cup 2026 prediction game.">
   <meta name="theme-color" content="#080c14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
   <header class="case-hero">
     <div class="wrap">
       <div class="case-back"><a href="../index.html#projects">← portfolio</a> / work / pitch-predictor</div>
-      <h1>Pitch Predictor — FIFA World Cup 2026</h1>
+      <h1>Pitch Predictor - FIFA World Cup 2026</h1>
       <p class="case-lede">An always-on campus prediction game where phones and public displays stay synchronized through Firestore while a scheduled GitHub Actions job fetches final match results automatically.</p>
       <div class="case-meta"><span>Private source</span><span>Live deployment</span><span>Firebase</span><span>GitHub Actions</span><span>Netlify</span><span>API-Football</span></div>
       <div class="case-actions"><a class="btn btn-primary" href="https://pitch-predictor-neu.netlify.app" target="_blank" rel="noopener">Live experience ↗</a></div>
@@ -105,7 +105,7 @@
           <div class="visual-showcase-title"><strong>scoring_rules</strong><span>leaderboard behavior</span></div>
           <div class="rule-grid">
             <div class="rule-card"><div class="rule-symbol">+1</div><h3>Correct pick</h3><p>Add one point and extend the current streak.</p></div>
-            <div class="rule-card"><div class="rule-symbol">—</div><h3>Skipped match</h3><p>No point awarded, but the current streak stays intact.</p></div>
+            <div class="rule-card"><div class="rule-symbol">-</div><h3>Skipped match</h3><p>No point awarded, but the current streak stays intact.</p></div>
             <div class="rule-card"><div class="rule-symbol">↺</div><h3>Incorrect pick</h3><p>No point awarded and the current streak resets.</p></div>
           </div>
           <div class="case-callout"><span>ranking order</span><p>Total correct picks → best streak → accuracy.</p></div>
@@ -115,7 +115,7 @@
       <section class="case-section reveal">
         <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
-        <ul><li><strong>Static app instead of a permanent server</strong> — the interaction layer stays simple to deploy and avoids maintaining an always-on application backend.</li><li><strong>Firestore for synchronization</strong> — realtime listeners keep phones and public screens aligned without custom websocket infrastructure.</li><li><strong>GitHub Actions as scheduled backend work</strong> — a cron-triggered Node.js job handles result ingestion while preserving the lightweight hosting model.</li><li><strong>Quota-aware API calls</strong> — the bot requests football data only when a match is actually waiting for a result.</li></ul>
+        <ul><li><strong>Static app instead of a permanent server</strong> - the interaction layer stays simple to deploy and avoids maintaining an always-on application backend.</li><li><strong>Firestore for synchronization</strong> - realtime listeners keep phones and public screens aligned without custom websocket infrastructure.</li><li><strong>GitHub Actions as scheduled backend work</strong> - a cron-triggered Node.js job handles result ingestion while preserving the lightweight hosting model.</li><li><strong>Quota-aware API calls</strong> - the bot requests football data only when a match is actually waiting for a result.</li></ul>
         <div class="case-callout"><span>scoring model</span><p>Ranking prioritizes total correct picks, then best streak, then accuracy. A skipped match does not break the current streak; an incorrect prediction does.</p></div>
       </section>
 

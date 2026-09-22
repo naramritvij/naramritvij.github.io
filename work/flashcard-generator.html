@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Flashcard Generator — Case Study — Ritvij Naram</title>
+  <title>AI Flashcard Generator - Case Study - Ritvij Naram</title>
   <meta name="description" content="Architecture case study for a Streamlit NLP application that generates study flashcards using spaCy and a fine-tuned T5 model.">
   <meta name="theme-color" content="#080c14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,7 @@
       <section class="case-section reveal">
         <p class="case-kicker">02 / architecture</p>
         <h2>Deterministic preprocessing before generative question creation.</h2>
-        <p>The model is used for the task it is best at—question generation—while segmentation and answer grounding remain deterministic.</p>
+        <p>The model is used for the task it is best at - question generation - while segmentation and answer grounding remain deterministic.</p>
         <div class="architecture-card">
 <div class="architecture-title"><strong>system_view</strong><span>architecture / data flow</span></div>
 <svg class="architecture-svg" viewBox="0 0 1000 420" role="img" aria-label="Project architecture diagram">
@@ -109,7 +109,7 @@
       <section class="case-section reveal">
         <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
-        <ul><li><strong>Ground answers in source text</strong> — the model generates only the question, reducing unsupported answer generation.</li><li><strong>Use spaCy for structure</strong> — sentence boundaries are handled by a dedicated NLP library instead of relying on generation.</li><li><strong>Streamlit for iteration</strong> — a lightweight interface makes the NLP pipeline directly usable without building a separate frontend.</li><li><strong>CSV as an interoperability layer</strong> — generated study material can move into other tools instead of being trapped in the app.</li></ul>
+        <ul><li><strong>Ground answers in source text</strong> - the model generates only the question, reducing unsupported answer generation.</li><li><strong>Use spaCy for structure</strong> - sentence boundaries are handled by a dedicated NLP library instead of relying on generation.</li><li><strong>Streamlit for iteration</strong> - a lightweight interface makes the NLP pipeline directly usable without building a separate frontend.</li><li><strong>CSV as an interoperability layer</strong> - generated study material can move into other tools instead of being trapped in the app.</li></ul>
         
       </section>
 

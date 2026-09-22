@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anomaly Detection for Video Surveillance — Case Study — Ritvij Naram</title>
+  <title>Anomaly Detection for Video Surveillance - Case Study - Ritvij Naram</title>
   <meta name="description" content="Architecture case study for a Python desktop video anomaly detection application using OpenCV, Keras, Tkinter, and SQLite authentication.">
   <meta name="theme-color" content="#080c14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +114,7 @@
       <section class="case-section reveal">
         <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
-        <ul><li><strong>Frame-level model</strong> — keeps the inference pipeline straightforward and computationally lighter than a temporal video model.</li><li><strong>Local desktop workflow</strong> — Tkinter and OpenCV allow direct file analysis without deploying an application server.</li><li><strong>Explicit preprocessing</strong> — the exact resize, grayscale, normalization, and reshape sequence makes model expectations transparent.</li><li><strong>SQLite only for access control</strong> — authentication state is persisted without adding an external database dependency.</li></ul>
+        <ul><li><strong>Frame-level model</strong> - keeps the inference pipeline straightforward and computationally lighter than a temporal video model.</li><li><strong>Local desktop workflow</strong> - Tkinter and OpenCV allow direct file analysis without deploying an application server.</li><li><strong>Explicit preprocessing</strong> - the exact resize, grayscale, normalization, and reshape sequence makes model expectations transparent.</li><li><strong>SQLite only for access control</strong> - authentication state is persisted without adding an external database dependency.</li></ul>
         <div class="case-callout"><span>current limitations</span><p>The repository notes missing background-image assets and a hardcoded model path that should be converted to a portable relative path. The classifier is frame-based, so it does not model temporal context across frames.</p></div>
       </section>
 
