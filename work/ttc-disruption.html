@@ -101,14 +101,34 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / access model</p>
+        <h2>Different roles see different operational surfaces.</h2>
+        <p>The system keeps internal disruption-management capabilities separate from the simplified passenger notification experience.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>role_matrix</strong><span>access + workflow separation</span></div>
+          <table class="role-matrix">
+            <thead><tr><th>Capability</th><th>Developer / Admin</th><th>Passenger</th></tr></thead>
+            <tbody>
+              <tr><td>View disruption records</td><td class="check">✓ Full operational view</td><td class="check">✓ Notification view</td></tr>
+              <tr><td>Create / update disruptions</td><td class="check">✓</td><td>—</td></tr>
+              <tr><td>Response coordination</td><td class="check">✓</td><td>—</td></tr>
+              <tr><td>Audit deleted records</td><td class="check">✓</td><td>—</td></tr>
+              <tr><td>Restore soft-deleted records</td><td class="check">✓</td><td>—</td></tr>
+              <tr><td>Passenger notifications</td><td class="check">✓ Source workflow</td><td class="check">✓ Consume</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>Custom native-HTTP backend</strong> — routing was implemented without Express, making request parsing and route behavior explicit.</li><li><strong>Named Oracle bind parameters</strong> — queries use bind variables instead of interpolating user input.</li><li><strong>Soft delete with recovery</strong> — deletion preserves an audit trail and supports restore instead of permanently destroying operational history.</li><li><strong>Role-specific UX</strong> — passengers are not exposed to developer operations, while operational users get richer CRUD and coordination tools.</li></ul>
         
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>React 19</span><span>Node.js native http</span><span>Oracle Database</span><span>oracledb</span><span>REST APIs</span><span>Role-based access</span><span>Audit logging</span><span>SQL bind parameters</span></div>
       </section>

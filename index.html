@@ -3,19 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ritvij Naram — Software, Data & AI Engineer</title>
+  <title>Ritvij Naram — Software Engineer</title>
   <meta name="description" content="Portfolio of Ritvij Naram — software, data and AI engineer building full-stack applications, data systems, and practical machine-learning products.">
   <meta name="theme-color" content="#0a0f1c">
-  <meta property="og:title" content="Ritvij Naram — Software, Data & AI Engineer">
+  <meta property="og:title" content="Ritvij Naram — Software Engineer">
   <meta property="og:description" content="Full-stack applications, data systems, AI products, and engineering case studies.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    try {
+      if (!sessionStorage.getItem("ritvij-portfolio-intro-seen") && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("intro-pending");
+      }
+    } catch (e) {}
+  </script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <div class="page-noise" aria-hidden="true"></div>
+
+  <div class="intro-screen" id="portfolio-intro" aria-hidden="true">
+    <div class="intro-grid"></div>
+    <div class="intro-orbit intro-orbit-a"></div>
+    <div class="intro-orbit intro-orbit-b"></div>
+    <div class="intro-content">
+      <span class="intro-overline">Welcome</span>
+      <h1>Ritvij Naram</h1>
+      <p class="intro-role">Software Engineer</p>
+      <div class="intro-rule"><span></span></div>
+      <p class="intro-subline">Building practical products across software, data &amp; AI.</p>
+    </div>
+  </div>
 
   <nav class="nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
@@ -100,7 +120,7 @@
           <div>
             <span class="identity-kicker">github.com/naramritvij</span>
             <h2>Ritvij Naram</h2>
-            <p>Software · Data · AI</p>
+            <p>Software Engineer</p>
           </div>
         </div>
 
@@ -221,7 +241,7 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card featured reveal" data-category="mobile ai">
+          <article class="project-card featured reveal" data-category="mobile ai" data-case-study="work/local-eco-scanner.html" tabindex="0" role="link" aria-label="Open Local Eco-Scanner case study">
             <div class="card-topline">
               <span class="project-index">01</span>
               <span class="project-state">Functional MVP</span>
@@ -245,13 +265,14 @@
             <div class="tags">
               <span>Kotlin</span><span>Jetpack Compose</span><span>CameraX</span><span>Gemini</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/local-eco-scanner.html">Case study →</a>
               <a href="https://github.com/naramritvij/LocalEcoScanner" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal" data-category="fullstack data">
+          <article class="project-card featured reveal" data-category="fullstack data" data-case-study="work/pitch-predictor.html" tabindex="0" role="link" aria-label="Open Pitch Predictor — FIFA World Cup 2026 case study">
             <div class="card-topline">
               <span class="project-index">02</span>
               <span class="project-state">Private source · Live</span>
@@ -266,13 +287,14 @@
             <div class="tags">
               <span>JavaScript</span><span>Firebase</span><span>GitHub Actions</span><span>Netlify</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/pitch-predictor.html">Case study →</a>
               <a href="https://pitch-predictor-neu.netlify.app" target="_blank" rel="noopener">Live demo ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal" data-category="productux">
+          <article class="project-card featured reveal" data-category="productux" data-case-study="work/service-navigator.html" tabindex="0" role="link" aria-label="Open Service Navigator case study">
             <div class="card-topline">
               <span class="project-index">03</span>
               <span class="project-state">Research validated</span>
@@ -297,13 +319,14 @@
             <div class="tags">
               <span>UX Research</span><span>Product Design</span><span>Figma</span><span>Usability Testing</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/service-navigator.html">Case study →</a>
               <a href="https://ritvij-service-nav-portfolio.lovable.app" target="_blank" rel="noopener">Live experience ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal" data-category="fullstack data ai">
+          <article class="project-card featured reveal" data-category="fullstack data ai" data-case-study="work/civicflow.html" tabindex="0" role="link" aria-label="Open CivicFlow AI case study">
             <div class="card-topline">
               <span class="project-index">04</span>
               <span class="project-state">Case study</span>
@@ -327,13 +350,14 @@
             <div class="tags">
               <span>FastAPI</span><span>Oracle</span><span>React</span><span>Gemini</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/civicflow.html">Case study →</a>
               <a href="https://github.com/naramritvij/civicflow-ai" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card featured reveal" data-category="ai fullstack">
+          <article class="project-card featured reveal" data-category="ai fullstack" data-case-study="work/rna-assistant.html" tabindex="0" role="link" aria-label="Open RNA — Ritvij Naram Assistant case study">
             <div class="card-topline">
               <span class="project-index">05</span>
               <span class="project-state">Local-first AI</span>
@@ -357,13 +381,14 @@
             <div class="tags">
               <span>Node.js</span><span>Express</span><span>Ollama</span><span>Local AI</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/rna-assistant.html">Case study →</a>
               <a href="https://github.com/naramritvij/RNA-assistant" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="ai fullstack">
+          <article class="project-card reveal" data-category="ai fullstack" data-case-study="work/neuralverse.html" tabindex="0" role="link" aria-label="Open NeuralVerse case study">
             <div class="card-topline">
               <span class="project-index">06</span>
               <span class="project-state">Live demo</span>
@@ -386,13 +411,14 @@
             <div class="tags">
               <span>React</span><span>TypeScript</span><span>Framer Motion</span><span>ML</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/neuralverse.html">Case study →</a>
               <a href="https://neural-verse-spark.lovable.app" target="_blank" rel="noopener">Live demo ↗</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="fullstack data">
+          <article class="project-card reveal" data-category="fullstack data" data-case-study="work/ttc-disruption.html" tabindex="0" role="link" aria-label="Open TTC Service Disruption System case study">
             <div class="card-topline">
               <span class="project-index">07</span>
               <span class="project-state">Database system</span>
@@ -413,13 +439,14 @@
             <div class="tags">
               <span>React</span><span>Node.js</span><span>Oracle</span><span>REST</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/ttc-disruption.html">Case study →</a>
               <a href="https://github.com/naramritvij/ttc-project" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="ai fullstack">
+          <article class="project-card reveal" data-category="ai fullstack" data-case-study="work/image-whisperer.html" tabindex="0" role="link" aria-label="Open Image Whisperer case study">
             <div class="card-topline">
               <span class="project-index">08</span>
               <span class="project-state">Live demo</span>
@@ -441,6 +468,7 @@
             <div class="tags">
               <span>React</span><span>TypeScript</span><span>TensorFlow.js</span><span>MobileNet</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/image-whisperer.html">Case study →</a>
               <a href="https://image-whisperer-64.lovable.app" target="_blank" rel="noopener">Live demo ↗</a>
@@ -448,7 +476,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="ai">
+          <article class="project-card reveal" data-category="ai" data-case-study="work/flashcard-generator.html" tabindex="0" role="link" aria-label="Open AI Flashcard Generator case study">
             <div class="card-topline">
               <span class="project-index">09</span>
               <span class="project-state">NLP</span>
@@ -470,13 +498,14 @@
             <div class="tags">
               <span>Python</span><span>Streamlit</span><span>spaCy</span><span>T5</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/flashcard-generator.html">Case study →</a>
               <a href="https://github.com/naramritvij/flashcard-generator-llm" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="ai data">
+          <article class="project-card reveal" data-category="ai data" data-case-study="work/anomaly-detection.html" tabindex="0" role="link" aria-label="Open Anomaly Detection for Video Surveillance case study">
             <div class="card-topline">
               <span class="project-index">10</span>
               <span class="project-state">Computer vision</span>
@@ -497,13 +526,14 @@
             <div class="tags">
               <span>Python</span><span>Keras</span><span>OpenCV</span><span>SQLite</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/anomaly-detection.html">Case study →</a>
               <a href="https://github.com/naramritvij/Anomaly-Detection-for-Video-Surveillance" target="_blank" rel="noopener">Repository ↗</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="ai data">
+          <article class="project-card reveal" data-category="ai data" data-case-study="work/nora-chatbot.html" tabindex="0" role="link" aria-label="Open NOra University Chatbot case study">
             <div class="card-topline">
               <span class="project-index">11</span>
               <span class="project-state">RAG prototype</span>
@@ -524,6 +554,7 @@
             <div class="tags">
               <span>Python</span><span>FAISS</span><span>Streamlit</span><span>RAG</span>
             </div>
+            <span class="card-open-cue" aria-hidden="true">Open case study ↗</span>
             <div class="card-links">
               <a href="work/nora-chatbot.html">Case study →</a>
               <a href="https://github.com/naramritvij/openai" target="_blank" rel="noopener">Repository ↗</a>

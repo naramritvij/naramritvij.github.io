@@ -106,14 +106,31 @@
       
 
       <section class="case-section reveal">
-        <p class="case-kicker">04 / decisions</p>
+        <p class="case-kicker">04 / capabilities</p>
+        <h2>RNA is a tool system around a local model.</h2>
+        <p>The assistant becomes useful because generation, memory, retrieval, file understanding, and document creation are separate capabilities that can be composed together.</p>
+        <div class="visual-showcase">
+          <div class="visual-showcase-title"><strong>capability_map</strong><span>assistant tool surface</span></div>
+          <div class="tool-map">
+            <div class="tool-node"><span>memory</span><strong>Session + conversation context</strong></div>
+            <div class="tool-node center"><span>core</span><strong>RNA + Ollama / phi3:mini</strong></div>
+            <div class="tool-node"><span>search</span><strong>DuckDuckGo web retrieval</strong></div>
+            <div class="tool-node"><span>files</span><strong>PDF / Word / text reading</strong></div>
+            <div class="tool-node"><span>documents</span><strong>PDF / Word / Excel generation</strong></div>
+            <div class="tool-node"><span>interfaces</span><strong>Browser UI + terminal mode</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
         <ul><li><strong>Local-first inference</strong> — Ollama keeps the core conversation private and removes per-request API cost.</li><li><strong>Modular tools</strong> — search, file reading, document creation, and memory live in separate modules rather than one large assistant file.</li><li><strong>Dual interface</strong> — the same assistant can be used through the browser UI or terminal mode.</li><li><strong>Simple persistence for a personal tool</strong> — JSON is sufficient for the current single-user scope while keeping the project easy to inspect.</li></ul>
         
       </section>
 
       <section class="case-section reveal">
-        <p class="case-kicker">05 / stack</p>
+        <p class="case-kicker">06 / stack</p>
         <h2>Technology stack</h2>
         <div class="case-tech"><span>Node.js</span><span>Express</span><span>Ollama</span><span>phi3:mini</span><span>Vanilla JS</span><span>pdfkit</span><span>docx</span><span>exceljs</span><span>pdf2json</span><span>mammoth</span><span>axios</span><span>cheerio</span></div>
       </section>
