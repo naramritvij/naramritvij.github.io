@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Eco-Scanner — Case Study — Ritvij Naram</title>
+  <title>Local Eco-Scanner - Case Study - Ritvij Naram</title>
   <meta name="description" content="Architecture and product case study for Local Eco-Scanner, a location-aware Android recycling assistant.">
   <meta name="theme-color" content="#080c14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,7 +103,7 @@
         <p class="case-kicker">04 / real product</p>
         <h2>Actual app screens from the installed Android APK.</h2>
         <p>
-          These are real on-device screenshots from a working scan of headphones — not mockups.
+          These are real on-device screenshots from a working scan of headphones - not mockups.
           They show the complete product interaction from framing the object, through Gemini analysis,
           to the final recycling, disposal, and upcycling guidance.
         </p>
@@ -166,7 +166,7 @@
       <section class="case-section reveal">
         <p class="case-kicker">05 / decisions</p>
         <h2>Key engineering decisions</h2>
-        <ul><li><strong>Context before classification</strong> — the application asks for local context because disposal guidance without municipality information can be misleading.</li><li><strong>On-device profile persistence</strong> — SharedPreferences avoids unnecessary account infrastructure for a lightweight MVP.</li><li><strong>Image resizing before inference</strong> — limiting the longest dimension reduces payload size without changing the core scan experience.</li><li><strong>Explicit uncertainty</strong> — the prompt and UI avoid presenting uncertain municipal rules as authoritative facts.</li></ul>
+        <ul><li><strong>Context before classification</strong> - the application asks for local context because disposal guidance without municipality information can be misleading.</li><li><strong>On-device profile persistence</strong> - SharedPreferences avoids unnecessary account infrastructure for a lightweight MVP.</li><li><strong>Image resizing before inference</strong> - limiting the longest dimension reduces payload size without changing the core scan experience.</li><li><strong>Explicit uncertainty</strong> - the prompt and UI avoid presenting uncertain municipal rules as authoritative facts.</li></ul>
         <div class="case-callout"><span>current limitation</span><p>The MVP is not grounded in a live authoritative municipal dataset, and the Gemini key is compiled into the app configuration. A production version should move sensitive access behind a backend and ground local rules in authoritative sources.</p></div>
       </section>
 
