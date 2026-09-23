@@ -232,6 +232,87 @@
     });
   }
 
+
+  /* timeline progress */
+  const timeline = document.querySelector(".timeline");
+  const timelineItems = timeline ? [...timeline.querySelectorAll(".timeline-item")] : [];
+
+  const updateTimelineProgress = () => {
+    if (!timeline) return;
+    const rect = timeline.getBoundingClientRect();
+    const anchor = window.innerHeight * 0.48;
+    const progress = Math.min(1, Math.max(0, (anchor - rect.top) / Math.max(1, rect.height)));
+    timeline.style.setProperty("--timeline-progress", progress.toFixed(4));
+
+    timelineItems.forEach((item) => {
+      const itemRect = item.getBoundingClientRect();
+      item.classList.toggle("is-passed", itemRect.top + 12 <= anchor);
+    });
+  };
+
+  /* floating page progress / back to top */
+  const scrollTop = document.createElement("button");
+  scrollTop.className = "scroll-top";
+  scrollTop.type = "button";
+  scrollTop.setAttribute("aria-label", "Back to top");
+  scrollTop.innerHTML =
+    '<svg viewBox="0 0 42 42" aria-hidden="true">' +
+      '<circle class="scroll-top-track" cx="21" cy="21" r="18"></circle>' +
+      '<circle class="scroll-top-progress" cx="21" cy="21" r="18"></circle>' +
+    '</svg><span aria-hidden="true">↑</span>';
+  document.body.appendChild(scrollTop);
+
+  const scrollTopRing = scrollTop.querySelector(".scroll-top-progress");
+  const ringLength = 2 * Math.PI * 18;
+  if (scrollTopRing) scrollTopRing.style.strokeDasharray = String(ringLength);
+
+  let polishFrame = 0;
+  const updatePolish = () => {
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+
+    scrollTop.classList.toggle("is-visible", window.scrollY > 520);
+    if (scrollTopRing) {
+      scrollTopRing.style.strokeDashoffset = String(ringLength * (1 - progress));
+    }
+
+    updateTimelineProgress();
+  };
+
+  const requestPolishUpdate = () => {
+    if (polishFrame) return;
+    polishFrame = requestAnimationFrame(() => {
+      updatePolish();
+      polishFrame = 0;
+    });
+  };
+
+  scrollTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  updatePolish();
+  window.addEventListener("scroll", requestPolishUpdate, { passive: true });
+  window.addEventListener("resize", requestPolishUpdate, { passive: true });
+
+  /* subtle magnetic controls on precise pointers */
+  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".btn, .filter").forEach((control) => {
+      control.addEventListener("pointermove", (event) => {
+        const rect = control.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        const strength = control.classList.contains("filter") ? 3 : 5;
+        control.style.translate =
+          (x * strength).toFixed(2) + "px " + (y * strength).toFixed(2) + "px";
+      });
+
+      control.addEventListener("pointerleave", () => {
+        control.style.translate = "";
+      });
+    });
+  }
+
   /* three.js network */
   const canvas = document.getElementById("hero-canvas");
   if (!canvas || reduceMotion) return;
