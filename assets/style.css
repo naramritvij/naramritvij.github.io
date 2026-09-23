@@ -938,10 +938,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px}
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:28px;
-  width:100%;
+  width:min(920px,100%);
+  margin:0 auto;
   align-items:start
 }
-.pitch-screen-card{width:100%;max-width:none}
+.pitch-screen-card{width:100%;max-width:430px;justify-self:center}
 .evidence-zoom-link{display:block;text-decoration:none;cursor:zoom-in}
 .pitch-screen-frame{
   position:relative;
@@ -954,7 +955,6 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px}
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:945/1315;
   object-fit:contain;
   border-radius:12px;
   background:#05080d
