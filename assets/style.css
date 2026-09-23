@@ -932,13 +932,65 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px}
 .evidence-phone{max-width:330px;width:100%;justify-self:center}
 .phone-evidence-frame{padding:8px;border-radius:22px;background:#05080d}
 .phone-evidence-frame img{border-radius:15px}
+
+/* Pitch Predictor uses wider product screenshots instead of narrow phone mockups. */
+.pitch-screen-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:28px;
+  width:min(920px,100%);
+  margin:0 auto;
+  align-items:start
+}
+.pitch-screen-card{width:100%;max-width:430px;justify-self:center}
+.evidence-zoom-link{display:block;text-decoration:none;cursor:zoom-in}
+.pitch-screen-frame{
+  position:relative;
+  padding:10px;
+  border-radius:20px;
+  background:#05080d;
+  transition:transform .28s cubic-bezier(.16,1,.3,1),border-color .22s ease,box-shadow .28s ease
+}
+.pitch-screen-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  border-radius:12px;
+  background:#05080d
+}
+.evidence-zoom-link:hover .pitch-screen-frame{
+  transform:translateY(-4px);
+  border-color:rgba(89,242,141,.38);
+  box-shadow:0 24px 64px rgba(0,0,0,.42),0 0 0 1px rgba(89,242,141,.05)
+}
+.evidence-zoom-badge{
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  z-index:2;
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background:rgba(5,8,13,.84);
+  backdrop-filter:blur(10px);
+  font-family:var(--mono);
+  font-size:.54rem;
+  color:#dbe7f5;
+  opacity:0;
+  transform:translateY(4px);
+  transition:opacity .2s ease,transform .2s ease
+}
+.evidence-zoom-link:hover .evidence-zoom-badge,
+.evidence-zoom-link:focus-visible .evidence-zoom-badge{opacity:1;transform:none}
+
 .doc-evidence-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:start}
 .doc-evidence-frame{padding:12px;background:#f7f8fb}
 .doc-evidence-frame img{border-radius:9px;background:#fff}
 .doc-evidence-tall{max-width:360px;justify-self:center}
 @media(max-width:760px){
   .product-evidence,.documentation-evidence{padding:16px}
-  .phone-evidence-grid,.doc-evidence-grid{grid-template-columns:1fr}
+  .phone-evidence-grid,.doc-evidence-grid,.pitch-screen-grid{grid-template-columns:1fr}
   .evidence-phone,.doc-evidence-tall{max-width:360px;justify-self:center}
 }
 
