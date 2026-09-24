@@ -145,32 +145,100 @@
 
       <section class="case-section reveal">
         <p class="case-kicker">05 / project documentation</p>
-        <h2>System logic documented in the original project README.</h2>
+        <h2>Repository logic, rebuilt as crisp vector documentation.</h2>
         <p>
-          These diagrams are supporting artifacts from the project repository. They document both the deployed
-          system architecture and the prediction-to-points lifecycle used by the application.
+          The original README defines both the deployed system architecture and the prediction-to-points lifecycle.
+          These portfolio-native SVG diagrams recreate that logic directly, so they stay sharp at every screen size.
         </p>
         <div class="visual-showcase documentation-evidence">
-          <div class="visual-showcase-title"><strong>repository_documentation</strong><span>README · original project diagrams</span></div>
+          <div class="visual-showcase-title"><strong>repository_documentation</strong><span>README logic · native vector diagrams</span></div>
           <div class="doc-evidence-grid">
-            <figure class="evidence-card">
-              <div class="evidence-frame doc-evidence-frame">
-                <img src="../assets/projects/pitch-predictor/readme-architecture.webp" alt="Pitch Predictor README architecture diagram linking student phones, campus screens, Netlify, Firestore, GitHub Actions, the results bot, and API-Football" loading="lazy" decoding="async">
+            <figure class="evidence-card readme-diagram-card">
+              <div class="readme-diagram-frame">
+                <svg class="architecture-svg readme-diagram-svg" viewBox="0 0 760 410" role="img" aria-label="Pitch Predictor architecture linking student phones and campus displays to the Netlify app and Firestore, plus GitHub Actions, the results bot, and API-Football">
+                  <defs><marker id="doc-arrow-a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+                  <path class="doc-edge" d="M 175 112 L 292 177"/>
+                  <path class="doc-edge" d="M 175 292 L 292 213"/>
+                  <path class="doc-edge doc-edge-accent" d="M 445 195 L 542 195"/>
+                  <path class="doc-edge" d="M 170 352 L 287 352"/>
+                  <path class="doc-edge" d="M 427 352 L 548 309"/>
+                  <path class="doc-edge doc-edge-accent" d="M 357 315 L 590 229"/>
+                  <text class="edge-label" x="230" y="137">scan + predict</text>
+                  <text class="edge-label" x="229" y="266">display mode</text>
+                  <text class="edge-label" x="493" y="185">realtime listeners</text>
+                  <text class="edge-label" x="230" y="343">runs every 15 min</text>
+                  <text class="edge-label" x="490" y="329">read final scores</text>
+                  <text class="edge-label" x="472" y="268">write winners</text>
+
+                  <rect class="node node-user" x="35" y="75" width="140" height="74" rx="14"/>
+                  <text class="label" x="105" y="108">Student Phones</text><text class="sub" x="105" y="128">QR + predictions</text>
+                  <rect class="node node-user" x="35" y="255" width="140" height="74" rx="14"/>
+                  <text class="label" x="105" y="288">Campus Screens</text><text class="sub" x="105" y="308">QR + leaderboard</text>
+
+                  <rect class="node" x="292" y="158" width="153" height="74" rx="14"/>
+                  <text class="label" x="368.5" y="191">Netlify App</text><text class="sub" x="368.5" y="211">single static client</text>
+
+                  <rect class="node node-data" x="542" y="158" width="175" height="74" rx="14"/>
+                  <text class="label" x="629.5" y="191">Firestore</text><text class="sub" x="629.5" y="211">realtime state</text>
+
+                  <rect class="node" x="35" y="328" width="135" height="52" rx="12"/>
+                  <text class="label" x="102.5" y="359">GitHub Actions</text>
+                  <rect class="node" x="287" y="328" width="140" height="52" rx="12"/>
+                  <text class="label" x="357" y="359">Results Bot</text>
+                  <rect class="node node-ai" x="548" y="282" width="169" height="58" rx="12"/>
+                  <text class="label" x="632.5" y="307">API-Football</text><text class="sub" x="632.5" y="326">final scores</text>
+                </svg>
               </div>
               <figcaption>
                 <span>architecture / deployment</span>
                 <strong>Always-on serverless operating model</strong>
-                <p>The README maps the client, realtime database, scheduled automation, and football-results API.</p>
+                <p>Phones and displays use the same realtime client while scheduled automation handles result ingestion separately.</p>
               </figcaption>
             </figure>
-            <figure class="evidence-card">
-              <div class="evidence-frame doc-evidence-frame doc-evidence-tall">
-                <img src="../assets/projects/pitch-predictor/readme-prediction-flow.webp" alt="Pitch Predictor README flow diagram showing prediction validation, kickoff locking, automated result retrieval, Firestore update, leaderboard recalculation, points, streaks, and celebration" loading="lazy" decoding="async">
+
+            <figure class="evidence-card readme-diagram-card">
+              <div class="readme-diagram-frame readme-diagram-frame-tall">
+                <svg class="architecture-svg readme-flow-svg" viewBox="0 0 470 700" role="img" aria-label="Pitch Predictor lifecycle from a player's prediction through kickoff locking, automated result retrieval, Firestore update, leaderboard recalculation, and scoring">
+                  <defs><marker id="doc-arrow-b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6f829a"/></marker></defs>
+                  <path class="doc-edge" d="M235 80 L235 118"/>
+                  <path class="doc-edge doc-edge-accent" d="M235 190 L235 228"/>
+                  <path class="doc-edge" d="M300 154 L375 154 L375 222"/>
+                  <path class="doc-edge" d="M235 282 L235 318"/>
+                  <path class="doc-edge" d="M235 372 L235 408"/>
+                  <path class="doc-edge" d="M235 462 L235 498"/>
+                  <path class="doc-edge" d="M235 552 L235 588"/>
+                  <text class="edge-label" x="209" y="213">yes</text>
+                  <text class="edge-label" x="338" y="144">no</text>
+
+                  <rect class="node node-user" x="120" y="28" width="230" height="52" rx="13"/>
+                  <text class="label" x="235" y="59">Player picks outcome</text>
+
+                  <path class="node node-ai" d="M235 118 L300 154 L235 190 L170 154 Z"/>
+                  <text class="label" x="235" y="151">Before kickoff?</text>
+
+                  <rect class="node node-warn" x="310" y="222" width="130" height="54" rx="13"/>
+                  <text class="label" x="375" y="254">Locked</text>
+
+                  <rect class="node node-data" x="115" y="228" width="240" height="54" rx="13"/>
+                  <text class="label" x="235" y="250">Prediction saved</text><text class="sub" x="235" y="269">editable until kickoff</text>
+
+                  <rect class="node" x="115" y="318" width="240" height="54" rx="13"/>
+                  <text class="label" x="235" y="350">Kickoff → predictions close</text>
+
+                  <rect class="node" x="115" y="408" width="240" height="54" rx="13"/>
+                  <text class="label" x="235" y="430">Match ends</text><text class="sub" x="235" y="449">bot checks final result</text>
+
+                  <rect class="node node-data" x="115" y="498" width="240" height="54" rx="13"/>
+                  <text class="label" x="235" y="520">Winner → Firestore</text><text class="sub" x="235" y="539">authoritative result update</text>
+
+                  <rect class="node node-ai" x="115" y="588" width="240" height="66" rx="13"/>
+                  <text class="label" x="235" y="614">Leaderboard recalculates</text><text class="sub" x="235" y="635">points + streak + celebration</text>
+                </svg>
               </div>
               <figcaption>
                 <span>logic / prediction lifecycle</span>
                 <strong>From prediction to points</strong>
-                <p>The second README diagram documents the complete path from a player's pick to leaderboard recalculation.</p>
+                <p>The lifecycle makes the scoring boundary explicit: picks lock at kickoff and points are awarded only after a final result.</p>
               </figcaption>
             </figure>
           </div>
@@ -206,6 +274,22 @@
       </section>
     </div>
   </main>
+
+  <div class="case-project-nav-wrap">
+    <div class="wrap case-project-nav" aria-label="Project navigation">
+      <a class="case-project-link previous" href="local-eco-scanner.html">
+        <span>Previous project</span>
+        <strong>Local Eco-Scanner</strong>
+        <small>← View case study</small>
+      </a>
+      <a class="case-project-all" href="../index.html#projects">All projects</a>
+      <a class="case-project-link next" href="service-navigator.html">
+        <span>Next project</span>
+        <strong>Service Navigator</strong>
+        <small>View case study →</small>
+      </a>
+    </div>
+  </div>
 
   <footer>
     <div class="wrap footer-inner"><span>© 2026 Ritvij Naram</span><a href="../index.html#projects">Back to projects ↑</a></div>
