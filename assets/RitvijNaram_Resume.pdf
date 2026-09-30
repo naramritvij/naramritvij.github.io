@@ -7,7 +7,7 @@ endobj
 << /Type /Pages /Count 1 /Kids [3 0 R] >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 728.52 1031.76] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R 9 0 R 10 0 R] >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R] >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Times-Roman /Encoding /WinAnsiEncoding >>
@@ -16,154 +16,190 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Times-Bold /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 14163 >>
+<< /Length 15328 >>
 stream
-0 0 0 rg BT /F2 14.30 Tf 1 0 0 1 322.22 997.00 Tm (RITVIJ NARAM) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 185.58 981.80 Tm (Toronto, Ontario) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 241.64 981.80 Tm ( | ) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 252.15 981.80 Tm (437-604-7804) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 294.19 981.80 Tm ( | ) Tj ET
-0.50 0.27 0.42 rg BT /F1 7.70 Tf 1 0 0 1 304.70 981.80 Tm (naram.r@northeastern.edu) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 388.78 981.80 Tm ( | ) Tj ET
-0.50 0.27 0.42 rg BT /F1 7.70 Tf 1 0 0 1 399.29 981.80 Tm (LinkedIn) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 427.32 981.80 Tm ( | ) Tj ET
-0.50 0.27 0.42 rg BT /F1 7.70 Tf 1 0 0 1 437.83 981.80 Tm (GitHub) Tj ET
-0 0 0 rg BT /F1 7.70 Tf 1 0 0 1 458.85 981.80 Tm ( | ) Tj ET
-0.50 0.27 0.42 rg BT /F1 7.70 Tf 1 0 0 1 469.36 981.80 Tm (naramritvij.github.io) Tj ET
-0 0 0 rg BT /F2 9.00 Tf 1 0 0 1 251.81 969.30 Tm (MACHINE LEARNING SOFTWARE DEVELOPER | GENERATIVE AI) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 955.40 Tm (PROFESSIONAL SUMMARY) Tj ET
-0 0 0 rg BT /F1 7.40 Tf 1 0 0 1 30.00 945.00 Tm (Information Systems graduate student and published researcher with 3+ years of experience in data analytics, SQL-based data engineering, ETL pipelines, and cloud platforms. Experienced in building) Tj ET
-0 0 0 rg BT /F1 7.40 Tf 1 0 0 1 30.00 936.80 Tm (data pipelines, dashboards, and AI-driven automation solutions, improving reporting efficiency by up to 97% and enabling data-driven decision-making. Hands-on ML/GenAI work includes) Tj ET
-0 0 0 rg BT /F1 7.40 Tf 1 0 0 1 30.00 928.60 Tm (TensorFlow/Keras, scikit-learn, LangChain/RAG, Gemini API, Docker, and Git/GitHub CI/CD.) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 917.70 Tm (EDUCATION) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 907.30 Tm (Master of Science, Information Systems) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 173.58 907.30 Tm ( | Northeastern University | Toronto, ON | December 2026) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 898.95 Tm (Bachelor of Engineering \(BE\), Computer Science) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 203.18 898.95 Tm ( | University of Pune | Pune, India | May 2021) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 888.40 Tm (CERTIFICATIONS) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 878.00 Tm (Certified Airtable Builder) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 129.19 878.00 Tm (, Airtable, Canada | May 2025) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 867.45 Tm (CORE COMPETENCIES) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 857.05 Tm (Machine Learning & GenAI:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 123.18 857.05 Tm (Python | TensorFlow/Keras | scikit-learn | CNNs | LangChain | LLMs | RAG | Gemini API | Prompt Engineering | Embeddings | Model Evaluation) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 848.30 Tm (MLOps & Cloud Platforms:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 119.61 848.30 Tm (Docker | GitHub Actions CI/CD | Azure | AWS | GCP, Vertex AI, BigQuery & Kubernetes \(current hands-on learning\) | Model Monitoring) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 839.55 Tm (Data Analytics & Engineering:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 137.45 839.55 Tm (SQL | Python | Data Modeling | ETL Pipeline Development | Data Warehousing | Data Cleaning | Data Transformation | API Integration) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 830.80 Tm (Business Intelligence & Visualization:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 169.55 830.80 Tm (Tableau | Power BI | Dashboard Development | KPI Reporting | Data Storytelling | Business Performance Analytics) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 822.05 Tm (Cloud & Data Platforms:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 116.05 822.05 Tm (Microsoft Azure | Snowflake | Azure Functions | Cloud Data Pipelines | Serverless Architecture) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 813.30 Tm (AI & Automation:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 91.08 813.30 Tm (AI Chatbots | LangChain | LLM Integration | Process Automation | Workflow Optimization | NLP Applications) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 804.55 Tm (Database & Systems:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 101.78 804.55 Tm (Relational Databases | Database Design | Data Governance | Airtable | SharePoint | Enterprise Data Systems) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 795.80 Tm (Interpersonal:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 83.94 795.80 Tm (Cross-Functional Leadership | Problem Solving | Analytical Thinking | Requirements Gathering | Team Collaboration) Tj ET
-0 0 0 rg BT /F2 7.28 Tf 1 0 0 1 30.00 787.05 Tm (Programming & Tools:) Tj ET
-0 0 0 rg BT /F1 7.28 Tf 1 0 0 1 105.34 787.05 Tm (Python | FastAPI | Git | REST APIs | Microsoft Excel | Advanced Excel Automation | Java | C++) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 776.70 Tm (PROFESSIONAL EXPERIENCE) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 766.30 Tm (Business Analytics & Systems Associate Co-op) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 195.78 766.30 Tm ( | Northeastern University | Toronto, ON | Jul 2025 - Dec 2025) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 757.95 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 757.95 Tm (Led end-to-end campus analytics and systems initiatives, translating stakeholder requirements into production-ready solutions supporting thousands of users.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 749.70 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 749.70 Tm (Solely owned and delivered the Scorecard Data Project end to end, from stakeholder requirements and architecture through implementation, validation, documentation, deployment, and handoff; built) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 741.85 Tm (scheduled Azure Functions ETL to pull Airtable/Asana API data, stage CSV/JSON checkpoints in Azure Blob Storage, and load curated Snowflake tables for Tableau reporting, improving data reliability by) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 734.00 Tm (50%.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 725.75 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 725.75 Tm (Secured the Scorecard pipeline with Azure Managed Identity, Key Vault, and environment variables; configured Snowflake warehouse/database/schema access and implemented incremental loads using monthly) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 717.90 Tm (partitions and data hashes to prevent unnecessary reprocessing.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 709.65 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 709.65 Tm (Benchmarked pipeline performance and documented architecture, recovery procedures, and troubleshooting; standardized Git/GitHub workflows, GitHub Actions CI/CD, and Docker-based deployment practices) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 701.80 Tm (for repeatable releases.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 693.55 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 693.55 Tm (Current technical upskilling: recreating ML deployment patterns on GCP with BigQuery, Vertex AI, Docker, and Kubernetes, including CI/CD, model monitoring, and container orchestration.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 685.30 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 685.30 Tm (Developed Python/Flask services and REST API integrations while maintaining mentorship-program databases and automation workflows supporting 300+ student and alumni records.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 677.05 Tm (Software Developer) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 99.59 677.05 Tm ( | Mechanize Industries | Pune, IN | Sep 2022 - May 2024) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 668.70 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 668.70 Tm (Built SQL-based ETL pipelines for weekly/monthly operational reporting, applying reusable validation and transformation logic to reduce manual processing and improve reporting consistency.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 660.45 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 660.45 Tm (Designed Power BI dashboards for 15+ KPIs and modeled OLTP operational data into analytics-ready structures, enabling 20+ stakeholders to monitor performance and investigate trends.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 652.20 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 652.20 Tm (Developed an AWS data-migration proof of concept using S3 for staged monthly data, RDS for transactional workloads, and Redshift for columnar analytics; applied partitioning and incremental-load checks) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 644.35 Tm (to minimize redundant processing.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 636.10 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 636.10 Tm (Automated legacy Excel reporting with Python and SQL, reducing manual workload by ~30%; used Git-based code review and CI/CD practices to improve release consistency and maintainability.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 627.85 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 627.85 Tm (Partnered with business and technical stakeholders to validate datasets, benchmark pipeline performance, document architecture, and drive issues through production handoff.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 619.60 Tm (Software Developer) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 99.59 619.60 Tm ( | Raja Industries | Pune, India | Aug 2021 - Aug 2022) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 611.25 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 611.25 Tm (Developed an integrated reporting solution extending legacy operational systems with near-real-time analytics, covering requirements, database design, testing, deployment, and support.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 603.00 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 603.00 Tm (Built Python/SQL ingestion workflows and REST API integrations with incremental processing and data-quality checks to prepare operational data for downstream analytics.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 594.75 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 594.75 Tm (Prototyped AWS analytics architecture using S3 staging, RDS source data, and Redshift reporting models, separating transactional and analytical workloads for scalable querying.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 586.50 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 586.50 Tm (Containerized Python services with Docker and used Git/GitHub CI/CD practices for repeatable builds, testing, and deployments while optimizing complex SQL for reporting and audit requests.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 578.25 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 578.25 Tm (Produced technical documentation and user guides; collaborated with analysts and business users to troubleshoot issues, refine requirements, and improve system adoption.) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 568.80 Tm (RESEARCH PUBLICATIONS) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 558.40 Tm (Anomaly Detection) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 95.89 558.40 Tm ( | Link | July - 2021) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 30.00 550.05 Tm (Published in the International Research Journal of Modernisation in Engineering Technology and Science.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 541.85 Tm (Artificial Intelligence System for Effective Detection of Animal Intervention in Croplands) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 365.95 541.85 Tm ( | Link | Sept - 2021) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 30.00 533.50 Tm (Published in the International Journal for Research in Applied Science and Engineering Technology.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 525.30 Tm (Wheeled Robot Development for Obstruction Avoidance Mechanism) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 258.67 525.30 Tm ( | Link | Sept - 2021) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 30.00 516.95 Tm (Published in the International Journal for Research in Applied Science and Engineering Technology.) Tj ET
-0 0 0 rg BT /F2 9.80 Tf 1 0 0 1 30.00 507.15 Tm (PROJECTS) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 496.75 Tm (Anomaly Detection for Video Surveillance) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 180.98 496.75 Tm ( | Python, TensorFlow/Keras, OpenCV, CNN) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 488.40 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 488.40 Tm (Built a CNN-based video anomaly-detection pipeline that preprocesses frames with OpenCV/NumPy, performs Keras/TensorFlow inference, and annotates abnormal events in video footage.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 480.15 Tm (AI Chatbot for Student Support \(Nora\)) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 169.88 480.15 Tm () Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 471.80 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 471.80 Tm (Built LLM-based chatbot using LangChain and API integrations for automated student query handling and developed backend using Python and APIs.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 463.55 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 463.55 Tm (Improved response automation, reducing manual query handling and increasing response efficiency.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 455.30 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 455.30 Tm (Implemented retrieval-augmented generation \(RAG\) for context-aware responses.) Tj ET
-0 0 0 rg BT /F2 7.55 Tf 1 0 0 1 30.00 447.05 Tm (Local Eco-Scanner) Tj ET
-0 0 0 rg BT /F1 7.55 Tf 1 0 0 1 95.89 447.05 Tm ( | Kotlin, Jetpack Compose, CameraX, Gemini API | GitHub) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 438.70 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 438.70 Tm (Developed a native Android application using Kotlin and Jetpack Compose, integrating CameraX and Gemini multimodal AI to identify household items and generate location-aware recycling guidance.) Tj ET
-0 0 0 rg BT /F1 7.30 Tf 1 0 0 1 32.00 430.45 Tm (\\225) Tj ET
-0 0 0 rg BT /F1 7.15 Tf 1 0 0 1 42.00 430.45 Tm (Implemented camera lifecycle and permission handling, image rotation and downscaling, coroutine-based API requests, Canadian postal-code validation, error states, and private local-profile persistence.) Tj ET
+0 0 0 rg BT /F2 12.80 Tf 1 0 0 1 258.47 815.00 Tm (RITVIJ NARAM) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 129.95 800.60 Tm (Toronto, Ontario) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 182.56 800.60 Tm ( | ) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 192.42 800.60 Tm (437-604-7804) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 231.88 800.60 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 6.85 Tf 1 0 0 1 241.74 800.60 Tm (naram.r@northeastern.edu) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 320.66 800.60 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 6.85 Tf 1 0 0 1 330.52 800.60 Tm (LinkedIn) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 356.82 800.60 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 6.85 Tf 1 0 0 1 366.69 800.60 Tm (GitHub) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 386.42 800.60 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 6.85 Tf 1 0 0 1 396.28 800.60 Tm (naramritvij.github.io) Tj ET
+0 0 0 rg BT /F2 7.95 Tf 1 0 0 1 194.25 789.10 Tm (MACHINE LEARNING SOFTWARE DEVELOPER | GENERATIVE AI) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 776.80 Tm (PROFESSIONAL SUMMARY) Tj ET
+0 0 0 rg BT /F1 7.05 Tf 1 0 0 1 25.00 766.10 Tm (Information Systems graduate student and published researcher with 3+ years of experience in data analytics, SQL-based data engineering, ETL pipelines, and cloud) Tj ET
+0 0 0 rg BT /F1 7.05 Tf 1 0 0 1 25.00 757.85 Tm (platforms. Experienced in building data pipelines, dashboards, and AI-driven automation solutions, improving reporting efficiency by up to 97% and enabling) Tj ET
+0 0 0 rg BT /F1 7.05 Tf 1 0 0 1 25.00 749.60 Tm (data-driven decision-making. Hands-on ML/GenAI work includes TensorFlow/Keras, scikit-learn, LangChain/RAG, Gemini API, Docker, and Git/GitHub CI/CD.) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 739.35 Tm (EDUCATION) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 728.65 Tm (Master of Science, Information Systems) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 171.88 728.65 Tm ( | Northeastern University | Toronto, ON | December 2026) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 720.50 Tm (Bachelor of Engineering \(BE\), Computer Science) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 202.28 720.50 Tm ( | University of Pune | Pune, India | May 2021) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 710.95 Tm (CERTIFICATIONS) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 700.25 Tm (Certified Airtable Builder) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 126.29 700.25 Tm (, Airtable, Canada | May 2025) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 690.70 Tm (CORE COMPETENCIES) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 680.00 Tm (Machine Learning & GenAI:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 115.34 680.00 Tm (Python | TensorFlow/Keras | scikit-learn | CNNs | LangChain | LLMs | RAG | Gemini API | Prompt Engineering | Embeddings | Model Evaluation) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 671.60 Tm (MLOps & Cloud Platforms:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 111.84 671.60 Tm (Docker | GitHub Actions CI/CD | Azure | AWS | GCP, Vertex AI, BigQuery & Kubernetes \(current hands-on learning\) | Model Monitoring) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 663.20 Tm (Data Analytics & Engineering:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 129.31 663.20 Tm (SQL | Python | Data Modeling | ETL Pipeline Development | Data Warehousing | Data Cleaning | Data Transformation | API Integration) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 654.80 Tm (Business Intelligence & Visualization:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 160.75 654.80 Tm (Tableau | Power BI | Dashboard Development | KPI Reporting | Data Storytelling | Business Performance Analytics) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 646.40 Tm (Cloud & Data Platforms:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 108.35 646.40 Tm (Microsoft Azure | Snowflake | Azure Functions | Cloud Data Pipelines | Serverless Architecture) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 638.00 Tm (AI & Automation:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 83.90 638.00 Tm (AI Chatbots | LangChain | LLM Integration | Process Automation | Workflow Optimization | NLP Applications) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 629.60 Tm (Database & Systems:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 94.38 629.60 Tm (Relational Databases | Database Design | Data Governance | Airtable | SharePoint | Enterprise Data Systems) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 621.20 Tm (Interpersonal:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 76.91 621.20 Tm (Cross-Functional Leadership | Problem Solving | Analytical Thinking | Requirements Gathering | Team Collaboration) Tj ET
+0 0 0 rg BT /F2 6.85 Tf 1 0 0 1 25.00 612.80 Tm (Programming & Tools:) Tj ET
+0 0 0 rg BT /F1 6.85 Tf 1 0 0 1 97.87 612.80 Tm (Python | FastAPI | Git | REST APIs | Microsoft Excel | Advanced Excel Automation | Java | C++) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 603.35 Tm (PROFESSIONAL EXPERIENCE) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 592.65 Tm (Business Analytics & Systems Associate Co-op) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 194.68 592.65 Tm ( | Northeastern University | Toronto, ON | Jul 2025 - Dec 2025) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 584.50 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 584.50 Tm (Led end-to-end campus analytics and systems initiatives, translating stakeholder requirements into production-ready solutions supporting thousands of users.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 576.35 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 576.35 Tm (Solely owned and delivered the Scorecard Data Project end to end, from stakeholder requirements and architecture through implementation, validation, documentation,) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 568.40 Tm (deployment, and handoff; built scheduled Azure Functions ETL to pull Airtable/Asana API data, stage CSV/JSON checkpoints in Azure Blob Storage, and load curated) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 560.45 Tm (Snowflake tables for Tableau reporting, improving data reliability by 50%.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 552.30 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 552.30 Tm (Secured the Scorecard pipeline with Azure Managed Identity, Key Vault, and environment variables; configured Snowflake warehouse/database/schema access and) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 544.35 Tm (implemented incremental loads using monthly partitions and data hashes to prevent unnecessary reprocessing.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 536.20 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 536.20 Tm (Benchmarked pipeline performance and documented architecture, recovery procedures, and troubleshooting; standardized Git/GitHub workflows, GitHub Actions CI/CD,) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 528.25 Tm (and Docker-based deployment practices for repeatable releases.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 520.10 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 520.10 Tm (Current technical upskilling: recreating ML deployment patterns on GCP with BigQuery, Vertex AI, Docker, and Kubernetes, including CI/CD, model monitoring, and) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 512.15 Tm (container orchestration.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 504.00 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 504.00 Tm (Developed Python/Flask services and REST API integrations while maintaining mentorship-program databases and automation workflows supporting 300+ student and) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 496.05 Tm (alumni records.) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 487.90 Tm (Software Developer) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 95.89 487.90 Tm ( | Mechanize Industries | Pune, IN | Sep 2022 - May 2024) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 479.75 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 479.75 Tm (Built SQL-based ETL pipelines for weekly/monthly operational reporting, applying reusable validation and transformation logic to reduce manual processing and) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 471.80 Tm (improve reporting consistency.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 463.65 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 463.65 Tm (Designed Power BI dashboards for 15+ KPIs and modeled OLTP operational data into analytics-ready structures, enabling 20+ stakeholders to monitor performance and) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 455.70 Tm (investigate trends.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 447.55 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 447.55 Tm (Developed an AWS data-migration proof of concept using S3 for staged monthly data, RDS for transactional workloads, and Redshift for columnar analytics; applied) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 439.60 Tm (partitioning and incremental-load checks to minimize redundant processing.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 431.45 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 431.45 Tm (Automated legacy Excel reporting with Python and SQL, reducing manual workload by ~30%; used Git-based code review and CI/CD practices to improve release) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 423.50 Tm (consistency and maintainability.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 415.35 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 415.35 Tm (Partnered with business and technical stakeholders to validate datasets, benchmark pipeline performance, document architecture, and drive issues through production) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 407.40 Tm (handoff.) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 399.25 Tm (Software Developer) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 95.89 399.25 Tm ( | Raja Industries | Pune, India | Aug 2021 - Aug 2022) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 391.10 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 391.10 Tm (Developed an integrated reporting solution extending legacy operational systems with near-real-time analytics, covering requirements, database design, testing,) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 383.15 Tm (deployment, and support.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 375.00 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 375.00 Tm (Built Python/SQL ingestion workflows and REST API integrations with incremental processing and data-quality checks to prepare operational data for downstream) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 367.05 Tm (analytics.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 358.90 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 358.90 Tm (Prototyped AWS analytics architecture using S3 staging, RDS source data, and Redshift reporting models, separating transactional and analytical workloads for) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 350.95 Tm (scalable querying.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 342.80 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 342.80 Tm (Containerized Python services with Docker and used Git/GitHub CI/CD practices for repeatable builds, testing, and deployments while optimizing complex SQL for) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 334.85 Tm (reporting and audit requests.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 326.70 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 326.70 Tm (Produced technical documentation and user guides; collaborated with analysts and business users to troubleshoot issues, refine requirements, and improve system) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 318.75 Tm (adoption.) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 309.80 Tm (RESEARCH PUBLICATIONS) Tj ET
+0 0 0 rg BT /F2 7.20 Tf 1 0 0 1 25.00 299.10 Tm (Anomaly Detection) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 87.42 299.10 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 7.20 Tf 1 0 0 1 97.79 299.10 Tm (Link) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 111.62 299.10 Tm ( | July - 2021) Tj ET
+0 0 0 rg BT /F1 6.72 Tf 1 0 0 1 25.00 291.20 Tm (Published in the International Research Journal of Modernisation in Engineering Technology and Science.) Tj ET
+0 0 0 rg BT /F2 7.20 Tf 1 0 0 1 25.00 283.40 Tm (Artificial Intelligence System for Effective Detection of Animal Intervention in Croplands) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 355.48 283.40 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 7.20 Tf 1 0 0 1 365.85 283.40 Tm (Link) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 379.67 283.40 Tm ( | Sept - 2021) Tj ET
+0 0 0 rg BT /F1 6.72 Tf 1 0 0 1 25.00 275.50 Tm (Published in the International Journal for Research in Applied Science and Engineering Technology.) Tj ET
+0 0 0 rg BT /F2 7.20 Tf 1 0 0 1 25.00 267.70 Tm (Wheeled Robot Development for Obstruction Avoidance Mechanism) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 248.99 267.70 Tm ( | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 7.20 Tf 1 0 0 1 259.36 267.70 Tm (Link) Tj ET
+0 0 0 rg BT /F1 7.20 Tf 1 0 0 1 273.18 267.70 Tm ( | Sept - 2021) Tj ET
+0 0 0 rg BT /F1 6.72 Tf 1 0 0 1 25.00 259.80 Tm (Published in the International Journal for Research in Applied Science and Engineering Technology.) Tj ET
+0 0 0 rg BT /F2 9.10 Tf 1 0 0 1 25.00 251.00 Tm (PROJECTS) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 240.30 Tm (Anomaly Detection for Video Surveillance) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 179.48 240.30 Tm ( | Python, TensorFlow/Keras, OpenCV, CNN) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 232.15 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 232.15 Tm (Built a CNN-based video anomaly-detection pipeline that preprocesses frames with OpenCV/NumPy, performs Keras/TensorFlow inference, and annotates abnormal events) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 224.20 Tm (in video footage.) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 216.05 Tm (AI Chatbot for Student Support \(Nora\)) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 207.90 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 207.90 Tm (Built LLM-based chatbot using LangChain and API integrations for automated student query handling and developed backend using Python and APIs.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 199.75 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 199.75 Tm (Improved response automation, reducing manual query handling and increasing response efficiency.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 191.60 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 191.60 Tm (Implemented retrieval-augmented generation \(RAG\) for context-aware responses.) Tj ET
+0 0 0 rg BT /F2 7.45 Tf 1 0 0 1 25.00 183.45 Tm (Local Eco-Scanner) Tj ET
+0 0 0 rg BT /F1 7.45 Tf 1 0 0 1 92.09 183.45 Tm ( | Kotlin, Jetpack Compose, CameraX, Gemini API | ) Tj ET
+0.50 0.27 0.42 rg BT /F1 7.45 Tf 1 0 0 1 270.89 183.45 Tm (GitHub) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 175.30 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 175.30 Tm (Developed a native Android application using Kotlin and Jetpack Compose, integrating CameraX and Gemini multimodal AI to identify household items and generate) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 167.35 Tm (location-aware recycling guidance.) Tj ET
+0 0 0 rg BT /F1 7.00 Tf 1 0 0 1 26.50 159.20 Tm (\\225) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 159.20 Tm (Implemented camera lifecycle and permission handling, image rotation and downscaling, coroutine-based API requests, Canadian postal-code validation, error states,) Tj ET
+0 0 0 rg BT /F1 6.82 Tf 1 0 0 1 36.00 151.25 Tm (and private local-profile persistence.) Tj ET
 endstream
 endobj
 7 0 obj
-<< /Type /Annot /Subtype /Link /Rect [304.70 980.80 388.78 990.00] /Border [0 0 0] /A << /S /URI /URI (mailto:naram.r@northeastern.edu) >> >>
+<< /Type /Annot /Subtype /Link /Rect [241.74 799.60 320.66 807.90] /Border [0 0 0] /A << /S /URI /URI (mailto:naram.r@northeastern.edu) >> >>
 endobj
 8 0 obj
-<< /Type /Annot /Subtype /Link /Rect [399.29 980.80 427.32 990.00] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/ritvij-naram/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [330.52 799.60 356.82 807.90] /Border [0 0 0] /A << /S /URI /URI (https://www.linkedin.com/in/ritvij-naram/) >> >>
 endobj
 9 0 obj
-<< /Type /Annot /Subtype /Link /Rect [437.83 980.80 458.85 990.00] /Border [0 0 0] /A << /S /URI /URI (https://github.com/naramritvij) >> >>
+<< /Type /Annot /Subtype /Link /Rect [366.69 799.60 386.42 807.90] /Border [0 0 0] /A << /S /URI /URI (https://github.com/naramritvij) >> >>
 endobj
 10 0 obj
-<< /Type /Annot /Subtype /Link /Rect [469.36 980.80 542.94 990.00] /Border [0 0 0] /A << /S /URI /URI (https://naramritvij.github.io/) >> >>
+<< /Type /Annot /Subtype /Link /Rect [396.28 799.60 465.33 807.90] /Border [0 0 0] /A << /S /URI /URI (https://naramritvij.github.io/) >> >>
+endobj
+11 0 obj
+<< /Type /Annot /Subtype /Link /Rect [97.79 298.10 111.62 306.60] /Border [0 0 0] /A << /S /URI /URI (https://www.irjmets.com/uploadedfiles/paper/volume3/issue_7_july_2021/14659/1628083569.pdf) >> >>
+endobj
+12 0 obj
+<< /Type /Annot /Subtype /Link /Rect [365.85 282.40 379.67 290.90] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.22214/ijraset.2021.38009) >> >>
+endobj
+13 0 obj
+<< /Type /Annot /Subtype /Link /Rect [259.36 266.70 273.18 275.20] /Border [0 0 0] /A << /S /URI /URI (https://doi.org/10.22214/ijraset.2021.38010) >> >>
+endobj
+14 0 obj
+<< /Type /Annot /Subtype /Link /Rect [270.89 182.45 292.35 191.15] /Border [0 0 0] /A << /S /URI /URI (https://github.com/naramritvij/LocalEcoScanner) >> >>
 endobj
 xref
-0 11
+0 15
 0000000000 65535 f 
 0000000016 00000 n 
 0000000065 00000 n 
 0000000122 00000 n 
-0000000300 00000 n 
-0000000399 00000 n 
-0000000497 00000 n 
-0000014712 00000 n 
-0000014869 00000 n 
-0000015036 00000 n 
-0000015192 00000 n 
+0000000327 00000 n 
+0000000426 00000 n 
+0000000524 00000 n 
+0000015904 00000 n 
+0000016061 00000 n 
+0000016228 00000 n 
+0000016384 00000 n 
+0000016541 00000 n 
+0000016757 00000 n 
+0000016927 00000 n 
+0000017097 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R >>
+<< /Size 15 /Root 1 0 R >>
 startxref
-15349
+17270
 %%EOF
